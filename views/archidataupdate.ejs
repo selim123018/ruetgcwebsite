@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/archi">insert</a></li>
+    <li>
+      <form action="/archidata" method="GET">
+        <input type="number" name="archisession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/archilogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<form action="/archiuser/<%=archiuser._id %>" method="post">
+
+<h3>আর্কিটেকচার বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="2">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+</tr>
+<tr>
+	<th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th rowspan="4">আর্কিটেকচার বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<th><input type="number" name="metotalbscstudent" value="<%=archiuser.metotalbscstudent%>"></th>
+	<th><input type="number" name="memalebscstudent" value="<%=archiuser.memalebscstudent%>"></th>
+	<th><input type="number" name="mefemalebscstudent" value="<%=archiuser.mefemalebscstudent%>"></th>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<th><input type="number" name="metotalmscstudent" value="<%=archiuser.metotalmscstudent%>"></th>
+	<th><input type="number" name="memalemscstudent" value="<%=archiuser.memalemscstudent%>"></th>
+	<th><input type="number" name="mefemalemscstudent" value="<%=archiuser.mefemalemscstudent%>"></th>
+</tr>
+<tr>
+    <th>এমফিল/সমমান</th>
+	<th><input type="number" name="metotalmfilstudent" value="<%=archiuser.metotalmfilstudent%>"></th>
+	<th><input type="number" name="memalemfilstudent" value="<%=archiuser.memalemfilstudent%>"></th>
+	<th><input type="number" name="mefemalemfilstudent" value="<%=archiuser.mefemalemfilstudent%>"></th>	
+</tr>
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<th><input type="number" name="metotalphdstudent" value="<%=archiuser.metotalphdstudent%>"></th>
+	<th><input type="number" name="memalephdstudent" value="<%=archiuser.memalephdstudent%>"></th>
+	<th><input type="number" name="mefemalephdstudent" value="<%=archiuser.mefemalephdstudent%>"></th>
+</tr>
+</table>
+<br><br>
+
+
+<h3>আর্কিটেকচার বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="2">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+</tr>
+<tr>
+    <th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th rowspan="4">আর্কিটেকচার বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<th><input type="number" name="meforeignmalebscstudent" value="<%=archiuser.meforeignmalebscstudent%>"></th>
+	<th><input type="number" name="meforeignfemalebscstudent" value="<%=archiuser.meforeignfemalebscstudent%>"></th>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<th><input type="number" name="meforeignmalemscstudent" value="<%=archiuser.meforeignmalemscstudent%>"></th>
+	<th><input type="number" name="meforeignfemalemscstudent" value="<%=archiuser.meforeignfemalemscstudent%>"></th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<th><input type="number" name="meforeignmalemfilstudent" value="<%=archiuser.meforeignmalemfilstudent%>"></th>
+	<th><input type="number" name="meforeignfemalemfilstudent" value="<%=archiuser.meforeignfemalemfilstudent%>"></th>
+</tr>
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<th><input type="number" name="meforeignmalephdstudent" value="<%=archiuser.meforeignmalephdstudent%>"></th>
+	<th><input type="number" name="meforeignfemalephdstudent" value="<%=archiuser.meforeignfemalephdstudent%>"></th>
+</tr>
+</table>
+<br>
+
+<h3>আর্কিটেকচার বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="2">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="2">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<th><input type="number" name="mefulltimemfilmaleteacher" value="<%=archiuser.mefulltimemfilmaleteacher%>"></th>
+	<th><input type="number" name="mefulltimemfilfemaleteacher" value="<%=archiuser.mefulltimemfilfemaleteacher%>"></th>
+	<th><input type="number" name="meparttimemfilmaleteacher" value="<%=archiuser.meparttimemfilmaleteacher%>"></th>
+	<th><input type="number" name="meparttimemfilfemaleteacher" value="<%=archiuser.meparttimemfilfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<th><input type="number" name="mefulltimephdmaleteacher" value="<%=archiuser.mefulltimephdmaleteacher%>"></th>
+	<th><input type="number" name="mefulltimephdfemaleteacher" value="<%=archiuser.mefulltimephdfemaleteacher%>"></th>
+	<th><input type="number" name="meparttimephdmaleteacher" value="<%=archiuser.meparttimephdmaleteacher%>"></th>
+	<th><input type="number" name="meparttimephdfemaleteacher" value="<%=archiuser.meparttimephdfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<th><input type="number" name="mefulltimemscmaleteacher" value="<%=archiuser.mefulltimemscmaleteacher%>"></th>
+	<th><input type="number" name="mefulltimemscfemaleteacher" value="<%=archiuser.mefulltimemscfemaleteacher%>"></th>
+	<th><input type="number" name="meparttimemscmaleteacher" value="<%=archiuser.meparttimemscmaleteacher%>"></th>
+	<th><input type="number" name="meparttimemscfemaleteacher" value="<%=archiuser.meparttimemscfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<th><input type="number" name="mefulltimebscmaleteacher" value="<%=archiuser.mefulltimebscmaleteacher%>"></th>
+	<th><input type="number" name="mefulltimebscfemaleteacher" value="<%=archiuser.mefulltimebscfemaleteacher%>"></th>
+	<th><input type="number" name="meparttimebscmaleteacher" value="<%=archiuser.meparttimebscmaleteacher%>"></th>
+	<th><input type="number" name="meparttimebscfemaleteacher" value="<%=archiuser.meparttimebscfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<th><input type="number" name="mefulltimeothermaleteacher" value="<%=archiuser.mefulltimeothermaleteacher%>"></th>
+	<th><input type="number" name="mefulltimeotherfemaleteacher" value="<%=archiuser.mefulltimeotherfemaleteacher%>"></th>
+	<th><input type="number" name="meparttimeothermaleteacher" value="<%=archiuser.meparttimeothermaleteacher%>"></th>
+	<th><input type="number" name="meparttimeotherfemaleteacher" value="<%=archiuser.meparttimeotherfemaleteacher%>"></th>
+</tr>
+</table>
+<br>
+
+<h3>আর্কিটেকচার বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">পুরকৌশল অনুষদ </th>
+	<th rowspan="10">আর্কিটেকচার বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<th><input type="number" name="meresearch1" value="<%=archiuser.meresearch1%>"></th>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<th><input type="number" name="meresearch2" value="<%=archiuser.meresearch2%>"></th>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<th><input type="number" name="meresearch3" value="<%=archiuser.meresearch3%>"></th>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<th><input type="number" name="meresearch4" value="<%=archiuser.meresearch4%>"></th>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<th><input type="number" name="meresearch5" value="<%=archiuser.meresearch5%>"></th>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<th><input type="number" name="meresearch6" value="<%=archiuser.meresearch6%>"></th>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ  Journal and Conference</th>
+<th><input type="number" name="mejournal" value="<%=archiuser.mejournal%>"><br>
+    <input type="number" name="meconference" value="<%=archiuser.meconference%>">
+</th>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<th><input type="number" name="meresearch8" value="<%=archiuser.meresearch8%>"></th>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<th><input type="number" name="meresearch9" value="<%=archiuser.meresearch9%>"></th>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<th><input type="number" name="meresearch10" value="<%=archiuser.meresearch10%>"></th>
+</tr>
+</table><br>
+<button type="submit">update</button>
+</form>
+<br>
+</div>
+</body>
+</html>

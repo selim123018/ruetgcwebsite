@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	<style>
+	    form{
+	    	margin-top: 200px;
+	    }
+	    form table{
+	    	margin: auto;
+	    }
+		form table tr th input{
+			resize: horizontal;
+		    width: 300px;
+		    padding: 3px;
+		    font-size: 17px;
+		}
+		form table tr th button{
+			font-size: 17px;
+		}
+		body{background: lightgray;}
+	</style>
+</head>
+<body>
+<%include partials/nav.ejs %>		
+<form action="meadmin" method="post">
+	<table width="400" height="130" border="1" align="center">
+		<tr>
+		 <th colspan="2"><h1>Admin login</h1></th>
+	   </tr>
+		<tr>
+			<th>Username:</th>
+			<th><input type="text" name="username" placeholder="Username" width="300"></th>
+		</tr>
+		<tr>
+			<th>Password:</th>
+			<th><input type="password" name="password" placeholder="Password"></th>
+		</tr>
+		<tr>
+			<th colspan="2"><button type="submit" class="btn btn-search btn-info">submit</button></th>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

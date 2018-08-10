@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/ete">insert</a></li>
+    <li>
+      <form action="/etedata" method="GET">
+        <input type="number" name="etesession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/etelogout">logout</a></li>
+  </ul>
+ </div>   
+<div class="form">
+<form action="/eteuser/<%=eteuser._id %>" method="post">
+<h3>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="2">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="4">ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<th><input type="number" name="etetotalbscstudent" value="<%=eteuser.etetotalbscstudent%>"></th>
+	<th><input type="number" name="etemalebscstudent" value="<%=eteuser.etemalebscstudent%>"></th>
+	<th><input type="number" name="etefemalebscstudent" value="<%=eteuser.etefemalebscstudent%>"></th>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<th><input type="number" name="etetotalmscstudent" value="<%=eteuser.etetotalmscstudent%>"></th>
+	<th><input type="number" name="etemalemscstudent" value="<%=eteuser.etemalemscstudent%>"></th>
+	<th><input type="number" name="etefemalemscstudent" value="<%=eteuser.etefemalemscstudent%>"></th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<th><input type="number" name="etetotalmfilstudent" value="<%=eteuser.etetotalmfilstudent%>"></th>
+	<th><input type="number" name="etemalemfilstudent" value="<%=eteuser.etemalemfilstudent%>"></th>
+	<th><input type="number" name="etefemalemfilstudent" value="<%=eteuser.etefemalemfilstudent%>"></th>
+</tr>
+<tr>
+    <th>পিএইচডি/সমমান</th>
+	<th><input type="number" name="etetotalphdstudent" value="<%=eteuser.etetotalphdstudent%>"></th>
+	<th><input type="number" name="etemalephdstudent" value="<%=eteuser.etemalephdstudent%>"></th>
+	<th><input type="number" name="etefemalephdstudent" value="<%=eteuser.etefemalephdstudent%>"></th>	
+</tr>
+</table>
+<br><br>
+
+<h3>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="2">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+   
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="4">ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<th><input type="number" name="eeeforeignmalebscstudent" value="<%=eteuser.eeeforeignmalebscstudent%>"></th>
+	<th><input type="number" name="eeeforeignfemalebscstudent" value="<%=eteuser.eeeforeignfemalebscstudent%>"></th>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<th><input type="number" name="eeeforeignmalemscstudent" value="<%=eteuser.eeeforeignmalemscstudent%>"></th>
+	<th><input type="number" name="eeeforeignfemalemscstudent" value="<%=eteuser.eeeforeignfemalemscstudent%>"></th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<th><input type="number" name="eeeforeignmalemfilstudent" value="<%=eteuser.eeeforeignmalemfilstudent%>"></th>
+	<th><input type="number" name="eeeforeignfemalemfilstudent" value="<%=eteuser.eeeforeignfemalemfilstudent%>"></th>
+</tr>
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<th><input type="number" name="eeeforeignmalephdstudent" value="<%=eteuser.eeeforeignmalephdstudent%>"></th>
+	<th><input type="number" name="eeeforeignfemalephdstudent" value="<%=eteuser.eeeforeignfemalephdstudent%>"></th>
+</tr>
+</table>
+<br><br>
+
+
+<h3>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="2">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="2">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<th><input type="number" name="etefulltimemfilmaleteacher" value="<%=eteuser.etefulltimemfilmaleteacher%>"></th>
+	<th><input type="number" name="etefulltimemfilfemaleteacher" value="<%=eteuser.etefulltimemfilfemaleteacher%>"></th>
+	<th><input type="number" name="eteparttimemfilmaleteacher" value="<%=eteuser.eteparttimemfilmaleteacher%>"></th>
+	<th><input type="number" name="eteparttimemfilfemaleteacher" value="<%=eteuser.eteparttimemfilfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<th><input type="number" name="etefulltimephdmaleteacher" value="<%=eteuser.etefulltimephdmaleteacher%>"></th>
+	<th><input type="number" name="etefulltimephdfemaleteacher" value="<%=eteuser.etefulltimephdfemaleteacher%>"></th>
+	<th><input type="number" name="eteparttimephdmaleteacher" value="<%=eteuser.eteparttimephdmaleteacher%>"></th>
+	<th><input type="number" name="eteparttimephdfemaleteacher" value="<%=eteuser.eteparttimephdfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<th><input type="number" name="etefulltimemscmaleteacher" value="<%=eteuser.etefulltimemscmaleteacher%>"></th>
+	<th><input type="number" name="etefulltimemscfemaleteacher" value="<%=eteuser.etefulltimemscfemaleteacher%>"></th>
+	<th><input type="number" name="eteparttimemscmaleteacher" value="<%=eteuser.eteparttimemscmaleteacher%>"></th>
+	<th><input type="number" name="eteparttimemscfemaleteacher" value="<%=eteuser.eteparttimemscfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<th><input type="number" name="etefulltimebscmaleteacher" value="<%=eteuser.etefulltimebscmaleteacher%>"></th>
+	<th><input type="number" name="etefulltimebscfemaleteacher" value="<%=eteuser.etefulltimebscfemaleteacher%>"></th>
+	<th><input type="number" name="eteparttimebscmaleteacher" value="<%=eteuser.eteparttimebscmaleteacher%>"></th>
+	<th><input type="number" name="eteparttimebscfemaleteacher" value="<%=eteuser.eteparttimebscfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<th><input type="number" name="etefulltimeothermaleteacher" value="<%=eteuser.etefulltimeothermaleteacher%>"></th>
+	<th><input type="number" name="etefulltimeotherfemaleteacher" value="<%=eteuser.etefulltimeotherfemaleteacher%>"></th>
+	<th><input type="number" name="eteparttimeothermaleteacher" value="<%=eteuser.eteparttimeothermaleteacher%>"></th>
+	<th><input type="number" name="eteparttimeotherfemaleteacher" value="<%=eteuser.eteparttimeotherfemaleteacher%>"></th>
+</tr>
+</table>
+<br><br>
+
+<h3>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="10">ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<th><input type="number" name="eteresearch1" value="<%=eteuser.eteresearch1%>"></th>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<th><input type="number" name="eteresearch2" value="<%=eteuser.eteresearch2%>"></th>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<th><input type="number" name="eteresearch3" value="<%=eteuser.eteresearch3%>"></th>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<th><input type="number" name="eteresearch4" value="<%=eteuser.eteresearch4%>"></th>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<th><input type="number" name="eteresearch5" value="<%=eteuser.eteresearch5%>"></th>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<th><input type="number" name="eteresearch6" value="<%=eteuser.eteresearch6%>"></th>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<th><input type="number" name="etejournal" value="<%=eteuser.etejournal%>"><br>
+<input type="number" name="eteconference" value="<%=eteuser.eteconference%>">
+</th>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<th><input type="number" name="eteresearch8" value="<%=eteuser.eteresearch8%>"></th>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<th><input type="number" name="eteresearch9" value="<%=eteuser.eteresearch9%>"></th>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<th><input type="number" name="eteresearch10" value="<%=eteuser.eteresearch10%>"></th>
+</tr>
+</table><br>
+<button type="submit">update</button>
+</form>
+<br>
+</div>
+</body>
+</html>

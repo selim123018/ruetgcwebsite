@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/public/style.css">
+</head>
+<body>
+   <div class="topnav">
+  <ul>
+    <li><a class="active" href="/computercentre">insert</a></li>
+    <li>
+      <form action="/computercentredata" method="GET">
+        <input type="number" name="computercentresession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/computercentrelogout">logout</a></li>
+  </ul>
+ </div>   
+<div class="form">
+<h3>আইটি সু্যক-সুবিধার বিবরণঃ</h3>  
+<table border="1" width="900" align="center" class="table1">
+<tr>
+  <th>বিবরণ</th>
+  <th>সংখ্যা</th>
+  <th>বিবরণ</th>
+  <th>সংখ্যা</th>
+</tr>
+<tr>
+  <th>শিক্ষার্থীর জন্য কম্পিউটার সংখ্যা</th>
+  <td><%=computercentreuser.totalstudentcomputer%></td>
+  <th>ইন্টারনেট সংযুক্ত কম্পিউটার সংখ্যা</th>
+  <td><%=computercentreuser.totalinternetconnectedcomputer%></td>
+</tr>
+<tr>
+  <th>প্রসাশনে ব্যবহ্রত কম্পিউটার সংখ্যা</th>
+  <td><%=computercentreuser.totaladministratorcomputer%></td>
+  <th>শিক্ষার্থী ও কম্পিউটার সংখ্যা অনুপাত</th>
+  <td><%=computercentreuser.studentandcomputer%></td>
+</tr>
+</table>
+<br>
+<h3>
+<a href="computercentreuser/<%=computercentreuser._id %>/edit">Update</a>
+<a href="computercentreuser/<%=computercentreuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

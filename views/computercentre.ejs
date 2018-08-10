@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/public/style.css">
+  
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/computercentre">insert</a></li>
+    <li>
+      <form action="/computercentredata" method="GET">
+        <input type="number" name="computercentresession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/computercentrelogout">logout</a></li>
+  </ul>
+ </div>   
+<div class="form">
+<form action="/computercentrenew" method="post">
+<p> সালঃ<input type="number" name="session"></p>
+<h3>আইটি সু্যক-সুবিধার বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+<tr>
+  <th>বিবরণ</th>
+  <th>সংখ্যা</th>
+  <th>বিবরণ</th>
+  <th>সংখ্যা</th>
+</tr>
+<tr>
+  <th>শিক্ষার্থীর জন্য কম্পিউটার সংখ্যা</th>
+  <th><input type="number" name="totalstudentcomputer"></th>
+  <th>ইন্টারনেট সংযুক্ত কম্পিউটার সংখ্যা</th>
+  <th><input type="number" name="totalinternetconnectedcomputer"></th>
+</tr>
+<tr>
+  <th>প্রসাশনে ব্যবহ্রত কম্পিউটার সংখ্যা</th>
+  <th><input type="number" name="totaladministratorcomputer"></th>
+  <th>শিক্ষার্থী ও কম্পিউটার সংখ্যা অনুপাত</th>
+  <th><input type="text" name="studentandcomputer"></th>
+</tr>
+</table><br>
+<button type="submit">submit</button>
+</form>
+<br>
+</div>
+</body>
+</html>

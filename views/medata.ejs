@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/me">insert</a></li>
+    <li>
+      <form action="/medata" method="GET">
+        <input type="number" name="mesession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/melogout">logout</a></li>
+  </ul>
+ </div>   
+<div class="form">
+<h3>যন্ত্রকৌশল বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="4">যন্ত্রকৌশল বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=meuser.metotalbscstudent %></td>
+	<td><%=meuser.memalebscstudent %></td>
+	<td><%=meuser.mefemalebscstudent %></td>
+	<td><%=(meuser.mefemalebscstudent+meuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=meuser.metotalmscstudent %></td>
+	<td><%=meuser.memalemscstudent %></td>
+	<td><%=meuser.mefemalemscstudent %></td>
+	<td><%=(meuser.memalemscstudent+meuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=meuser.metotalmfilstudent %></td>
+	<td><%=meuser.memalemfilstudent %></td>
+	<td><%=meuser.mefemalemfilstudent %></td>
+	<td><%=(meuser.memalemfilstudent+meuser.mefemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=meuser.metotalphdstudent %></td>
+	<td><%=meuser.memalephdstudent %></td>
+	<td><%=meuser.mefemalephdstudent %></td>
+	<td><%=(meuser.memalephdstudent+meuser.mefemalephdstudent) %></td>
+</tr>	
+</table>
+<br>
+
+<h3>যন্ত্রকৌশল বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="4">যন্ত্রকৌশল বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=meuser.meforeignmalebscstudent %></td>
+	<td><%=meuser.meforeignfemalebscstudent %></td>
+	<td><%=(meuser.meforeignfemalebscstudent+meuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=meuser.meforeignmalemscstudent %></td>
+	<td><%=meuser.meforeignfemalemscstudent %></td>
+	<td><%=(meuser.meforeignmalemscstudent+meuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=meuser.meforeignmalemfilstudent %></td>
+	<td><%=meuser.meforeignfemalemfilstudent %></td>
+	<td><%=(meuser.meforeignmalemfilstudent+meuser.meforeignfemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=meuser.meforeignmalephdstudent %></td>
+	<td><%=meuser.meforeignfemalephdstudent %></td>
+	<td><%=(meuser.meforeignmalephdstudent+meuser.meforeignfemalephdstudent) %></td>
+</tr>	
+</table>
+<br>
+
+<h3>যন্ত্রকৌশল বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="3">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=meuser.mefulltimemfilmaleteacher %></td>
+	<td><%=meuser.mefulltimemfilfemaleteacher %></td>
+	<td><%=(meuser.mefulltimemfilmaleteacher+meuser.mefulltimemfilfemaleteacher) %></td>
+	<td><%=meuser.meparttimemfilmaleteacher %></td>
+	<td><%=meuser.meparttimemfilfemaleteacher %></td>
+	<td><%=(meuser.meparttimemfilmaleteacher+meuser.meparttimemfilfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=meuser.mefulltimephdmaleteacher %></td>
+	<td><%=meuser.mefulltimephdfemaleteacher %></td>
+	<td><%=(meuser.mefulltimephdmaleteacher+meuser.mefulltimephdfemaleteacher) %></td>
+	<td><%=meuser.meparttimephdmaleteacher %></td>
+	<td><%=meuser.meparttimephdfemaleteacher %></td>
+	<td><%=(meuser.meparttimephdmaleteacher+meuser.meparttimephdfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=meuser.mefulltimemscmaleteacher %></td>
+	<td><%=meuser.mefulltimemscfemaleteacher %></td>
+	<td><%=(meuser.mefulltimemscmaleteacher+meuser.mefulltimemscfemaleteacher) %></td>
+	<td><%=meuser.meparttimemscmaleteacher %></td>
+	<td><%=meuser.meparttimemscfemaleteacher %></td>
+	<td><%=(meuser.meparttimemscmaleteacher+meuser.meparttimemscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<td><%=meuser.mefulltimebscmaleteacher %></td>
+	<td><%=meuser.mefulltimebscfemaleteacher %></td>
+	<td><%=(meuser.mefulltimebscmaleteacher+meuser.mefulltimebscfemaleteacher)%></td>
+	<td><%=meuser.meparttimebscmaleteacher %></td>
+	<td><%=meuser.meparttimebscfemaleteacher %></td>
+	<td><%=(meuser.meparttimebscmaleteacher+meuser.meparttimebscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<td><%=meuser.mefulltimeothermaleteacher %></td>
+	<td><%=meuser.mefulltimeotherfemaleteacher %></td>
+	<td><%=(meuser.mefulltimeothermaleteacher+meuser.mefulltimeotherfemaleteacher)%></td>
+	<td><%=meuser.meparttimeothermaleteacher %></td>
+	<td><%=meuser.meparttimeotherfemaleteacher %></td>
+	<td><%=(meuser.meparttimeothermaleteacher+meuser.meparttimeotherfemaleteacher)%></td>
+</tr>
+</table>
+<br>
+
+<h3>যন্ত্রকৌশল বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="10">যন্ত্রকৌশল বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=meuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=meuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=meuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=meuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=meuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=meuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=meuser.mejournal %><br><hr><%=meuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=meuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=meuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=meuser.meresearch10 %></td>
+</tr>
+</table><br>
+<h3>
+<a href="meuser/<%=meuser._id %>/edit">Update</a>
+<a href="meuser/<%=meuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

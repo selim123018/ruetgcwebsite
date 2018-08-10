@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="stylesheet" type="text/css" href="/public/style.css">
+  <style>
+       .table2 tr th input{resize: horizontal; width: 90px;}
+  </style>
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/commite">insert</a></li>
+    <li>
+      <form action="/commitedata" method="GET">
+        <input type="number" name="commitesession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/commitelogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<form action="/commitenew" method="post">
+<p> সালঃ<input type="number" name="session"></p>
+<h3>মুলবিষয়ভিত্তিক পরিসংখ্যান</h3>
+<table border="1" width="900" align="center">
+  <tr>
+    <th>মুল বিষয়</th>
+    <th>ছাত্র</th>
+    <th>ছাত্রী</th>
+  </tr>
+  <tr>
+    <th>কলা ও মানবিক</th>
+    <th><input type="number" name="artsmalestudent"></th>
+    <th><input type="number" name="artsfemalestudent"></th>
+  </tr>
+  <tr>
+    <th>সামাজিক বিজ্ঞান</th>
+    <th><input type="number" name="socialsciencemalestudent"></th>
+    <th><input type="number" name="socialsciencefemalestudent"></th>
+  </tr>
+  <tr>
+    <th>শিক্ষা</th>
+    <th><input type="number" name="educationmalestudent"></th>
+    <th><input type="number" name="educationfemalestudent"></th>
+  </tr>
+  <tr>
+    <th>ব্যবসায় প্রশাসন/ব্যবসায় শিক্ষা</th>
+    <th><input type="number" name="commercemalestudent"></th>
+    <th><input type="number" name="commercefemalestudent"></th>
+  </tr>
+  <tr>
+    <th>আইন</th>
+    <th><input type="number" name="lawmalestudent"></th>
+    <th><input type="number" name="lawfemalestudent"></th>
+  </tr>
+  <tr>
+    <th>ফার্মেসী</th>
+    <th><input type="number" name="farmecymalestudent"></th>
+    <th><input type="number" name="farmecyfemalestudent"></th>
+  </tr>
+  <tr>
+    <th>বিজ্ঞান</th>
+    <th><input type="number" name="sciencemalestudent"></th>
+    <th><input type="number" name="sciencefemalestudent"></th>
+  </tr>
+  <tr>
+    <th>চিকিৎসা</th>
+    <th><input type="number" name="advicemalestudent"></th>
+    <th><input type="number" name="advicefemalestudent"></th>
+  </tr>
+  <tr>
+    <th>কৃষি</th>
+    <th><input type="number" name="agriculturemalestudent"></th>
+    <th><input type="number" name="agriculturefemalestudent"></th>
+  </tr>
+  <tr>
+    <th>প্রকৌশল ও কারিগরি</th>
+    <th><input type="number" name="engineeringmalestudent"></th>
+    <th><input type="number" name="engineeringfemalestudent"></th>
+  </tr>
+  <tr>
+    <th>অন্যান্য(ডিপ্লোমা/সার্টিফিকেট)</th>
+    <th><input type="number" name="othermalestudent"></th>
+    <th><input type="number" name="otherfemalestudent"></th>
+  </tr>
+
+</table>
+<br><br>
+<h3>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমি ও অন্যান্য বিষয়ভিত্তিক শিক্ষক-শিক্ষার্থীর অনুপাতঃ</h3>
+<table border="1" width="900" align="center" class="table2">
+  <tr>
+    <th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+      <th>বিভাগের নাম</th>
+    <th>মোট শিক্ষক</th>
+    <th>ছাত্র</th>
+    <th>ছাত্রী</th>
+    <th>মোট শিক্ষার্থী</th>
+    <th>শিক্ষকঃশিক্ষার্থী</th>
+  </tr>
+
+  <tr>
+      <th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+      <th>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+      <th><input type="number" name="totaleeeteacher"></th>
+      <th><input type="number" name="eeemalestudent"></th>
+      <th><input type="number" name="eeefemalestudent"></th>
+      <th><input type="number" name="totaleeestudent"></th>
+      <th rowspan="4"><input type="text" name="eeeteacheronupatstudent"></th>
+  </tr>
+
+  <tr>
+     <th>কম্পিউটার সায়েন্স এন্ড ইঞ্জনিয়ারিং বিভাগ</th>
+     <th><input type="number" name="totalcseteacher"></th>
+     <th><input type="number" name="csemalestudent"></th>
+     <th><input type="number" name="csefemalestudent"></th>
+     <th><input type="number" name="totalcsestudent"></th>
+  </tr>
+
+  <tr>
+     <th>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+     <th><input type="number" name="totaleteteacher"></th>
+     <th><input type="number" name="etemalestudent"></th>
+     <th><input type="number" name="etefemalestudent"></th>
+     <th><input type="number" name="totaletestudent"></th>
+  </tr>
+  <tr>
+     <th>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+     <th><input type="number" name="totaleceteacher"></th>
+     <th><input type="number" name="ecemalestudent"></th>
+     <th><input type="number" name="ecefemalstudent"></th>
+     <th><input type="number" name="totalecestudent"></th>
+  </tr>
+  <tr>
+     <th rowspan="6">যন্ত্রকৌশল অনুষদ </th>
+     <th>যন্ত্রকৌশল বিভাগ</th>
+     <th><input type="number" name="totalmeteacher"></th>
+     <th><input type="number" name="memalestudent"></th>
+     <th><input type="number" name="mefemalestudent"></th>
+     <th><input type="number" name="totalmestudent"></th>
+     <th rowspan="6"><input type="text" name="meteacheronupatstudent"></th>
+  </tr>
+  <tr>
+     <th>ইন্ডাস্ট্রিয়াল এন্ড প্রোডাকশন ইঞ্জিনিয়ারিং বিভাগ</th>
+     <th><input type="number" name="totalipeteacher"></th>
+     <th><input type="number" name="ipemalestudent"></th>
+     <th><input type="number" name="ipefemalestudent"></th>
+     <th><input type="number" name="totalipestudent"></th>
+  </tr>
+  <tr>
+     <th>গ্লাস এন্ড সিরামিক ইঞ্জিনিয়ারিং বিভাগ</th>
+     <th><input type="number" name="totalgceteacher"></th>
+     <th><input type="number" name="gcemalestudent"></th>
+     <th><input type="number" name="gcefemalestudent"></th>
+     <th><input type="number" name="totalgcestudent"></th>
+  </tr>
+  <tr>
+     <th>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+     <th><input type="number" name="totalmteteacher"></th>
+     <th><input type="number" name="mtemalestudent"></th>
+     <th><input type="number" name="mtefemalestudent"></th>
+     <th><input type="number" name="totalmtestudent"></th>
+  </tr>
+  <tr>
+     <th>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+     <th><input type="number" name="totalmseteacher"></th>
+     <th><input type="number" name="msemalestudent"></th>
+     <th><input type="number" name="msefemalestudent"></th>
+     <th><input type="number" name="totalmsestudent"></th>
+  </tr>
+  <tr>
+     <th>কেমিক্যাল এন্ড ফুড প্রোসেস ইঞ্জিনিয়ারিং বিভাগ</th>
+     <th><input type="number" name="totalcfpeteacher"></th>
+     <th><input type="number" name="cfpemalestudent"></th>
+     <th><input type="number" name="cfpefemalestudent"></th>
+     <th><input type="number" name="totalcfpestudent"></th>
+  </tr>
+  <tr>
+     <th rowspan="4">পুরকৌশল অনুষদ </th>
+     <th>পুরকৌশল বিভাগ</th>
+     <th><input type="number" name="totalceteacher"></th>
+     <th><input type="number" name="cemalestudent"></th>
+     <th><input type="number" name="cefemalestudent"></th>
+     <th><input type="number" name="totalcestudent"></th>
+     <th  rowspan="4"><input type="text" name="ceteacheronupatstudent"></th>
+  </tr>
+  <tr>
+     <th>আর্কিটেকচার বিভাগ</th>
+     <th><input type="number" name="totalarchiteacher"></th>
+     <th><input type="number" name="archimalestudent"></th>
+     <th><input type="number" name="archifemalestudent"></th>
+     <th><input type="number" name="totalarchistudent"></th>
+  </tr>
+  <tr>
+     <th>আরবান এন্ড রিজিওনাল প্লানিং বিভাগ</th>
+     <th><input type="number" name="totalurpteacher"></th>
+     <th><input type="number" name="urpmalestudent"></th>
+     <th><input type="number" name="urpfemalestudent"></th>
+     <th><input type="number" name="totalurpstudent"></th>
+  </tr>
+  <tr>
+     <th>বিল্ডিং ইঞ্জিনিয়ারিং এন্ড কনসট্রাকসন মেনেজমেন্ট বিভাগ</th>
+     <th><input type="number" name="totalbecmteacher"></th>
+     <th><input type="number" name="becmmalestudent"></th>
+     <th><input type="number" name="becmfemalestudent"></th>
+     <th><input type="number" name="totalbecmstudent"></th>
+  </tr>
+  <tr>
+     <th rowspan="4">অ্যাপ্লায়েড সায়েন্স এন্ড হিউম্যানিটিজ অনুষদ </th>
+     <th>গণিত বিভাগ</th>
+     <th><input type="number" name="totalmathteacher"></th>
+     <th><input type="number" name="mathmalestudent"></th>
+     <th><input type="number" name="mathfemalestudent"></th>
+     <th><input type="number" name="totalmathstudent"></th>
+     <th rowspan="4"><input type="text" name="mathteacheronupatstudent"></th>
+  </tr>
+  <tr>
+     <th>পদার্থ বিভাগ</th>
+     <th><input type="number" name="totalphysicsteacher"></th>
+     <th><input type="number" name="physicsmalestudent"></th>
+     <th><input type="number" name="physicsfemalestudent"></th>
+     <th><input type="number" name="totalphysicsstudent"></th>
+  </tr>
+  <tr>
+     <th>রসায়ন বিভাগ</th>
+     <th><input type="number" name="totalchemistryteacher"></th>
+     <th><input type="number" name="chemistrymalestudent"></th>
+     <th><input type="number" name="chemistryfemalestudent"></th>
+     <th><input type="number" name="totalchemistrystudent"></th>
+  </tr>
+  <tr>
+     <th>মানবিক বিভাগ</th>
+     <th><input type="number" name="totalhumteacher"></th>
+     <th><input type="number" name="hummalestudent"></th>
+     <th><input type="number" name="humfemalestudent"></th>
+     <th><input type="number" name="totalhumstudent"></th>
+  </tr>
+</table>
+<br>
+
+<h3>শিক্ষক,কর্মকর্তা,কর্মচারী ও শিক্ষার্থীর অনুপাতঃ</h3>
+<table border="1" width="900" align="center">
+  <tr>
+    <th>শিক্ষকঃশিক্ষার্থী </th>
+    <th>কর্মকর্তাঃশিক্ষার্থী</th>
+    <th>কর্মচারীঃশিক্ষার্থী</th>
+  </tr>
+  <tr>
+    <th><input type="text" name="teacheronupatstudent"></th>
+    <th><input type="text" name="officeronupatstudent"></th>
+    <th><input type="text" name="employeonupatstudent"></th>
+  </tr>
+</table>
+<br><br>
+<h3>এক নজরে বিশ্ববিদ্যালয়ের উল্লেখযোগ্য তথ্যঃ</h3>
+<table border="1" width="900" align="center">
+    <tr>
+      <th>বিশ্ববিদ্যালয়ের উল্লেখযোগ্য তথ্য পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>শিক্ষক পরিসংখ্যানঃ</th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>নিজস্ব জমির পরিমান(একর)-</th>
+      <th><input type="text" name="totalland"></th>
+      <th>মোট শিক্ষক</th>
+      <th><input type="text" name="totalteacher"></th>
+    </tr>
+    <tr>
+      <th>ছাত্রাবাস-</th>
+      <th><input type="text" name="totalhall"></th>
+      <th>মোট মহিলা শিক্ষক-</th>
+      <th><input type="text" name="totalfemaleteacher"></th>
+    </tr>
+    <tr>
+      <th>মোট অনুষদ সংখ্যা-</th>
+      <th><input type="text" name="totalfaculty"></th>
+      <th>খন্ডকালীন/চুক্তিভিত্তিক/এডহক শিক্ষক-</th>
+      <th><input type="text" name="parttimeteacher"></th>
+    </tr>
+    <tr>
+      <th>মোট বিভাগ সংখ্যা-</th>
+      <th><input type="text" name="totaldepartment"></th>
+      <th>পিএইচডি/সমমান ডিগ্রী শিক্ষক-</th>
+      <th><input type="text" name="totalphdteacher"></th>
+    </tr>
+    <tr>
+      <th>মোট ইনস্টিটিঊট সংখ্যা-</th>
+      <th><input type="text" name="totalinstitute"></th>
+      <th>অধ্যাপক-</th>
+      <th><input type="text" name="totalprofessor"></th>
+    </tr>
+    <tr>
+      <th>মোট অভিভুক্ত ও অঙ্গীভুক্ত কলেজ/মাদ্রাসার সংখ্যা-</th>
+      <th><input type="text" name="totalcollage"></th>
+      <th>সহযোগী অধ্যাপক-</th>
+      <th><input type="text" name="tatalassociateproffesor"></th>
+    </tr>
+    <tr>
+      <th>ভর্তিকৃত শিক্ষার্থী পরিসংখানঃ</th>
+      <th></th>
+      <th>সহকারী অধ্যাপক- </th>
+      <th><input type="text" name="asistantproffesor"></th>
+    </tr>
+    <tr>
+      <th>মোট আসন সংখ্যা-</th>
+      <th><input type="text" name="totalseat"></th>
+      <th>প্রভাষক-</th>
+      <th><input type="text" name="totallecturar"></th>
+    </tr>
+    <tr>
+      <th>ভরতিকৃত শিক্ষার্থী সংখ্যা- </th>
+      <th><input type="text" name="totaladmissionstudent"></th>
+      <th>অনুমোদিত অনুপস্থিত শিক্ষক-</th>
+      <th><input type="text" name="approveabsentteacher"></th>
+    </tr>
+    <tr>
+      <th>মোট ছাত্রী সংখ্যা-</th>
+      <th><input type="text" name="totalfemalestudent"></th>
+      <th>অননুমোদিত অনুপস্থিত শিক্ষক-</th>
+      <th><input type="text" name="unapprovedteacher"></th>
+    </tr>
+    <tr>
+      <th>অধ্যয়নরত মোট শিক্ষার্থী পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>কর্মকর্তা ও কর্মচারীদের পরিসংখ্যানঃ</th>
+      <th></th>
+    </tr> 
+    <tr>
+      <th>মোট শিক্ষার্থী সংখ্যা-</th>
+      <th><input type="text" name="totalstudents"></th>
+      <th>কর্মকর্তার সংখ্যা-</th>
+      <th><input type="text" name="employeenum"></th>
+    </tr>
+  
+
+    <tr>
+      <th></th>
+      <th></th>
+      <th>কর্মচারীর সংখ্যা-</th>
+      <th><input type="text" name="totalemployeenum"></th>
+    </tr>
+
+    <tr>
+      <th>স্নাতক পর্যায়ে -</th>
+      <th><input type="text" name="totalbscstudents"></th>
+      <th>শিক্ষক-শিক্ষার্থী অনুপাত-</th>
+      <th><input type="text" name="teacherstudentsratio"></th>
+    </tr>
+
+    <tr>
+      <th>স্নাতক সম্মান পর্যায়ে-</th>
+      <th><input type="text" name="totalbscsnexttudents"></th>
+      <th>কর্মকর্তা-শিক্ষার্থী অনুপাত-</th>
+      <th><input type="text" name="employeestudentsratio"></th>
+    </tr>
+    
+
+    <tr>
+      <th>স্নাতকোত্তর পর্যায়ে-</th>
+      <th><input type="text" name="totalbscsnexttotudents"></th>
+      <th>কর্মচারী-শিক্ষার্থী অনুপাত-</th>
+      <th><input type="text" name="totalemployeestudentsratio"></th>
+    </tr>
+
+    <tr>
+      <th>এমফিল পিএইচডি ও অন্যান্য উচ্চতর পর্যায়ে-</th>
+      <th><input type="text" name="mphilphdtotudents"></th>
+      <th>আবাসিক পরিসংখ্যানঃ</th>
+      <th></th>
+    </tr>
+    
+    <tr>
+      <th>মুল বিষয়ভিত্তিক শিক্ষার্থী পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>ছাত্র</th>
+      <th><input type="text" name="residencemale"></th>
+    </tr>
+     
+    <tr>
+      <th>কলা ও মানবিক-</th>
+      <th><input type="text" name="hum"></th>
+      <th>ছাত্রী-</th>
+      <th><input type="text" name="residencefemale"></th>
+    </tr>
+
+    <tr>
+      <th>সামাজিক বিজ্ঞান-</th>
+      <th><input type="text" name="socialscience"></th>
+      <th>আবাসিক শিক্ষক-</th>
+      <th><input type="text" name="residenceteacher"></th>
+    </tr>
+
+    <tr>
+      <th>শিক্ষা-</th>
+      <th><input type="text" name="education"></th>
+      <th>কর্মকর্তা-</th>
+      <th><input type="text" name="residenceemployee"></th>
+    </tr>    
+
+    <tr>
+      <th>ব্যাবসায় প্রশাসন-</th>
+      <th><input type="text" name="management"></th>
+      <th>কর্মচারী-</th>
+      <th><input type="text" name="residenceemployeer"></th>
+    </tr>
+
+
+     <tr>
+      <th>আইন-</th>
+      <th><input type="text" name="law"></th>
+      <th>সর্বমোট ব্যায়ঃ (লক্ষ টাকায়)</th>
+      <th></th>
+    </tr>
+
+    <tr>
+      <th>ফার্মেসী-</th>
+      <th><input type="text" name="phermacy"></th>
+      <th>রাজস্ব ও উন্নয়ন-</th>
+      <th><input type="text" name="vatdevelopement"></th>
+    </tr>
+
+    <tr>
+      <th>বিজ্ঞান-</th>
+      <th><input type="text" name="science"></th>
+      <th>নিজস্ব আয়-</th>
+      <th><input type="text" name="selfincome"></th>
+    </tr>
+
+
+    <tr>
+      <th>চিকিৎসা-</th>
+      <th><input type="text" name="medical"></th>
+      <th>অন্যান্য-</th>
+      <th><input type="text" name="others"></th>
+    </tr>
+
+    <tr>
+      <th>কৃষি-</th>
+      <th><input type="text" name="agri"></th>
+      <th>শিক্ষাখাত-</th>
+      <th><input type="text" name="edu"></th>
+    </tr>
+
+
+    <tr>
+      <th>প্রকৌশল ও কারিগরি-</th>
+      <th><input type="text" name="engineering"></th>
+      <th>গবেষণা খাত-</th>
+      <th><input type="text" name="research"></th>
+    </tr>
+     
+
+    <tr>
+      <th>অন্যান্য-</th>
+      <th><input type="text" name="others1"></th>
+      <th>গবেষণা বৃত্তি-</th>
+      <th><input type="text" name="researchstipend"></th>
+    </tr>
+
+
+    <tr>
+      <th>ডিগ্রিভিত্তিক উত্তীর্ণ শিক্ষার্থীর পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>বেতন ভাতা খাত-</th>
+      <th><input type="text" name="salary"></th>
+    </tr>
+     
+    <tr>
+      <th>স্নাতক পাস-</th>
+      <th><input type="text" name="masters"></th>
+      <th>পরিবহন খাত-</th>
+      <th><input type="text" name="transportsec"></th>
+    </tr>
+
+    <tr>
+      <th>স্নাতক সম্মান-</th>
+      <th><input type="text" name="masterspass"></th>
+      <th>বিদ্যুৎ খাত-</th>
+      <th><input type="text" name="electricsection"></th>
+    </tr>
+
+    <tr>
+      <th>স্নাতক(কারিগরি ও প্রযুক্তি)-</th>
+      <th><input type="text" name="masterstechnical"></th>
+      <th>অবকাঠামো উন্নয়ন ও রক্ষণাবেক্ষণ-</th>
+      <th><input type="text" name="infrasturctures"></th>
+    </tr>
+
+    <tr>
+      <th>স্নাতকোত্তর-</th>
+      <th><input type="text" name="masterspasssss"></th>
+      <th>চিকিৎসা খাত-</th>
+      <th><input type="text" name="medicalsection"></th>
+    </tr>
+
+    <tr>
+      <th>স্নাতকোত্তর(কারিগরি ও প্রযুক্তি)-</th>
+      <th><input type="text" name="masterspassssstechnical"></th>
+      <th>অন্যান্য-</th>
+      <th><input type="text" name="otherssection"></th>
+    </tr>
+
+    <tr>
+      <th>এমফিল পিএইচডি ও অন্যান্য পর্যায়ে-</th>
+      <th><input type="text" name="mastersmphilothers"></th>
+      <th>গ্রন্থাগারে বই পাঠোপকরনের বিবরণ </th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>সার্টিফিকেট, ডিপ্লোমা-</th>
+      <th><input type="text" name="certificate"></th>
+      <th>গ্রন্থাগারে সামগ্রীর মোট মজুদ সংখ্যা-</th>
+      <th><input type="text" name="libarysec"></th>
+    </tr>
+     
+     <tr>
+      <th>শিক্ষার্থী প্রতি মাথাপিছু ব্যয় পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>সংগ্রহীত সংখ্যা(Acquisition)-</th>
+      <th><input type="text" name="collectionnumber"></th>
+    </tr>
+
+
+    <tr>
+      <th>অস্বাভাবিক পরিস্থিতির জন্য ক্লাস না হওয়া দিন-</th>
+      <th><input type="text" name="suspendclassday"></th>
+      <th>পরিচালিত গবেষণা প্রকল্পের পরিসংখ্যানঃ</th>
+      <th><input type="text" name="researchcollectionnumber"></th>
+    </tr>
+</table>
+<br>
+<button type="submit">submit</button>
+</form>
+<br>
+</div>
+</body>
+</html>

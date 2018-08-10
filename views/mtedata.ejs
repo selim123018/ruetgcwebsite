@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/mte">insert</a></li>
+    <li>
+      <form action="/mtedata" method="GET">
+        <input type="number" name="mtesession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/mtelogout">logout</a></li>
+  </ul>
+ </div>     
+<div class="form">
+<h3>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="4">মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=mteuser.metotalbscstudent %></td>
+	<td><%=mteuser.memalebscstudent %></td>
+	<td><%=mteuser.mefemalebscstudent %></td>
+	<td><%=(mteuser.mefemalebscstudent+mteuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=mteuser.metotalmscstudent %></td>
+	<td><%=mteuser.memalemscstudent %></td>
+	<td><%=mteuser.mefemalemscstudent %></td>
+	<td><%=(mteuser.memalemscstudent+mteuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=mteuser.metotalmfilstudent %></td>
+	<td><%=mteuser.memalemfilstudent %></td>
+	<td><%=mteuser.mefemalemfilstudent %></td>
+	<td><%=(mteuser.memalemfilstudent+mteuser.mefemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=mteuser.metotalphdstudent %></td>
+	<td><%=mteuser.memalephdstudent %></td>
+	<td><%=mteuser.mefemalephdstudent %></td>
+	<td><%=(mteuser.memalephdstudent+mteuser.mefemalephdstudent) %></td>
+</tr>	
+</table>
+<br><br>
+</table>
+
+<h3>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+    <th rowspan="4">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="4">মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=mteuser.meforeignmalebscstudent %></td>
+	<td><%=mteuser.meforeignfemalebscstudent %></td>
+	<td><%=(mteuser.meforeignfemalebscstudent+mteuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=mteuser.meforeignmalemscstudent %></td>
+	<td><%=mteuser.meforeignfemalemscstudent %></td>
+	<td><%=(mteuser.meforeignmalemscstudent+mteuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=mteuser.meforeignmalemfilstudent %></td>
+	<td><%=mteuser.meforeignfemalemfilstudent %></td>
+	<td><%=(mteuser.meforeignmalemfilstudent+mteuser.meforeignfemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=mteuser.meforeignmalephdstudent %></td>
+	<td><%=mteuser.meforeignfemalephdstudent %></td>
+	<td><%=(mteuser.meforeignmalephdstudent+mteuser.meforeignfemalephdstudent) %></td>
+</tr>	
+</table>
+<br>
+
+<h3>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="3">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=mteuser.mefulltimemfilmaleteacher %></td>
+	<td><%=mteuser.mefulltimemfilfemaleteacher %></td>
+	<td><%=(mteuser.mefulltimemfilmaleteacher+mteuser.mefulltimemfilfemaleteacher) %></td>
+	<td><%=mteuser.meparttimemfilmaleteacher %></td>
+	<td><%=mteuser.meparttimemfilfemaleteacher %></td>
+	<td><%=(mteuser.meparttimemfilmaleteacher+mteuser.meparttimemfilfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=mteuser.mefulltimephdmaleteacher %></td>
+	<td><%=mteuser.mefulltimephdfemaleteacher %></td>
+	<td><%=(mteuser.mefulltimephdmaleteacher+mteuser.mefulltimephdfemaleteacher) %></td>
+	<td><%=mteuser.meparttimephdmaleteacher %></td>
+	<td><%=mteuser.meparttimephdfemaleteacher %></td>
+	<td><%=(mteuser.meparttimephdmaleteacher+mteuser.meparttimephdfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=mteuser.mefulltimemscmaleteacher %></td>
+	<td><%=mteuser.mefulltimemscfemaleteacher %></td>
+	<td><%=(mteuser.mefulltimemscmaleteacher+mteuser.mefulltimemscfemaleteacher) %></td>
+	<td><%=mteuser.meparttimemscmaleteacher %></td>
+	<td><%=mteuser.meparttimemscfemaleteacher %></td>
+	<td><%=(mteuser.meparttimemscmaleteacher+mteuser.meparttimemscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<td><%=mteuser.mefulltimebscmaleteacher %></td>
+	<td><%=mteuser.mefulltimebscfemaleteacher %></td>
+	<td><%=(mteuser.mefulltimebscmaleteacher+mteuser.mefulltimebscfemaleteacher)%></td>
+	<td><%=mteuser.meparttimebscmaleteacher %></td>
+	<td><%=mteuser.meparttimebscfemaleteacher %></td>
+	<td><%=(mteuser.meparttimebscmaleteacher+mteuser.meparttimebscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<td><%=mteuser.mefulltimeothermaleteacher %></td>
+	<td><%=mteuser.mefulltimeotherfemaleteacher %></td>
+	<td><%=(mteuser.mefulltimeothermaleteacher+mteuser.mefulltimeotherfemaleteacher)%></td>
+	<td><%=mteuser.meparttimeothermaleteacher %></td>
+	<td><%=mteuser.meparttimeotherfemaleteacher %></td>
+	<td><%=(mteuser.meparttimeothermaleteacher+mteuser.meparttimeotherfemaleteacher)%></td>
+</tr>
+</table>
+<br><br>
+
+<h3>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="10">মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=mteuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mteuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mteuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mteuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mteuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mteuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=mteuser.mejournal %><br><hr><%=mteuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=mteuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=mteuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=mteuser.meresearch10 %></td>
+</tr>
+</table><br>
+<h3>
+<a href="mteuser/<%=mteuser._id %>/edit">Update</a>
+<a href="mteuser/<%=mteuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

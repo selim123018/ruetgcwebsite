@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+   <div class="topnav">
+  <ul>
+    <li><a class="active" href="/eee">insert</a></li>
+    <li>
+      <form action="/eeedata" method="GET">
+        <input type="number" name="eeesession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/eeelogout">logout</a></li>
+  </ul>
+</div>   
+<div class="form">
+<h3>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="4">তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=eeeuser.eeetotalbscstudent %></td>
+	<td><%=eeeuser.eeemalebscstudent %></td>
+	<td><%=eeeuser.eeefemalebscstudent %></td>
+	<td><%=(eeeuser.eeefemalebscstudent+eeeuser.eeemalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=eeeuser.eeetotalmscstudent %></td>
+	<td><%=eeeuser.eeemalemscstudent %></td>
+	<td><%=eeeuser.eeefemalemscstudent %></td>
+	<td><%=(eeeuser.eeemalemscstudent+eeeuser.eeefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=eeeuser.eeetotalmfilstudent %></td>
+	<td><%=eeeuser.eeemalemfilstudent %></td>
+	<td><%=eeeuser.eeefemalemfilstudent %></td>
+	<td><%=(eeeuser.eeemalemfilstudent+eeeuser.eeefemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=eeeuser.eeetotalphdstudent %></td>
+	<td><%=eeeuser.eeemalephdstudent %></td>
+	<td><%=eeeuser.eeefemalephdstudent %></td>
+	<td><%=(eeeuser.eeemalephdstudent+eeeuser.eeefemalephdstudent) %></td>
+</tr>
+
+</table>
+<br><br>
+
+<h3>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="4">তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=eeeuser.eeeforeignmalebscstudent %></td>
+	<td><%=eeeuser.eeeforeignfemalebscstudent %></td>
+	<td><%=(eeeuser.eeeforeignfemalebscstudent+eeeuser.eeeforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=eeeuser.eeeforeignmalemscstudent %></td>
+	<td><%=eeeuser.eeeforeignfemalemscstudent %></td>
+	<td><%=(eeeuser.eeeforeignmalemscstudent+eeeuser.eeeforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=eeeuser.eeeforeignmalemfilstudent %></td>
+	<td><%=eeeuser.eeeforeignfemalemfilstudent %></td>
+	<td><%=(eeeuser.eeeforeignmalemfilstudent+eeeuser.eeeforeignfemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=eeeuser.eeeforeignmalephdstudent %></td>
+	<td><%=eeeuser.eeeforeignfemalephdstudent %></td>
+	<td><%=(eeeuser.eeeforeignmalephdstudent+eeeuser.eeeforeignfemalephdstudent) %></td>
+</tr>
+
+</table>
+<br><br>
+
+<h3>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="3">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=eeeuser.eeefulltimemfilmaleteacher %></td>
+	<td><%=eeeuser.eeefulltimemfilfemaleteacher %></td>
+	<td><%=(eeeuser.eeefulltimemfilmaleteacher+eeeuser.eeefulltimemfilfemaleteacher) %></td>
+	<td><%=eeeuser.eeeparttimemfilmaleteacher %></td>
+	<td><%=eeeuser.eeeparttimemfilfemaleteacher %></td>
+	<td><%=(eeeuser.eeeparttimemfilmaleteacher+eeeuser.eeeparttimemfilfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=eeeuser.eeefulltimephdmaleteacher %></td>
+	<td><%=eeeuser.eeefulltimephdfemaleteacher %></td>
+	<td><%=(eeeuser.eeefulltimephdmaleteacher+eeeuser.eeefulltimephdfemaleteacher) %></td>
+	<td><%=eeeuser.eeeparttimephdmaleteacher %></td>
+	<td><%=eeeuser.eeeparttimephdfemaleteacher %></td>
+	<td><%=(eeeuser.eeeparttimephdmaleteacher+eeeuser.eeeparttimephdfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=eeeuser.eeefulltimemscmaleteacher %></td>
+	<td><%=eeeuser.eeefulltimemscfemaleteacher %></td>
+	<td><%=(eeeuser.eeefulltimemscmaleteacher+eeeuser.eeefulltimemscfemaleteacher) %></td>
+	<td><%=eeeuser.eeeparttimemscmaleteacher %></td>
+	<td><%=eeeuser.eeeparttimemscfemaleteacher %></td>
+	<td><%=(eeeuser.eeeparttimemscmaleteacher+eeeuser.eeeparttimemscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<td><%=eeeuser.eeefulltimebscmaleteacher %></td>
+	<td><%=eeeuser.eeefulltimebscfemaleteacher %></td>
+	<td><%=(eeeuser.eeefulltimebscmaleteacher+eeeuser.eeefulltimebscfemaleteacher)%></td>
+	<td><%=eeeuser.eeeparttimebscmaleteacher %></td>
+	<td><%=eeeuser.eeeparttimebscfemaleteacher %></td>
+	<td><%=(eeeuser.eeeparttimebscmaleteacher+eeeuser.eeeparttimebscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<td><%=eeeuser.eeefulltimeothermaleteacher %></td>
+	<td><%=eeeuser.eeefulltimeotherfemaleteacher %></td>
+	<td><%=(eeeuser.eeefulltimeothermaleteacher+eeeuser.eeefulltimeotherfemaleteacher)%></td>
+	<td><%=eeeuser.eeeparttimeothermaleteacher %></td>
+	<td><%=eeeuser.eeeparttimeotherfemaleteacher %></td>
+	<td><%=(eeeuser.eeeparttimeothermaleteacher+eeeuser.eeeparttimeotherfemaleteacher)%></td>
+</tr>
+</table>
+<br><br>
+
+<h3>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="10">তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=eeeuser.eeeresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eeeuser.eeeresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eeeuser.eeeresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eeeuser.eeeresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eeeuser.eeeresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eeeuser.eeeresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=eeeuser.eeejournal %><br><hr><%=eeeuser.eeeconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=eeeuser.eeeresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=eeeuser.eeeresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=eeeuser.eeeresearch10 %></td>
+</tr>
+</table>
+<br>
+<h3>
+<a href="eeeuser/<%=eeeuser._id %>/edit">Update</a>
+<a href="eeeuser/<%=eeeuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

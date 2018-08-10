@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+    
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/educationsection">insert</a></li>
+    <li>
+      <form action="/educationsectiondata" method="GET">
+        <input type="number" name="educationsectionsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/educationsectionlogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<h3>বিদেশী শিক্ষার্থীঃ </h3> 
+<h3>
+	ছাত্রঃ<%=educationsectionuser.cseforeignbscmalestudent%> ছাত্রীঃ<%=educationsectionuser.cseforeignbsctfemalestudent%>
+	মোট:<%=(educationsectionuser.cseforeignbscmalestudent+educationsectionuser.cseforeignbsctfemalestudent)%>
+</h3>
+<table border="1" width="900" align="center" class="table1">
+<tr>
+    <th rowspan="2">ক্রমিক নং</th>
+    <th rowspan="2">লিঙ্গ(ছেলে/মেয়ে)</th>
+    <th rowspan="2">অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th rowspan="2">বিভাগ</th>
+	<th rowspan="2">ডিগ্রি</th>
+	<th rowspan="2">দেশের নাম</th>
+	<th colspan="2">শিক্ষার্থীর অধ্যয়ন ব্যয়</th>
+</tr>
+<tr>
+	<th>বৃত্তি</th>
+	<th>নিজ</th>	
+</tr>
+<tr>
+    <th>০১</th>
+    <td><%=educationsectionuser.gender1%></td>
+	<td><%=educationsectionuser.faculty1%></th>
+	<td><%=educationsectionuser.department1%></td>
+	<td><%=educationsectionuser.degree1%></td>
+	<td><%=educationsectionuser.foreignstudentcountry1%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent1%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent1%></td>
+</tr>
+<tr>
+    <th>০২</th>
+    <td><%=educationsectionuser.gender2%></td>
+	<td><%=educationsectionuser.faculty2%></td>
+	<td><%=educationsectionuser.department2%></td>
+	<td><%=educationsectionuser.degree2%></td>
+	<td><%=educationsectionuser.foreignstudentcountry2%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent2%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent2%></td>
+</tr>
+<tr>
+    <th>০৩</th>
+    <td><%=educationsectionuser.gender3%></td>
+	<td><%=educationsectionuser.faculty3%></td>
+	<td><%=educationsectionuser.department3%></td>
+	<td><%=educationsectionuser.degree3%></td>
+	<td><%=educationsectionuser.foreignstudentcountry3%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent3%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent3%></td>
+</tr>
+<tr>
+    <th>০৪</th>
+    <td><%=educationsectionuser.gender4%></td>
+	<td><%=educationsectionuser.faculty4%></td>
+	<td><%=educationsectionuser.department4%></td>
+	<td><%=educationsectionuser.degree4%></td>
+	<td><%=educationsectionuser.foreignstudentcountry4%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent4%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent4%></td>
+</tr><tr>
+    <th>০৫</th>
+    <td><%=educationsectionuser.gender5%></td>
+	<td><%=educationsectionuser.faculty5%></td>
+	<td><%=educationsectionuser.department5%></td>
+	<td><%=educationsectionuser.degree5%></td>
+	<td><%=educationsectionuser.foreignstudentcountry5%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent5%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent5%></td>
+</tr>
+<tr>
+    <th>০৬</th>
+    <td><%=educationsectionuser.gender6%></td>
+	<td><%=educationsectionuser.faculty6%></td>
+	<td><%=educationsectionuser.department6%></td>
+	<td><%=educationsectionuser.degree6%></td>
+	<td><%=educationsectionuser.foreignstudentcountry6%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent6%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent6%></td>
+</tr>
+<tr>
+    <th>0৭</th>
+    <td><%=educationsectionuser.gender7%></td>
+	<td><%=educationsectionuser.faculty7%></td>
+	<td><%=educationsectionuser.department7%></td>
+	<td><%=educationsectionuser.degree7%></td>
+	<td><%=educationsectionuser.foreignstudentcountry7%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent7%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent7%></td>
+</tr>
+</table><br>
+
+
+<h3>ড্রপ আউটের হারঃ </h3> 
+<table border="1" width="900" align="center" class="table2">
+	<tr>
+		<th rowspan="2">ক্রমিক নং</th>
+		<th rowspan="2">অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	    <th rowspan="2">বিভাগ</th>
+	    <th colspan="3">শতকরা হার</th>
+	</tr>
+	<tr>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+	</tr>
+	<tr>
+		<th>০১</th>
+		<td><%=educationsectionuser.dropoutfaculty1%></td>
+		<td><%=educationsectionuser.dropoutdepartment1%></td>
+		<td><%=educationsectionuser.dropoutmalestudent1%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent1%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent1+educationsectionuser.dropoutfemalestudent1)%></td>
+	</tr>
+	<tr>
+		<th>০২</th>
+		<td><%=educationsectionuser.dropoutfaculty2%></td>
+		<td><%=educationsectionuser.dropoutdepartment2%></td>
+		<td><%=educationsectionuser.dropoutmalestudent2%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent2%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent2+educationsectionuser.dropoutfemalestudent2)%></td>
+	</tr>
+	<tr>
+		<th>০৩</th>
+		<td><%=educationsectionuser.dropoutfaculty3%></td>
+		<td><%=educationsectionuser.dropoutdepartment3%></td>
+		<td><%=educationsectionuser.dropoutmalestudent3%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent3%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent3+educationsectionuser.dropoutfemalestudent3)%></td>
+	</tr>
+	<tr>
+		<th>০৪</th>
+		<td><%=educationsectionuser.dropoutfaculty4%></td>
+		<td><%=educationsectionuser.dropoutdepartment4%></td>
+		<td><%=educationsectionuser.dropoutmalestudent4%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent4%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent4+educationsectionuser.dropoutfemalestudent4)%></td>
+	</tr>
+	<tr>
+		<th>০৫</th>
+		<td><%=educationsectionuser.dropoutfaculty5%></td>
+		<td><%=educationsectionuser.dropoutdepartment5%></td>
+		<td><%=educationsectionuser.dropoutmalestudent5%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent5%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent5+educationsectionuser.dropoutfemalestudent5)%></td>
+	</tr>
+</table><br>
+
+<h3>বিনাবেতনে ও বৃত্তিপ্রাপ্ত শিক্ষার্থীর বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+	<tr>
+		<th>বিবরণ</th>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+	</tr>
+	<tr>
+		<th>বিনাবেতনে অধ্যায়ন্রত শিক্ষার্থী</th>
+		<td><%=educationsectionuser.fullfreemalestudent%></td>
+		<td><%=educationsectionuser.fullfreefemalestudent%></td>
+		<td><%=(educationsectionuser.fullfreemalestudent+educationsectionuser.fullfreefemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>স্কলারশিপ ও ফেলশিপ প্রাপ্ত শিক্ষার্থীর সংখ্যা</th>
+		<td><%=educationsectionuser.schoolarshipandfeloshipmalestudent%></td>
+		<td><%=educationsectionuser.schoolarshipandfeloshipfemalestudent%></td>
+		<td><%=(educationsectionuser.schoolarshipandfeloshipmalestudent+educationsectionuser.schoolarshipandfeloshipfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>স্কলারশিপ</th>
+		<td><%=educationsectionuser.schoolarshipmalestudent%></td>
+		<td><%=educationsectionuser.schoolarshipfemalestudent%></td>
+		<td><%=(educationsectionuser.schoolarshipmalestudent+educationsectionuser.schoolarshipfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>ফেলশিপ</th>
+		<td><%=educationsectionuser.feloshipmalestudent%></td>
+		<td><%=educationsectionuser.feloshipfemalestudent%></td>
+		<td><%=(educationsectionuser.feloshipmalestudent+educationsectionuser.feloshipfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>অন্যান্য বৃত্তি</th>
+		<td><%=educationsectionuser.otherschoolarshipmalestudent%></td>
+		<td><%=educationsectionuser.otherschoolarshipfemalestudent%></td>
+		<td><%=(educationsectionuser.otherschoolarshipmalestudent+educationsectionuser.otherschoolarshipfemalestudent)%></td>
+	</tr>
+</table><br>
+
+<h3>জানুয়ারী থেকে ডিসেম্বরের মধ্যে বিশ্ববিদ্যালয়ের ডিগ্রিপ্রাপ্ত শিক্ষার্থীর পরিসংখানঃ</h3>
+<table border="1" width="900" align="center" class="table4">
+	<tr>
+		<th rowspan="2">ডিগ্রির নাম</th>
+		<th rowspan="2">বিষয়</th>
+		<th rowspan="2">সেশন</th>
+		<th colspan="3">পরীক্ষার্থীর সংখ্যা</th>
+		<th colspan="3">উত্তীর্ণ</th>
+		<th rowspan="2">শতকরা হার</th>
+	</tr>
+	<tr>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+	</tr>
+	<tr>
+		<th>স্নাতক(সম্মান)</th>
+		<th>বি এসসি(সম্মান)</th>
+		<td><%=educationsectionuser.bscpasssession%></td>
+		<td><%=educationsectionuser.bscadmitmalestudent%></td>
+		<td><%=educationsectionuser.bscadmitfemalestudent%></td>
+		<td><%=(educationsectionuser.bscadmitmalestudent+educationsectionuser.bscadmitfemalestudent)%></td>
+		<td><%=educationsectionuser.bscpassmalestudent%></td>
+		<td><%=educationsectionuser.bscpassfemalestudent%></td>
+		<td><%=(educationsectionuser.bscpassmalestudent+educationsectionuser.bscpassfemalestudent)%></td>
+		<td><%=educationsectionuser.percentageofbscpass%></td>
+	</tr>
+	<tr>
+		<th>মাস্টার্স</th>
+		<th>এম এসসি</th>
+		<td><%=educationsectionuser.mscpasssession%></td>
+		<td><%=educationsectionuser.mscadmitmalestudent%></td>
+		<td><%=educationsectionuser.mscadmitfemalestudent%></td>
+        <td><%=(educationsectionuser.mscadmitmalestudent+educationsectionuser.mscadmitfemalestudent)%></td>
+		<td><%=educationsectionuser.mscpassmalestudent%></td>
+		<td><%=educationsectionuser.mscpassfemalestudent%></td>
+		<td><%=(educationsectionuser.mscpassmalestudent+educationsectionuser.mscpassfemalestudent)%></td>
+		<td><%=educationsectionuser.percentageofmscpass%></td>
+	</tr>
+	<tr>
+		<th>এম ফিল</th>
+		<th>এম.ফিল</th>
+		<td><%=educationsectionuser.mfilpasssession%></td>
+		<td><%=educationsectionuser.mfiladmitmalestudent%></td>
+		<td><%=educationsectionuser.mfiladmitfemalestudent%></td>
+		<td><%=(educationsectionuser.mfiladmitmalestudent+educationsectionuser.mfiladmitfemalestudent)%></td>
+		<td><%=educationsectionuser.mfilpassmalestudent%></td>
+		<td><%=educationsectionuser.mfilpassfemalestudent%></td>
+		<td><%=(educationsectionuser.mfilpassmalestudent+educationsectionuser.mfilpassfemalestudent)%></td>
+		<td><%=educationsectionuser.percentageofmfilpass%></td>
+	</tr>
+	<tr>
+		<th>পিএইচ ডি</th>
+		<th>পিএইচ.ডি</th>
+		<td><%=educationsectionuser.phdpasssession%></td>
+		<td><%=educationsectionuser.phdadmitmalestudent%></td>
+		<td><%=educationsectionuser.phdadmitfemalestudent%></td>
+		<td><%=(educationsectionuser.phdadmitmalestudent+educationsectionuser.phdadmitfemalestudent)%></td>
+		<td><%=educationsectionuser.phdpassmalestudent%></td>
+		<td><%=educationsectionuser.phdpassfemalestudent%></td>
+		<td><%=(educationsectionuser.phdpassmalestudent+educationsectionuser.phdpassfemalestudent)%></td>
+		<td><%=educationsectionuser.percentageofphdpass%></td>
+	</tr>
+</table>
+<br>
+<h3>
+<a href="educationsectionuser/<%=educationsectionuser._id %>/edit">Update</a>
+<a href="educationsectionuser/<%=educationsectionuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

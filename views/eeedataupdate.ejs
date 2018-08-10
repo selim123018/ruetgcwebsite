@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+   <div class="topnav">
+  <ul>
+    <li><a class="active" href="/eee">insert</a></li>
+    <li>
+      <form action="/eeedata" method="GET">
+        <input type="number" name="eeesession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/eeelogout">logout</a></li>
+  </ul>
+</div>   
+<div class="form">
+<form action="/eeeuser/<%=eeeuser._id %>" method="post">
+
+<h3>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="2">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+   
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="4">তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<th><input type="number" name="eeetotalbscstudent" value="<%=eeeuser.eeetotalbscstudent %>"></th>
+	<th><input type="number" name="eeemalebscstudent" value="<%=eeeuser.eeemalebscstudent%>"></th>
+	<th><input type="number" name="eeefemalebscstudent" value="<%=eeeuser.eeefemalebscstudent%>"></th>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<th><input type="number" name="eeetotalmscstudent" value="<%=eeeuser.eeetotalmscstudent%>"></th>
+	<th><input type="number" name="eeemalemscstudent" value="<%=eeeuser.eeemalemscstudent%>"></th>
+	<th><input type="number" name="eeefemalemscstudent" value="<%=eeeuser.eeefemalemscstudent%>"></th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<th><input type="number" name="eeetotalmfilstudent" value="<%=eeeuser.eeetotalmfilstudent%>"></th>
+	<th><input type="number" name="eeemalemfilstudent" value="<%=eeeuser.eeemalemfilstudent%>"></th>
+	<th><input type="number" name="eeefemalemfilstudent" value="<%=eeeuser.eeefemalemfilstudent%>"></th>
+</tr>
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<th><input type="number" name="eeetotalphdstudent" value="<%=eeeuser.eeetotalphdstudent%>"></th>
+	<th><input type="number" name="eeemalephdstudent" value="<%=eeeuser.eeemalephdstudent%>"></th>
+	<th><input type="number" name="eeefemalephdstudent" value="<%=eeeuser.eeefemalephdstudent%>"></th>
+</tr>
+</table>
+<br><br>
+
+<h3>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="2">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+   
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="4">তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<th><input type="number" name="eeeforeignmalebscstudent" value="<%=eeeuser.eeeforeignmalebscstudent%>"></th>
+	<th><input type="number" name="eeeforeignfemalebscstudent" value="<%=eeeuser.eeeforeignfemalebscstudent%>"></th>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<th><input type="number" name="eeeforeignmalemscstudent" value="<%=eeeuser.eeeforeignmalemscstudent%>"></th>
+	<th><input type="number" name="eeeforeignfemalemscstudent" value="<%=eeeuser.eeeforeignfemalemscstudent%>"></th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<th><input type="number" name="eeeforeignmalemfilstudent" value="<%=eeeuser.eeeforeignmalemfilstudent%>"></th>
+	<th><input type="number" name="eeeforeignfemalemfilstudent" value="<%=eeeuser.eeeforeignfemalemfilstudent%>"></th>
+</tr>
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<th><input type="number" name="eeeforeignmalephdstudent" value="<%=eeeuser.eeeforeignmalephdstudent%>"></th>
+	<th><input type="number" name="eeeforeignfemalephdstudent" value="<%=eeeuser.eeeforeignfemalephdstudent%>"></th>
+</tr>
+</table>
+<br><br>
+
+
+<h3>কম্পিউটার প্রকৌশল বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="2">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="2">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<th><input type="number" name="eeefulltimemfilmaleteacher" value="<%=eeeuser.eeefulltimemfilmaleteacher%>"></th>
+	<th><input type="number" name="eeefulltimemfilfemaleteacher" value="<%=eeeuser.eeefulltimemfilfemaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimemfilmaleteacher" value="<%=eeeuser.eeeparttimemfilmaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimemfilfemaleteacher" value="<%=eeeuser.eeeparttimemfilfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<th><input type="number" name="eeefulltimephdmaleteacher" value="<%=eeeuser.eeefulltimephdmaleteacher%>"></th>
+	<th><input type="number" name="eeefulltimephdfemaleteacher" value="<%=eeeuser.eeefulltimephdfemaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimephdmaleteacher" value="<%=eeeuser.eeeparttimephdmaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimephdfemaleteacher" value="<%=eeeuser.eeeparttimephdfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<th><input type="number" name="eeefulltimemscmaleteacher" value="<%=eeeuser.eeefulltimemscmaleteacher%>"></th>
+	<th><input type="number" name="eeefulltimemscfemaleteacher" value="<%=eeeuser.eeefulltimemscfemaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimemscmaleteacher" value="<%=eeeuser.eeeparttimemscmaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimemscfemaleteacher" value="<%=eeeuser.eeeparttimemscfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<th><input type="number" name="eeefulltimebscmaleteacher" value="<%=eeeuser.eeefulltimebscmaleteacher%>"></th>
+	<th><input type="number" name="eeefulltimebscfemaleteacher" value="<%=eeeuser.eeefulltimebscfemaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimebscmaleteacher" value="<%=eeeuser.eeeparttimebscmaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimebscfemaleteacher" value="<%=eeeuser.eeeparttimebscfemaleteacher%>"></th>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<th><input type="number" name="eeefulltimeothermaleteacher" value="<%=eeeuser.eeefulltimeothermaleteacher%>"></th>
+	<th><input type="number" name="eeefulltimeotherfemaleteacher" value="<%=eeeuser.eeefulltimeotherfemaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimeothermaleteacher" value="<%=eeeuser.eeeparttimeothermaleteacher%>"></th>
+	<th><input type="number" name="eeeparttimeotherfemaleteacher" value="<%=eeeuser.eeeparttimeotherfemaleteacher%>"></th>
+</tr>
+</table>
+<br><br>
+
+<h3>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="10">তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<th><input type="number" name="eeeresearch1" value="<%=eeeuser.eeeresearch1%>"></th>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<th><input type="number" name="eeeresearch2" value="<%=eeeuser.eeeresearch2%>"></th>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<th><input type="number" name="eeeresearch3" value="<%=eeeuser.eeeresearch3%>"></th>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<th><input type="number" name="eeeresearch4" value="<%=eeeuser.eeeresearch4%>"></th>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<th><input type="number" name="eeeresearch5" value="<%=eeeuser.eeeresearch5%>"></th>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<th><input type="number" name="eeeresearch6" value="<%=eeeuser.eeeresearch6%>"></th>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<th><input type="number" name="eeejournal" value="<%=eeeuser.eeejournal%>"><br>
+<input type="number" name="eeeconference" value="<%=eeeuser.eeeconference%>">
+</th>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<th><input type="number" name="eeeresearch8" value="<%=eeeuser.eeeresearch8%>"></th>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<th><input type="number" name="eeeresearch9" value="<%=eeeuser.eeeresearch9%>"></th>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<th><input type="number" name="eeeresearch10" value="<%=eeeuser.eeeresearch10%>"></th>
+</tr>
+</table><br>
+<button type="submit">update</button>
+</form>
+<br>
+</div>
+</body>
+</html>

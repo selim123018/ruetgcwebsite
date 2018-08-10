@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/hall">insert</a></li>
+    <li>
+      <form action="/halldata" method="GET">
+        <input type="number" name="hallsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/halllogout">logout</a></li>
+  </ul>
+ </div>  
+<div class="form">
+<form action="/hallnew" method="post">
+<p> সালঃ<input type="number" name="session"></p>
+<h3>আবাসিক শিক্ষার্থীর পরিসংখ্যান</h3>
+<table border="1" width="900" align="center">
+	<tr>
+		<th rowspan="2">হল/ডরমিটরি নাম</th>
+		<th colspan="2">সংখ্যা</th>
+	</tr>
+	<tr>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+	</tr>
+	<tr>
+		<th>বঙ্গবন্ধু হল</th>
+		<th><input type="number" name="bongobondhuhallmalestudent"></th>
+		<th><input type="number" name="bongobondhuhallfemalestudent"></th>
+	</tr>
+	<tr>
+		<th>শহীদ প্রেসিডেন্ট জিয়াউর রহমান হল</th>
+		<th><input type="number" name="ziahallmalestudent"></th>
+		<th><input type="number" name="ziahallfemalestudent"></th>
+	</tr>
+	<tr>
+		<th>শহীদ লেঃ সেলিম হল</th>
+		<th><input type="number" name="selimhallmalestudent"></th>
+		<th><input type="number" name="selimhallfemalestudent"></th>
+	</tr>
+	<tr>
+		<th>শহীদ শহিদুল ইসলাম হল</th>
+		<th><input type="number" name="shohidulhallmalestudent"></th>
+		<th><input type="number" name="shohidulhallfemalestudent"></th>
+	</tr>
+	<tr>
+		<th>শহীদ আব্দুল হামিদ হল</th>
+		<th><input type="number" name="hamidhallmalestudent"></th>
+		<th><input type="number" name="hamidhallfemalestudent"></th>
+	</tr>
+	<tr>
+		<th>টিনশেড হল</th>
+		<th><input type="number" name="tinshedhallmalestudent"></th>
+		<th><input type="number" name="tinshedhallfemalestudent"></th>
+	</tr>
+	<tr>
+		<th>দেশরত্ন শেখ হাসিনা হল</th>
+		<th><input type="number" name="shekhhasinahallmalestudent"></th>
+		<th><input type="number" name="shekhhasinahallfemalestudent"></th>
+	</tr>
+</table><br>
+<button type="submit">submit</button>
+</form>
+<br>
+</div>
+</body>
+</html>

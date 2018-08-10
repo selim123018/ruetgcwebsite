@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/ete">insert</a></li>
+    <li>
+      <form action="/ecedata" method="GET">
+        <input type="number" name="ecesession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/ecelogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<h3>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="4">ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=eceuser.ecetotalbscstudent %></td>
+	<td><%=eceuser.ecemalebscstudent %></td>
+	<td><%=eceuser.ecefemalebscstudent %></td>
+	<td><%=(eceuser.ecefemalebscstudent+eceuser.ecemalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=eceuser.ecetotalmscstudent %></td>
+	<td><%=eceuser.ecemalemscstudent %></td>
+	<td><%=eceuser.ecefemalemscstudent %></td>
+	<td><%=(eceuser.ecemalemscstudent+eceuser.ecefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=eceuser.ecetotalmfilstudent %></td>
+	<td><%=eceuser.ecemalemfilstudent %></td>
+	<td><%=eceuser.ecefemalemfilstudent %></td>
+	<td><%=(eceuser.ecemalemfilstudent+eceuser.ecefemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=eceuser.ecetotalphdstudent %></td>
+	<td><%=eceuser.ecemalephdstudent %></td>
+	<td><%=eceuser.ecefemalephdstudent %></td>
+	<td><%=(eceuser.ecemalephdstudent+eceuser.ecefemalephdstudent) %></td>
+</tr>
+</table>
+<br>
+
+<h3>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="4">ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=eceuser.eceforeignmalebscstudent %></td>
+	<td><%=eceuser.eceforeignfemalebscstudent %></td>
+	<td><%=(eceuser.eceforeignfemalebscstudent+eceuser.eceforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=eceuser.eceforeignmalemscstudent %></td>
+	<td><%=eceuser.eceforeignfemalemscstudent %></td>
+	<td><%=(eceuser.eceforeignmalemscstudent+eceuser.eceforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=eceuser.eceforeignmalemfilstudent %></td>
+	<td><%=eceuser.eceforeignfemalemfilstudent %></td>
+	<td><%=(eceuser.eceforeignmalemfilstudent+eceuser.eceforeignfemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=eceuser.eceforeignmalephdstudent %></td>
+	<td><%=eceuser.eceforeignfemalephdstudent %></td>
+	<td><%=(eceuser.eceforeignmalephdstudent+eceuser.eceforeignfemalephdstudent) %></td>
+</tr>
+</table>
+<br>
+
+<h3>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="3">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=eceuser.ecefulltimemfilmaleteacher %></td>
+	<td><%=eceuser.ecefulltimemfilfemaleteacher %></td>
+	<td><%=(eceuser.ecefulltimemfilmaleteacher+eceuser.ecefulltimemfilfemaleteacher) %></td>
+	<td><%=eceuser.eceparttimemfilmaleteacher %></td>
+	<td><%=eceuser.eceparttimemfilfemaleteacher %></td>
+	<td><%=(eceuser.eceparttimemfilmaleteacher+eceuser.eceparttimemfilfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=eceuser.ecefulltimephdmaleteacher %></td>
+	<td><%=eceuser.ecefulltimephdfemaleteacher %></td>
+	<td><%=(eceuser.ecefulltimephdmaleteacher+eceuser.ecefulltimephdfemaleteacher) %></td>
+	<td><%=eceuser.eceparttimephdmaleteacher %></td>
+	<td><%=eceuser.eceparttimephdfemaleteacher %></td>
+	<td><%=(eceuser.eceparttimephdmaleteacher+eceuser.eceparttimephdfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=eceuser.ecefulltimemscmaleteacher %></td>
+	<td><%=eceuser.ecefulltimemscfemaleteacher %></td>
+	<td><%=(eceuser.ecefulltimemscmaleteacher+eceuser.ecefulltimemscfemaleteacher) %></td>
+	<td><%=eceuser.eceparttimemscmaleteacher %></td>
+	<td><%=eceuser.eceparttimemscfemaleteacher %></td>
+	<td><%=(eceuser.eceparttimemscmaleteacher+eceuser.eceparttimemscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<td><%=eceuser.ecefulltimebscmaleteacher %></td>
+	<td><%=eceuser.ecefulltimebscfemaleteacher %></td>
+	<td><%=(eceuser.ecefulltimebscmaleteacher+eceuser.ecefulltimebscfemaleteacher)%></td>
+	<td><%=eceuser.eceparttimebscmaleteacher %></td>
+	<td><%=eceuser.eceparttimebscfemaleteacher %></td>
+	<td><%=(eceuser.eceparttimebscmaleteacher+eceuser.eceparttimebscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<td><%=eceuser.ecefulltimeothermaleteacher %></td>
+	<td><%=eceuser.ecefulltimeotherfemaleteacher %></td>
+	<td><%=(eceuser.ecefulltimeothermaleteacher+eceuser.ecefulltimeotherfemaleteacher)%></td>
+	<td><%=eceuser.eceparttimeothermaleteacher %></td>
+	<td><%=eceuser.eceparttimeotherfemaleteacher %></td>
+	<td><%=(eceuser.eceparttimeothermaleteacher+eceuser.eceparttimeotherfemaleteacher)%></td>
+</tr>
+</table>
+<br>
+
+<h3>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="10">ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=eceuser.eceresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eceuser.eceresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eceuser.eceresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eceuser.eceresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eceuser.eceresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eceuser.eceresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ</th>
+<td><%=eceuser.ecejournal %><br><hr><%=eceuser.ececonference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=eceuser.eceresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=eceuser.eceresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=eceuser.eceresearch10 %></td>
+</tr>
+</table><br>
+<h3>
+<a href="eceuser/<%=eceuser._id %>/edit">Update</a>
+<a href="eceuser/<%=eceuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

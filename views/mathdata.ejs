@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/math">insert</a></li>
+    <li>
+      <form action="/mathdata" method="GET">
+        <input type="number" name="mathsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/mathlogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<h3>গণিত বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">অ্যাপ্লায়েড সায়েন্স এন্ড হিউম্যানিটিজ অনুষদ</th>
+	<th rowspan="4">গণিত বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=mathuser.metotalbscstudent %></td>
+	<td><%=mathuser.memalebscstudent %></td>
+	<td><%=mathuser.mefemalebscstudent %></td>
+	<td><%=(mathuser.mefemalebscstudent+mathuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=mathuser.metotalmscstudent %></td>
+	<td><%=mathuser.memalemscstudent %></td>
+	<td><%=mathuser.mefemalemscstudent %></td>
+	<td><%=(mathuser.memalemscstudent+mathuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=mathuser.metotalmfilstudent %></td>
+	<td><%=mathuser.memalemfilstudent %></td>
+	<td><%=mathuser.mefemalemfilstudent %></td>
+	<td><%=(mathuser.memalemfilstudent+mathuser.mefemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=mathuser.metotalphdstudent %></td>
+	<td><%=mathuser.memalephdstudent %></td>
+	<td><%=mathuser.mefemalephdstudent %></td>
+	<td><%=(mathuser.memalephdstudent+mathuser.mefemalephdstudent) %></td>
+</tr>	
+</table>
+<br>
+
+<h3>গণিত বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">অ্যাপ্লায়েড সায়েন্স এন্ড হিউম্যানিটিজ অনুষদ</th>
+	<th rowspan="4">গণিত বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=mathuser.meforeignmalebscstudent %></td>
+	<td><%=mathuser.meforeignfemalebscstudent %></td>
+	<td><%=(mathuser.meforeignfemalebscstudent+mathuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=mathuser.meforeignmalemscstudent %></td>
+	<td><%=mathuser.meforeignfemalemscstudent %></td>
+	<td><%=(mathuser.meforeignmalemscstudent+mathuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=mathuser.meforeignmalemfilstudent %></td>
+	<td><%=mathuser.meforeignfemalemfilstudent %></td>
+	<td><%=(mathuser.meforeignmalemfilstudent+mathuser.meforeignfemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=mathuser.meforeignmalephdstudent %></td>
+	<td><%=mathuser.meforeignfemalephdstudent %></td>
+	<td><%=(mathuser.meforeignmalephdstudent+mathuser.meforeignfemalephdstudent) %></td>
+</tr>	
+</table>
+<br>
+
+<h3>গণিত বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="3">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=mathuser.mefulltimemfilmaleteacher %></td>
+	<td><%=mathuser.mefulltimemfilfemaleteacher %></td>
+	<td><%=(mathuser.mefulltimemfilmaleteacher+mathuser.mefulltimemfilfemaleteacher) %></td>
+	<td><%=mathuser.meparttimemfilmaleteacher %></td>
+	<td><%=mathuser.meparttimemfilfemaleteacher %></td>
+	<td><%=(mathuser.meparttimemfilmaleteacher+mathuser.meparttimemfilfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=mathuser.mefulltimephdmaleteacher %></td>
+	<td><%=mathuser.mefulltimephdfemaleteacher %></td>
+	<td><%=(mathuser.mefulltimephdmaleteacher+mathuser.mefulltimephdfemaleteacher) %></td>
+	<td><%=mathuser.meparttimephdmaleteacher %></td>
+	<td><%=mathuser.meparttimephdfemaleteacher %></td>
+	<td><%=(mathuser.meparttimephdmaleteacher+mathuser.meparttimephdfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=mathuser.mefulltimemscmaleteacher %></td>
+	<td><%=mathuser.mefulltimemscfemaleteacher %></td>
+	<td><%=(mathuser.mefulltimemscmaleteacher+mathuser.mefulltimemscfemaleteacher) %></td>
+	<td><%=mathuser.meparttimemscmaleteacher %></td>
+	<td><%=mathuser.meparttimemscfemaleteacher %></td>
+	<td><%=(mathuser.meparttimemscmaleteacher+mathuser.meparttimemscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<td><%=mathuser.mefulltimebscmaleteacher %></td>
+	<td><%=mathuser.mefulltimebscfemaleteacher %></td>
+	<td><%=(mathuser.mefulltimebscmaleteacher+mathuser.mefulltimebscfemaleteacher)%></td>
+	<td><%=mathuser.meparttimebscmaleteacher %></td>
+	<td><%=mathuser.meparttimebscfemaleteacher %></td>
+	<td><%=(mathuser.meparttimebscmaleteacher+mathuser.meparttimebscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<td><%=mathuser.mefulltimeothermaleteacher %></td>
+	<td><%=mathuser.mefulltimeotherfemaleteacher %></td>
+	<td><%=(mathuser.mefulltimeothermaleteacher+mathuser.mefulltimeotherfemaleteacher)%></td>
+	<td><%=mathuser.meparttimeothermaleteacher %></td>
+	<td><%=mathuser.meparttimeotherfemaleteacher %></td>
+	<td><%=(mathuser.meparttimeothermaleteacher+mathuser.meparttimeotherfemaleteacher)%></td>
+</tr>
+</table>
+<br>
+
+<h3>গণিত বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">অ্যাপ্লায়েড সায়েন্স এন্ড হিউম্যানিটিজ অনুষদ</th>
+	<th rowspan="10">গণিত বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=mathuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mathuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mathuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mathuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mathuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mathuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=mathuser.mejournal%><br><hr><%=mathuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=mathuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=mathuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=mathuser.meresearch10 %></td>
+</tr>
+</table><br>
+<h3>
+<a href="mathuser/<%=mathuser._id %>/edit">Update</a>
+<a href="mathuser/<%=mathuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/mse">insert</a></li>
+    <li>
+      <form action="/msedata" method="GET">
+        <input type="number" name="msesession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/mselogout">logout</a></li>
+  </ul>
+ </div>  
+<div class="form">
+<h3>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="4">মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=mseuser.metotalbscstudent %></td>
+	<td><%=mseuser.memalebscstudent %></td>
+	<td><%=mseuser.mefemalebscstudent %></td>
+	<td><%=(mseuser.mefemalebscstudent+mseuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=mseuser.metotalmscstudent %></td>
+	<td><%=mseuser.memalemscstudent %></td>
+	<td><%=mseuser.mefemalemscstudent %></td>
+	<td><%=(mseuser.memalemscstudent+mseuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=mseuser.metotalmfilstudent %></td>
+	<td><%=mseuser.memalemfilstudent %></td>
+	<td><%=mseuser.mefemalemfilstudent %></td>
+	<td><%=(mseuser.memalemfilstudent+mseuser.mefemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=mseuser.metotalphdstudent %></td>
+	<td><%=mseuser.memalephdstudent %></td>
+	<td><%=mseuser.mefemalephdstudent %></td>
+	<td><%=(mseuser.memalephdstudent+mseuser.mefemalephdstudent) %></td>
+</tr>	
+</table>
+<br>
+
+<h3>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="4">মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=mseuser.meforeignmalebscstudent %></td>
+	<td><%=mseuser.meforeignfemalebscstudent %></td>
+	<td><%=(mseuser.meforeignfemalebscstudent+mseuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=mseuser.meforeignmalemscstudent %></td>
+	<td><%=mseuser.meforeignfemalemscstudent %></td>
+	<td><%=(mseuser.meforeignmalemscstudent+mseuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=mseuser.meforeignmalemfilstudent %></td>
+	<td><%=mseuser.meforeignfemalemfilstudent %></td>
+	<td><%=(mseuser.meforeignmalemfilstudent+mseuser.meforeignfemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=mseuser.meforeignmalephdstudent %></td>
+	<td><%=mseuser.meforeignfemalephdstudent %></td>
+	<td><%=(mseuser.meforeignmalephdstudent+mseuser.meforeignfemalephdstudent) %></td>
+</tr>	
+</table>
+<br>
+
+<h3>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="3">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=mseuser.mefulltimemfilmaleteacher %></td>
+	<td><%=mseuser.mefulltimemfilfemaleteacher %></td>
+	<td><%=(mseuser.mefulltimemfilmaleteacher+mseuser.mefulltimemfilfemaleteacher) %></td>
+	<td><%=mseuser.meparttimemfilmaleteacher %></td>
+	<td><%=mseuser.meparttimemfilfemaleteacher %></td>
+	<td><%=(mseuser.meparttimemfilmaleteacher+mseuser.meparttimemfilfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=mseuser.mefulltimephdmaleteacher %></td>
+	<td><%=mseuser.mefulltimephdfemaleteacher %></td>
+	<td><%=(mseuser.mefulltimephdmaleteacher+mseuser.mefulltimephdfemaleteacher) %></td>
+	<td><%=mseuser.meparttimephdmaleteacher %></td>
+	<td><%=mseuser.meparttimephdfemaleteacher %></td>
+	<td><%=(mseuser.meparttimephdmaleteacher+mseuser.meparttimephdfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=mseuser.mefulltimemscmaleteacher %></td>
+	<td><%=mseuser.mefulltimemscfemaleteacher %></td>
+	<td><%=(mseuser.mefulltimemscmaleteacher+mseuser.mefulltimemscfemaleteacher) %></td>
+	<td><%=mseuser.meparttimemscmaleteacher %></td>
+	<td><%=mseuser.meparttimemscfemaleteacher %></td>
+	<td><%=(mseuser.meparttimemscmaleteacher+mseuser.meparttimemscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<td><%=mseuser.mefulltimebscmaleteacher %></td>
+	<td><%=mseuser.mefulltimebscfemaleteacher %></td>
+	<td><%=(mseuser.mefulltimebscmaleteacher+mseuser.mefulltimebscfemaleteacher)%></td>
+	<td><%=mseuser.meparttimebscmaleteacher %></td>
+	<td><%=mseuser.meparttimebscfemaleteacher %></td>
+	<td><%=(mseuser.meparttimebscmaleteacher+mseuser.meparttimebscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<td><%=mseuser.mefulltimeothermaleteacher %></td>
+	<td><%=mseuser.mefulltimeotherfemaleteacher %></td>
+	<td><%=(mseuser.mefulltimeothermaleteacher+mseuser.mefulltimeotherfemaleteacher)%></td>
+	<td><%=mseuser.meparttimeothermaleteacher %></td>
+	<td><%=mseuser.meparttimeotherfemaleteacher %></td>
+	<td><%=(mseuser.meparttimeothermaleteacher+mseuser.meparttimeotherfemaleteacher)%></td>
+</tr>
+</table>
+<br>
+
+<h3>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="10">মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=mseuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mseuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mseuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mseuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mseuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mseuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=mseuser.mejournal%><br><hr><%=mseuser.meconference%></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=mseuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=mseuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=mseuser.meresearch10 %></td>
+</tr>
+</table><br>
+<h3>
+<a href="mseuser/<%=mseuser._id %>/edit">Update</a>
+<a href="mseuser/<%=mseuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

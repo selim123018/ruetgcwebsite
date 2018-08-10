@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/archi">insert</a></li>
+    <li>
+      <form action="/archidata" method="GET">
+        <input type="number" name="archisession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/archilogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<h3>আর্কিটেকচার বিভাগের শিক্ষার্থীঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th rowspan="4">আর্কিটেকচার বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=archiuser.metotalbscstudent %></td>
+	<td><%=archiuser.memalebscstudent %></td>
+	<td><%=archiuser.mefemalebscstudent %></td>
+	<td><%=(archiuser.mefemalebscstudent+archiuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=archiuser.metotalmscstudent %></td>
+	<td><%=archiuser.memalemscstudent %></td>
+	<td><%=archiuser.mefemalemscstudent %></td>
+	<td><%=(archiuser.memalemscstudent+archiuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=archiuser.metotalmfilstudent %></td>
+	<td><%=archiuser.memalemfilstudent %></td>
+	<td><%=archiuser.mefemalemfilstudent %></td>
+	<td><%=(archiuser.memalemfilstudent+archiuser.mefemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=archiuser.metotalphdstudent %></td>
+	<td><%=archiuser.memalephdstudent %></td>
+	<td><%=archiuser.mefemalephdstudent %></td>
+	<td><%=(archiuser.memalephdstudent+archiuser.mefemalephdstudent) %></td>
+</tr>	
+</table>
+<br>
+
+<h3>আর্কিটেকচার বিভাগের শিক্ষার্থী(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th rowspan="4">আর্কিটেকচার বিভাগ</th>
+	<th>বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=archiuser.meforeignmalebscstudent %></td>
+	<td><%=archiuser.meforeignfemalebscstudent %></td>
+	<td><%=(archiuser.meforeignfemalebscstudent+archiuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=archiuser.meforeignmalemscstudent %></td>
+	<td><%=archiuser.meforeignfemalemscstudent %></td>
+	<td><%=(archiuser.meforeignmalemscstudent+archiuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=archiuser.meforeignmalemfilstudent %></td>
+	<td><%=archiuser.meforeignfemalemfilstudent %></td>
+	<td><%=(archiuser.meforeignmalemfilstudent+archiuser.meforeignfemalemfilstudent) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=archiuser.meforeignmalephdstudent %></td>
+	<td><%=archiuser.meforeignfemalephdstudent %></td>
+	<td><%=(archiuser.meforeignmalephdstudent+archiuser.meforeignfemalephdstudent) %></td>
+</tr>	
+</table>
+<br>
+
+<h3>আর্কিটেকচার বিভাগের ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="3">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=archiuser.mefulltimemfilmaleteacher %></td>
+	<td><%=archiuser.mefulltimemfilfemaleteacher %></td>
+	<td><%=(archiuser.mefulltimemfilmaleteacher+archiuser.mefulltimemfilfemaleteacher) %></td>
+	<td><%=archiuser.meparttimemfilmaleteacher %></td>
+	<td><%=archiuser.meparttimemfilfemaleteacher %></td>
+	<td><%=(archiuser.meparttimemfilmaleteacher+archiuser.meparttimemfilfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=archiuser.mefulltimephdmaleteacher %></td>
+	<td><%=archiuser.mefulltimephdfemaleteacher %></td>
+	<td><%=(archiuser.mefulltimephdmaleteacher+archiuser.mefulltimephdfemaleteacher) %></td>
+	<td><%=archiuser.meparttimephdmaleteacher %></td>
+	<td><%=archiuser.meparttimephdfemaleteacher %></td>
+	<td><%=(archiuser.meparttimephdmaleteacher+archiuser.meparttimephdfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=archiuser.mefulltimemscmaleteacher %></td>
+	<td><%=archiuser.mefulltimemscfemaleteacher %></td>
+	<td><%=(archiuser.mefulltimemscmaleteacher+archiuser.mefulltimemscfemaleteacher) %></td>
+	<td><%=archiuser.meparttimemscmaleteacher %></td>
+	<td><%=archiuser.meparttimemscfemaleteacher %></td>
+	<td><%=(archiuser.meparttimemscmaleteacher+archiuser.meparttimemscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<td><%=archiuser.mefulltimebscmaleteacher %></td>
+	<td><%=archiuser.mefulltimebscfemaleteacher %></td>
+	<td><%=(archiuser.mefulltimebscmaleteacher+archiuser.mefulltimebscfemaleteacher)%></td>
+	<td><%=archiuser.meparttimebscmaleteacher %></td>
+	<td><%=archiuser.meparttimebscfemaleteacher %></td>
+	<td><%=(archiuser.meparttimebscmaleteacher+archiuser.meparttimebscfemaleteacher) %></td>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<td><%=archiuser.mefulltimeothermaleteacher %></td>
+	<td><%=archiuser.mefulltimeotherfemaleteacher %></td>
+	<td><%=(archiuser.mefulltimeothermaleteacher+archiuser.mefulltimeotherfemaleteacher)%></td>
+	<td><%=archiuser.meparttimeothermaleteacher %></td>
+	<td><%=archiuser.meparttimeotherfemaleteacher %></td>
+	<td><%=(archiuser.meparttimeothermaleteacher+archiuser.meparttimeotherfemaleteacher)%></td>
+</tr>
+</table>
+<br>
+
+<h3>আর্কিটেকচার বিভাগের গবেষণা ও প্রকাশনাঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="10">পুরকৌশল অনুষদ </th>
+	<th rowspan="10">আর্কিটেকচার বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=archiuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=archiuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=archiuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=archiuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=archiuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=archiuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=archiuser.mejournal%><br><hr><%=archiuser.meconference%></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=archiuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=archiuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=archiuser.meresearch10 %></td>
+</tr>
+</table><br>
+<h3>
+<a href="archiuser/<%=archiuser._id %>/edit">Update</a>
+<a href="archiuser/<%=archiuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

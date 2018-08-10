@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/public/style.css">
+  
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/library">insert</a></li>
+    <li>
+      <form action="/librarydata" method="GET">
+        <input type="number" name="librarysession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/librarylogout">logout</a></li>
+  </ul>
+ </div>    
+<div class="form">
+<h3>গ্রন্থাগার ও পাথপকরনের বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+    <tr>
+     <th>বিবরণ</th>
+     <th>বই</th>
+     <th>জার্নাল</th>
+     <th>অডিওভিজুয়েল সামগ্রী</th>
+  </tr>
+  <tr>
+     <th>গ্রন্থাগার সামগ্রীর মোট মজুদ সংখ্যা</th>
+     <td><%=libraryuser.totallibrarybook%></td>
+     <td><%=libraryuser.totaljournal%></td>
+     <td><%=libraryuser.totalaudiovisual%></td>
+  </tr>
+  <tr>
+     <th>সংগৃহীত সংখ্যা</th>
+     <td><%=libraryuser.totalcollectedlibrarybook%></td>
+     <td><%=libraryuser.totalcollectedjournal%></td>
+     <td><%=libraryuser.totalcollectedaudiovisual%></td>
+  </tr>
+  <tr>
+     <th>গৃহীত ইলেক্ট্রনিক বই ও সাময়িকী</th>
+     <td><%=libraryuser.totalsubscribedlibrarybook%></td>
+     <td><%=libraryuser.totalsubscribedjournal%></td>
+     <td><%=libraryuser.totalsubscribedaudiovisual%></td>
+  </tr>
+  <tr>
+     <th>অন্যান্য</th>
+     <td><%=libraryuser.totalotherlibrarybook%></td>
+     <td><%=libraryuser.totalotherjournal%></td>
+     <td><%=libraryuser.totalotheraudiovisual%></td>
+  </tr>
+</table><br>
+
+<h3>গ্রন্থাগারে নিয়োজিত জনবলঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+<tr>
+  <th rowspan="2">জনবল</th>
+  <th colspan="3">সংখ্যা</th>
+</tr>
+<tr>
+  <th>পুরুষ</th>
+  <th>মহিলা</th>
+  <th>মোট</th>
+</tr>
+<tr>
+  <th>লাইব্রেরি সায়েন্সে ডিগ্রিপ্রাপ্ত</th>
+  <td><%=libraryuser.librarygraduatedmale%></td>
+  <td><%=libraryuser.librarygraduatedfemale%></td>
+  <td><%=(libraryuser.librarygraduatedmale+libraryuser.librarygraduatedfemale)%></td>
+</tr>
+<tr>
+  <th>অন্যান্য</th>
+  <td><%=libraryuser.libraryothermale%></td>
+  <td><%=libraryuser.libraryotherfemale%></td>
+  <td><%=(libraryuser.libraryothermale+libraryuser.libraryotherfemale)%></td>
+</tr>
+</table><br>
+<h3>
+<a href="libraryuser/<%=libraryuser._id %>/edit">Update</a>
+<a href="libraryuser/<%=libraryuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</form>
+</div>
+</body>
+</html>

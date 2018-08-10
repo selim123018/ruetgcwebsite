@@ -1,0 +1,3347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+</head>
+<body>
+
+	<%include partials/nav.ejs  %>
+
+<div class="form">
+<h3><%=user._id%>  সালে স্নাতক সম্মান,মাস্টার্স,এমফিল,পিএইচডি ও অন্যান্য পর্যায়ে ভর্তি সংক্রান্ত বিবরণঃ</h3>	
+<h3>স্নাতক সম্মান পর্যায়েঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th rowspan="4">বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=eeeuser.eeetotalbscstudent %></td>
+	<td><%=eeeuser.eeemalebscstudent %></td>
+	<td><%=eeeuser.eeefemalebscstudent %></td>
+	<td><%=(eeeuser.eeefemalebscstudent+eeeuser.eeemalebscstudent) %></td>
+</tr>
+<tr>
+	<th>কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=user.csetotalbscstudent %></td>
+	<td><%=user.csemalebscstudent %></td>
+	<td><%=user.csefemalebscstudent %></td>
+	<td><%=(user.csefemalebscstudent+user.csemalebscstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eteuser.etetotalbscstudent %></td>
+	<td><%=eteuser.etemalebscstudent %></td>
+	<td><%=eteuser.etefemalebscstudent %></td>
+	<td><%=(eteuser.etemalebscstudent+eteuser.etefemalebscstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eceuser.ecetotalbscstudent %></td>
+	<td><%=eceuser.ecemalebscstudent %></td>
+	<td><%=eceuser.ecefemalebscstudent %></td>
+	<td><%=(eceuser.ecefemalebscstudent+eceuser.ecemalebscstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th>পুরকৌশল বিভাগ</th>
+	<th rowspan="4">বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=ceuser.metotalbscstudent %></td>
+	<td><%=ceuser.memalebscstudent %></td>
+	<td><%=ceuser.mefemalebscstudent %></td>
+	<td><%=(ceuser.mefemalebscstudent+ceuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>বিল্ডিং ইঞ্জিনিয়ারিং এন্ড কনসট্রাকসন মেনেজমেন্ট বিভাগ</th>
+	<td><%=becmuser.metotalbscstudent %></td>
+	<td><%=becmuser.memalebscstudent %></td>
+	<td><%=becmuser.mefemalebscstudent %></td>
+	<td><%=(becmuser.mefemalebscstudent+becmuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>আরবান এন্ড রিজিওনাল প্লানিং বিভাগ</th>
+	<td><%=urpuser.metotalbscstudent %></td>
+	<td><%=urpuser.memalebscstudent %></td>
+	<td><%=urpuser.mefemalebscstudent %></td>
+	<td><%=(urpuser.mefemalebscstudent+urpuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>আর্কিটেকচার বিভাগ</th>
+	<td><%=archiuser.metotalbscstudent %></td>
+	<td><%=archiuser.memalebscstudent %></td>
+	<td><%=archiuser.mefemalebscstudent %></td>
+	<td><%=(archiuser.mefemalebscstudent+archiuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="6">যন্ত্রকৌশল অনুষদ </th>
+	<th>যন্ত্রকৌশল বিভাগ</th>
+	<th rowspan="6">বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=meuser.metotalbscstudent %></td>
+	<td><%=meuser.memalebscstudent %></td>
+	<td><%=meuser.mefemalebscstudent %></td>
+	<td><%=(meuser.mefemalebscstudent+meuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>ইন্ডাস্ট্রিয়াল এন্ড প্রোডাকশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=ipeuser.metotalbscstudent %></td>
+	<td><%=ipeuser.memalebscstudent %></td>
+	<td><%=ipeuser.mefemalebscstudent %></td>
+	<td><%=(ipeuser.mefemalebscstudent+ipeuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>গ্লাস এন্ড সিরামিক ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=gceuser.metotalbscstudent %></td>
+	<td><%=gceuser.memalebscstudent %></td>
+	<td><%=gceuser.mefemalebscstudent %></td>
+	<td><%=(gceuser.mefemalebscstudent+gceuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mteuser.metotalbscstudent %></td>
+	<td><%=mteuser.memalebscstudent %></td>
+	<td><%=mteuser.mefemalebscstudent %></td>
+	<td><%=(mteuser.mefemalebscstudent+mteuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>কেমিক্যাল এন্ড ফুড প্রোসেস ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=cfpeuser.metotalbscstudent %></td>
+	<td><%=cfpeuser.memalebscstudent %></td>
+	<td><%=cfpeuser.mefemalebscstudent %></td>
+	<td><%=(cfpeuser.mefemalebscstudent+cfpeuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mseuser.metotalbscstudent %></td>
+	<td><%=mseuser.memalebscstudent %></td>
+	<td><%=mseuser.mefemalebscstudent %></td>
+	<td><%=(mseuser.mefemalebscstudent+mseuser.memalebscstudent) %></td>
+</tr>
+<tr>
+	<th colspan="3">বিশ্ববিদ্যালয়ের সর্বমোট</th>
+	<td><%=(eeeuser.eeetotalbscstudent+user.csetotalbscstudent+eteuser.etetotalbscstudent+eceuser.ecetotalbscstudent+ceuser.metotalbscstudent+becmuser.metotalbscstudent+urpuser.metotalbscstudent+archiuser.metotalbscstudent+meuser.metotalbscstudent+ipeuser.metotalbscstudent+gceuser.metotalbscstudent+mteuser.metotalbscstudent+cfpeuser.metotalbscstudent+mseuser.metotalbscstudent)%></td>
+
+	<td><%=(eeeuser.eeemalebscstudent+user.csemalebscstudent+eteuser.etemalebscstudent+eceuser.ecemalebscstudent+ceuser.memalebscstudent+becmuser.memalebscstudent+urpuser.memalebscstudent+archiuser.memalebscstudent+meuser.memalebscstudent+ipeuser.memalebscstudent+gceuser.memalebscstudent+mteuser.memalebscstudent+cfpeuser.memalebscstudent+mseuser.memalebscstudent)%></td>
+
+	<td><%=(eeeuser.eeefemalebscstudent+user.csefemalebscstudent+eteuser.etefemalebscstudent+eceuser.ecefemalebscstudent+ceuser.mefemalebscstudent+becmuser.mefemalebscstudent+urpuser.mefemalebscstudent+archiuser.mefemalebscstudent+meuser.mefemalebscstudent+ipeuser.mefemalebscstudent+gceuser.mefemalebscstudent+mteuser.mefemalebscstudent+cfpeuser.mefemalebscstudent+mseuser.mefemalebscstudent)%></td>
+
+	<td><%=(eeeuser.eeefemalebscstudent+eeeuser.eeemalebscstudent+user.csefemalebscstudent+user.csemalebscstudent+eteuser.etemalebscstudent+eteuser.etefemalebscstudent+eceuser.ecefemalebscstudent+eceuser.ecemalebscstudent+ceuser.mefemalebscstudent+ceuser.memalebscstudent+becmuser.mefemalebscstudent+becmuser.memalebscstudent+urpuser.mefemalebscstudent+urpuser.memalebscstudent+archiuser.mefemalebscstudent+archiuser.memalebscstudent+meuser.mefemalebscstudent+meuser.memalebscstudent+ipeuser.mefemalebscstudent+ipeuser.memalebscstudent+gceuser.mefemalebscstudent+gceuser.memalebscstudent+mteuser.mefemalebscstudent+mteuser.memalebscstudent+cfpeuser.mefemalebscstudent+cfpeuser.memalebscstudent+mseuser.mefemalebscstudent+mseuser.memalebscstudent)%></td>
+
+</tr>
+</table>
+<br>
+
+<h3>মাস্টার্স পর্যায়েঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th rowspan="4">মাস্টার্স</th>
+	<td><%=eeeuser.eeetotalmscstudent %></td>
+	<td><%=eeeuser.eeemalemscstudent %></td>
+	<td><%=eeeuser.eeefemalemscstudent %></td>
+	<td><%=(eeeuser.eeemalemscstudent+eeeuser.eeefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=user.csetotalmscstudent %></td>
+	<td><%=user.csemalemscstudent %></td>
+	<td><%=user.csefemalemscstudent %></td>
+	<td><%=(user.csemalemscstudent+user.csefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eteuser.etetotalmscstudent %></td>
+	<td><%=eteuser.etemalemscstudent %></td>
+	<td><%=eteuser.etefemalemscstudent %></td>
+	<td><%=(eteuser.etemalemscstudent+eteuser.etefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eceuser.ecetotalmscstudent %></td>
+	<td><%=eceuser.ecemalemscstudent %></td>
+	<td><%=eceuser.ecefemalemscstudent %></td>
+	<td><%=(eceuser.ecemalemscstudent+eceuser.ecefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th>পুরকৌশল বিভাগ</th>
+	<th rowspan="4">মাস্টার্স</th>
+	<td><%=ceuser.metotalmscstudent %></td>
+	<td><%=ceuser.memalemscstudent %></td>
+	<td><%=ceuser.mefemalemscstudent %></td>
+	<td><%=(ceuser.memalemscstudent+ceuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>বিল্ডিং ইঞ্জিনিয়ারিং এন্ড কনসট্রাকসন মেনেজমেন্ট বিভাগ</th>
+	<td><%=becmuser.metotalmscstudent %></td>
+	<td><%=becmuser.memalemscstudent %></td>
+	<td><%=becmuser.mefemalemscstudent %></td>
+	<td><%=(becmuser.memalemscstudent+becmuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>আরবান এন্ড রিজিওনাল প্লানিং বিভাগ</th>
+	<td><%=urpuser.metotalmscstudent %></td>
+	<td><%=urpuser.memalemscstudent %></td>
+	<td><%=urpuser.mefemalemscstudent %></td>
+	<td><%=(urpuser.memalemscstudent+urpuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>আর্কিটেকচার বিভাগ</th>
+	<td><%=archiuser.metotalmscstudent %></td>
+	<td><%=archiuser.memalemscstudent %></td>
+	<td><%=archiuser.mefemalemscstudent %></td>
+	<td><%=(archiuser.memalemscstudent+archiuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="6">যন্ত্রকৌশল অনুষদ </th>
+	<th>যন্ত্রকৌশল বিভাগ</th>
+	<th rowspan="6">মাস্টার্স</th>
+	<td><%=meuser.metotalmscstudent %></td>
+	<td><%=meuser.memalemscstudent %></td>
+	<td><%=meuser.mefemalemscstudent %></td>
+	<td><%=(meuser.memalemscstudent+meuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>ইন্ডাস্ট্রিয়াল এন্ড প্রোডাকশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=ipeuser.metotalmscstudent %></td>
+	<td><%=ipeuser.memalemscstudent %></td>
+	<td><%=ipeuser.mefemalemscstudent %></td>
+	<td><%=(ipeuser.memalemscstudent+ipeuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>গ্লাস এন্ড সিরামিক ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=gceuser.metotalmscstudent %></td>
+	<td><%=gceuser.memalemscstudent %></td>
+	<td><%=gceuser.mefemalemscstudent %></td>
+	<td><%=(gceuser.memalemscstudent+gceuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mteuser.metotalmscstudent %></td>
+	<td><%=mteuser.memalemscstudent %></td>
+	<td><%=mteuser.mefemalemscstudent %></td>
+	<td><%=(mteuser.memalemscstudent+mteuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>কেমিক্যাল এন্ড ফুড প্রোসেস ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=cfpeuser.metotalmscstudent %></td>
+	<td><%=cfpeuser.memalemscstudent %></td>
+	<td><%=cfpeuser.mefemalemscstudent %></td>
+	<td><%=(cfpeuser.memalemscstudent+cfpeuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mseuser.metotalmscstudent %></td>
+	<td><%=mseuser.memalemscstudent %></td>
+	<td><%=mseuser.mefemalemscstudent %></td>
+	<td><%=(mseuser.memalemscstudent+mseuser.mefemalemscstudent) %></td>
+</tr>
+<tr>
+	<th colspan="3">বিশ্ববিদ্যালয়ের সর্বমোট</th>
+	<td><%=(eeeuser.eeetotalmscstudent+user.csetotalmscstudent+eteuser.etetotalmscstudent+eceuser.ecetotalmscstudent+ceuser.metotalmscstudent+becmuser.metotalmscstudent+urpuser.metotalmscstudent+archiuser.metotalmscstudent+meuser.metotalmscstudent+ipeuser.metotalmscstudent+gceuser.metotalmscstudent+mteuser.metotalmscstudent+cfpeuser.metotalmscstudent+mseuser.metotalmscstudent)%></td>
+
+	<td><%=(eeeuser.eeemalemscstudent+user.csemalemscstudent+eteuser.etemalemscstudent+eceuser.ecemalemscstudent+ceuser.memalemscstudent+becmuser.memalemscstudent+urpuser.memalemscstudent+archiuser.memalemscstudent+meuser.memalemscstudent+ipeuser.memalemscstudent+gceuser.memalemscstudent+mteuser.memalemscstudent+cfpeuser.memalemscstudent+mseuser.memalemscstudent)%></td>
+
+	<td><%=(eeeuser.eeefemalemscstudent+user.csefemalemscstudent+eteuser.etefemalemscstudent+eceuser.ecefemalemscstudent+ceuser.mefemalemscstudent+becmuser.mefemalemscstudent+urpuser.mefemalemscstudent+archiuser.mefemalemscstudent+meuser.mefemalemscstudent+ipeuser.mefemalemscstudent+gceuser.mefemalemscstudent+mteuser.mefemalemscstudent+cfpeuser.mefemalemscstudent+mseuser.mefemalemscstudent)%></td>
+
+	<td><%=(eeeuser.eeemalemscstudent+eeeuser.eeefemalemscstudent+user.csemalemscstudent+user.csefemalemscstudent+eteuser.etemalemscstudent+eteuser.etefemalemscstudent+eceuser.ecemalemscstudent+eceuser.ecefemalemscstudent+ceuser.memalemscstudent+ceuser.mefemalemscstudent+becmuser.memalemscstudent+becmuser.mefemalemscstudent+urpuser.memalemscstudent+urpuser.mefemalemscstudent+archiuser.memalemscstudent+archiuser.mefemalemscstudent+meuser.memalemscstudent+meuser.mefemalemscstudent+ipeuser.memalemscstudent+ipeuser.mefemalemscstudent+gceuser.memalemscstudent+gceuser.mefemalemscstudent+mteuser.memalemscstudent+mteuser.mefemalemscstudent+cfpeuser.memalemscstudent+cfpeuser.mefemalemscstudent+mseuser.memalemscstudent+mseuser.mefemalemscstudent)%></td>
+</tr>
+</table>
+<br>
+<h3>এমফিল ও পিএইচডি অন্যান্য পর্যায়েঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th>মোট আসন সংখা</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th rowspan="4">পিএইচডি</th>
+	<td><%=eeeuser.eeetotalphdstudent %></td>
+	<td><%=eeeuser.eeemalephdstudent %></td>
+	<td><%=eeeuser.eeefemalephdstudent %></td>
+	<td><%=(eeeuser.eeemalephdstudent+eeeuser.eeefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=user.csetotalphdstudent %></td>
+	<td><%=user.csemalephdstudent %></td>
+	<td><%=user.csefemalephdstudent %></td>
+	<td><%=(user.csemalephdstudent+user.csefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eteuser.etetotalphdstudent %></td>
+	<td><%=eteuser.etemalephdstudent %></td>
+	<td><%=eteuser.etefemalephdstudent %></td>
+	<td><%=(eteuser.etemalephdstudent+eteuser.etefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eceuser.ecetotalphdstudent %></td>
+	<td><%=eceuser.ecemalephdstudent %></td>
+	<td><%=eceuser.ecefemalephdstudent %></td>
+	<td><%=(eceuser.ecemalephdstudent+eceuser.ecefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th>পুরকৌশল বিভাগ</th>
+	<th rowspan="4">পিএইচডি</th>
+	<td><%=ceuser.metotalphdstudent %></td>
+	<td><%=ceuser.memalephdstudent %></td>
+	<td><%=ceuser.mefemalephdstudent %></td>
+	<td><%=(ceuser.memalephdstudent+ceuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>বিল্ডিং ইঞ্জিনিয়ারিং এন্ড কনসট্রাকসন মেনেজমেন্ট বিভাগ</th>
+	<td><%=becmuser.metotalphdstudent %></td>
+	<td><%=becmuser.memalephdstudent %></td>
+	<td><%=becmuser.mefemalephdstudent %></td>
+	<td><%=(becmuser.memalephdstudent+becmuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>আরবান এন্ড রিজিওনাল প্লানিং বিভাগ</th>
+	<td><%=urpuser.metotalphdstudent %></td>
+	<td><%=urpuser.memalephdstudent %></td>
+	<td><%=urpuser.mefemalephdstudent %></td>
+	<td><%=(urpuser.memalephdstudent+urpuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>আর্কিটেকচার বিভাগ</th>
+	<td><%=archiuser.metotalphdstudent %></td>
+	<td><%=archiuser.memalephdstudent %></td>
+	<td><%=archiuser.mefemalephdstudent %></td>
+	<td><%=(archiuser.memalephdstudent+archiuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="6">যন্ত্রকৌশল অনুষদ </th>
+	<th>যন্ত্রকৌশল বিভাগ</th>
+	<th rowspan="6">পিএইচডি</th>
+	<td><%=meuser.metotalphdstudent %></td>
+	<td><%=meuser.memalephdstudent %></td>
+	<td><%=meuser.mefemalephdstudent %></td>
+	<td><%=(meuser.memalephdstudent+meuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>ইন্ডাস্ট্রিয়াল এন্ড প্রোডাকশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=ipeuser.metotalphdstudent %></td>
+	<td><%=ipeuser.memalephdstudent %></td>
+	<td><%=ipeuser.mefemalephdstudent %></td>
+	<td><%=(ipeuser.memalephdstudent+ipeuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>গ্লাস এন্ড সিরামিক ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=gceuser.metotalphdstudent %></td>
+	<td><%=gceuser.memalephdstudent %></td>
+	<td><%=gceuser.mefemalephdstudent %></td>
+	<td><%=(gceuser.memalephdstudent+gceuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mteuser.metotalphdstudent %></td>
+	<td><%=mteuser.memalephdstudent %></td>
+	<td><%=mteuser.mefemalephdstudent %></td>
+	<td><%=(mteuser.memalephdstudent+mteuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>কেমিক্যাল এন্ড ফুড প্রোসেস ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=cfpeuser.metotalphdstudent %></td>
+	<td><%=cfpeuser.memalephdstudent %></td>
+	<td><%=cfpeuser.mefemalephdstudent %></td>
+	<td><%=(cfpeuser.memalephdstudent+cfpeuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mseuser.metotalphdstudent %></td>
+	<td><%=mseuser.memalephdstudent %></td>
+	<td><%=mseuser.mefemalephdstudent %></td>
+	<td><%=(mseuser.memalephdstudent+mseuser.mefemalephdstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="3">অ্যাপ্লায়েড সায়েন্স এন্ড হিউম্যানিটিজ অনুষদ</th>
+	<th>গণিত বিভাগ</th>
+	<th rowspan="3">এমফিল</th>
+	<td><%=mathuser.metotalmfilstudent %></td>
+	<td><%=mathuser.memalemfilstudent %></td>
+	<td><%=mathuser.mefemalemfilstudent %></td>
+	<td><%=(mathuser.memalemfilstudent+mathuser.mefemalemfilstudent) %></td>
+</tr>
+<tr>
+	<th>পদার্থ বিভাগ</th>
+	<td><%=physicsuser.metotalmfilstudent %></td>
+	<td><%=physicsuser.memalemfilstudent %></td>
+	<td><%=physicsuser.mefemalemfilstudent %></td>
+	<td><%=(physicsuser.memalemfilstudent+physicsuser.mefemalemfilstudent) %></td>
+</tr>
+<tr>
+	<th>রসায়ন বিভাগ</th>
+	<td><%=chemistryuser.metotalmfilstudent %></td>
+	<td><%=chemistryuser.memalemfilstudent %></td>
+	<td><%=chemistryuser.mefemalemfilstudent %></td>
+	<td><%=(chemistryuser.memalemfilstudent+chemistryuser.mefemalemfilstudent) %></td>
+</tr>
+<tr>
+	<th colspan="3">বিশ্ববিদ্যালয়ের সর্বমোট</th>
+	<td><%=(eeeuser.eeetotalphdstudent+user.csetotalphdstudent+eteuser.etetotalphdstudent+eceuser.ecetotalphdstudent+ceuser.metotalphdstudent+becmuser.metotalphdstudent+urpuser.metotalphdstudent+archiuser.metotalphdstudent+meuser.metotalphdstudent+ipeuser.metotalphdstudent+gceuser.metotalphdstudent+mteuser.metotalphdstudent+cfpeuser.metotalphdstudent+mseuser.metotalphdstudent+mathuser.metotalmfilstudent+physicsuser.metotalmfilstudent+chemistryuser.metotalmfilstudent)%></td>
+
+	<td><%=(eeeuser.eeemalephdstudent+user.csemalephdstudent+eteuser.etemalephdstudent+eceuser.ecemalephdstudent+ceuser.memalephdstudent+becmuser.memalephdstudent+urpuser.memalephdstudent+archiuser.memalephdstudent+meuser.memalephdstudent+ipeuser.memalephdstudent+gceuser.memalephdstudent+mteuser.memalephdstudent+cfpeuser.memalephdstudent+mseuser.memalephdstudent+mathuser.memalemfilstudent+physicsuser.memalemfilstudent+chemistryuser.memalemfilstudent)%></td>
+
+	<td><%=(eeeuser.eeefemalephdstudent+user.csefemalephdstudent+eteuser.etefemalephdstudent+eceuser.ecefemalephdstudent+ceuser.mefemalephdstudent+becmuser.mefemalephdstudent+urpuser.mefemalephdstudent+archiuser.mefemalephdstudent+meuser.mefemalephdstudent+ipeuser.mefemalephdstudent+gceuser.mefemalephdstudent+mteuser.mefemalephdstudent+cfpeuser.mefemalephdstudent+mseuser.mefemalephdstudent+mathuser.mefemalemfilstudent+physicsuser.mefemalemfilstudent+chemistryuser.mefemalemfilstudent)%></td>
+
+	<td><%=(eeeuser.eeemalephdstudent+eeeuser.eeefemalephdstudent+user.csemalephdstudent+user.csefemalephdstudent+eteuser.etemalephdstudent+eteuser.etefemalephdstudent+eceuser.ecemalephdstudent+eceuser.ecefemalephdstudent+ceuser.memalephdstudent+ceuser.mefemalephdstudent+becmuser.memalephdstudent+becmuser.mefemalephdstudent+urpuser.memalephdstudent+urpuser.mefemalephdstudent+archiuser.memalephdstudent+archiuser.mefemalephdstudent+meuser.memalephdstudent+meuser.mefemalephdstudent+ipeuser.memalephdstudent+ipeuser.mefemalephdstudent+gceuser.memalephdstudent+gceuser.mefemalephdstudent+mteuser.memalephdstudent+mteuser.mefemalephdstudent+cfpeuser.memalephdstudent+cfpeuser.mefemalephdstudent+mseuser.memalephdstudent+mseuser.mefemalephdstudent+mathuser.memalemfilstudent+mathuser.mefemalemfilstudent+physicsuser.memalemfilstudent+physicsuser.mefemalemfilstudent+chemistryuser.memalemfilstudent+chemistryuser.mefemalemfilstudent)%></td>
+</tr>
+</table>
+<br>
+
+<h3>বিদেশী শিক্ষার্থীঃ </h3> 
+<h3>
+	ছাত্রঃ<%=educationsectionuser.cseforeignbscmalestudent%> ছাত্রীঃ<%=educationsectionuser.cseforeignbsctfemalestudent%>
+	মোটঃ<%=(educationsectionuser.cseforeignbscmalestudent+educationsectionuser.cseforeignbsctfemalestudent)%>
+</h3>
+<table border="1" width="900" align="center" class="table1">
+<tr>
+    <th rowspan="2">ক্রমিক নং</th>
+    <th rowspan="2">লিঙ্গ(ছেলে/মেয়ে)</th>
+    <th rowspan="2">অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th rowspan="2">বিভাগ</th>
+	<th rowspan="2">ডিগ্রি</th>
+	<th rowspan="2">দেশের নাম</th>
+	<th colspan="2">শিক্ষার্থীর অধ্যয়ন ব্যয়</th>
+</tr>
+<tr>
+	<th>বৃত্তি</th>
+	<th>নিজ</th>	
+</tr>
+<tr>
+    <th>০১</th>
+    <td><%=educationsectionuser.gender1%></td>
+	<td><%=educationsectionuser.faculty1%></th>
+	<td><%=educationsectionuser.department1%></td>
+	<td><%=educationsectionuser.degree1%></td>
+	<td><%=educationsectionuser.foreignstudentcountry1%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent1%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent1%></td>
+</tr>
+<tr>
+    <th>০২</th>
+    <td><%=educationsectionuser.gender2%></td>
+	<td><%=educationsectionuser.faculty2%></td>
+	<td><%=educationsectionuser.department2%></td>
+	<td><%=educationsectionuser.degree2%></td>
+	<td><%=educationsectionuser.foreignstudentcountry2%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent2%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent2%></td>
+</tr>
+<tr>
+    <th>০৩</th>
+    <td><%=educationsectionuser.gender3%></td>
+	<td><%=educationsectionuser.faculty3%></td>
+	<td><%=educationsectionuser.department3%></td>
+	<td><%=educationsectionuser.degree3%></td>
+	<td><%=educationsectionuser.foreignstudentcountry3%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent3%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent3%></td>
+</tr>
+<tr>
+    <th>০৪</th>
+    <td><%=educationsectionuser.gender4%></td>
+	<td><%=educationsectionuser.faculty4%></td>
+	<td><%=educationsectionuser.department4%></td>
+	<td><%=educationsectionuser.degree4%></td>
+	<td><%=educationsectionuser.foreignstudentcountry4%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent4%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent4%></td>
+</tr><tr>
+    <th>০৫</th>
+    <td><%=educationsectionuser.gender5%></td>
+	<td><%=educationsectionuser.faculty5%></td>
+	<td><%=educationsectionuser.department5%></td>
+	<td><%=educationsectionuser.degree5%></td>
+	<td><%=educationsectionuser.foreignstudentcountry5%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent5%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent5%></td>
+</tr>
+<tr>
+    <th>০৬</th>
+    <td><%=educationsectionuser.gender6%></td>
+	<td><%=educationsectionuser.faculty6%></td>
+	<td><%=educationsectionuser.department6%></td>
+	<td><%=educationsectionuser.degree6%></td>
+	<td><%=educationsectionuser.foreignstudentcountry6%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent6%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent6%></td>
+</tr>
+<tr>
+    <th>0৭</th>
+    <td><%=educationsectionuser.gender7%></td>
+	<td><%=educationsectionuser.faculty7%></td>
+	<td><%=educationsectionuser.department7%></td>
+	<td><%=educationsectionuser.degree7%></td>
+	<td><%=educationsectionuser.foreignstudentcountry7%></td>
+	<td><%=educationsectionuser.foreignschoolarshipbscstudent7%></td>
+	<td><%=educationsectionuser.foreignownexpensebscstudent7%></td>
+</tr>
+</table><br>
+
+
+<h3>স্নাতক সম্মান পর্যায়ে(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th rowspan="4">বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=eeeuser.eeeforeignmalebscstudent %></td>
+	<td><%=eeeuser.eeeforeignfemalebscstudent %></td>
+	<td><%=(eeeuser.eeeforeignfemalebscstudent+eeeuser.eeeforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=user.cseforeignmalebscstudent %></td>
+	<td><%=user.cseforeignfemalebscstudent %></td>
+	<td><%=(user.cseforeignfemalebscstudent+user.cseforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eteuser.eeeforeignmalebscstudent %></td>
+	<td><%=eteuser.eeeforeignfemalebscstudent %></td>
+	<td><%=(eteuser.eeeforeignfemalebscstudent+eteuser.eeeforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eceuser.eceforeignmalebscstudent %></td>
+	<td><%=eceuser.eceforeignfemalebscstudent %></td>
+	<td><%=(eceuser.eceforeignfemalebscstudent+eceuser.eceforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th>পুরকৌশল বিভাগ</th>
+	<th rowspan="4">বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=ceuser.meforeignmalebscstudent %></td>
+	<td><%=ceuser.meforeignfemalebscstudent %></td>
+	<td><%=(ceuser.meforeignfemalebscstudent+ceuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>বিল্ডিং ইঞ্জিনিয়ারিং এন্ড কনসট্রাকসন মেনেজমেন্ট বিভাগ</th>
+	<td><%=becmuser.meforeignmalebscstudent %></td>
+	<td><%=becmuser.meforeignfemalebscstudent %></td>
+	<td><%=(becmuser.meforeignfemalebscstudent+becmuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>আরবান এন্ড রিজিওনাল প্লানিং বিভাগ</th>
+	<td><%=urpuser.meforeignmalebscstudent %></td>
+	<td><%=urpuser.meforeignfemalebscstudent %></td>
+	<td><%=(urpuser.meforeignfemalebscstudent+urpuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>আর্কিটেকচার বিভাগ</th>
+	<td><%=archiuser.meforeignmalebscstudent %></td>
+	<td><%=archiuser.meforeignfemalebscstudent %></td>
+	<td><%=(archiuser.meforeignfemalebscstudent+archiuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="6">যন্ত্রকৌশল অনুষদ </th>
+	<th>যন্ত্রকৌশল বিভাগ</th>
+	<th rowspan="6">বিএসসি ইঞ্জিনিয়ারিং(স্নাতক)</th>
+	<td><%=meuser.meforeignmalebscstudent %></td>
+	<td><%=meuser.meforeignfemalebscstudent %></td>
+	<td><%=(meuser.meforeignfemalebscstudent+meuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>ইন্ডাস্ট্রিয়াল এন্ড প্রোডাকশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=ipeuser.meforeignmalebscstudent %></td>
+	<td><%=ipeuser.meforeignfemalebscstudent %></td>
+	<td><%=(ipeuser.meforeignfemalebscstudent+ipeuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>গ্লাস এন্ড সিরামিক ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=gceuser.meforeignmalebscstudent %></td>
+	<td><%=gceuser.meforeignfemalebscstudent %></td>
+	<td><%=(gceuser.meforeignfemalebscstudent+gceuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mteuser.meforeignmalebscstudent %></td>
+	<td><%=mteuser.meforeignfemalebscstudent %></td>
+	<td><%=(mteuser.meforeignfemalebscstudent+mteuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>কেমিক্যাল এন্ড ফুড প্রোসেস ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=cfpeuser.meforeignmalebscstudent %></td>
+	<td><%=cfpeuser.meforeignfemalebscstudent %></td>
+	<td><%=(cfpeuser.meforeignfemalebscstudent+cfpeuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mseuser.meforeignmalebscstudent %></td>
+	<td><%=mseuser.meforeignfemalebscstudent %></td>
+	<td><%=(mseuser.meforeignfemalebscstudent+mseuser.meforeignmalebscstudent) %></td>
+</tr>
+<tr>
+	<th colspan="3">বিশ্ববিদ্যালয়ের সর্বমোট</th>
+    <td><%=(eeeuser.eeeforeignmalebscstudent+user.cseforeignmalebscstudent+eteuser.eeeforeignmalebscstudent+eceuser.eceforeignmalebscstudent+ceuser.meforeignmalebscstudent+becmuser.meforeignmalebscstudent+urpuser.meforeignmalebscstudent+archiuser.meforeignmalebscstudent+meuser.meforeignmalebscstudent+ipeuser.meforeignmalebscstudent+gceuser.meforeignmalebscstudent+mteuser.meforeignmalebscstudent+cfpeuser.meforeignmalebscstudent+mseuser.meforeignmalebscstudent)%></td>
+
+    <td><%=(eeeuser.eeeforeignfemalebscstudent+user.cseforeignfemalebscstudent+eteuser.eeeforeignfemalebscstudent+eceuser.eceforeignfemalebscstudent+ceuser.meforeignfemalebscstudent+becmuser.meforeignfemalebscstudent+urpuser.meforeignfemalebscstudent+archiuser.meforeignfemalebscstudent+meuser.meforeignfemalebscstudent+ipeuser.meforeignfemalebscstudent+gceuser.meforeignfemalebscstudent+mteuser.meforeignfemalebscstudent+cfpeuser.meforeignfemalebscstudent+mseuser.meforeignfemalebscstudent)%></td>
+
+    <td><%=(eeeuser.eeeforeignfemalebscstudent+eeeuser.eeeforeignmalebscstudent+user.cseforeignfemalebscstudent+user.cseforeignmalebscstudent+eteuser.eeeforeignfemalebscstudent+eteuser.eeeforeignmalebscstudent+eceuser.eceforeignfemalebscstudent+eceuser.eceforeignmalebscstudent+ceuser.meforeignfemalebscstudent+ceuser.meforeignmalebscstudent+becmuser.meforeignfemalebscstudent+becmuser.meforeignmalebscstudent+urpuser.meforeignfemalebscstudent+urpuser.meforeignmalebscstudent+archiuser.meforeignfemalebscstudent+archiuser.meforeignmalebscstudent+meuser.meforeignfemalebscstudent+meuser.meforeignmalebscstudent+ipeuser.meforeignfemalebscstudent+ipeuser.meforeignmalebscstudent+gceuser.meforeignfemalebscstudent+gceuser.meforeignmalebscstudent+mteuser.meforeignfemalebscstudent+mteuser.meforeignmalebscstudent+cfpeuser.meforeignfemalebscstudent+cfpeuser.meforeignmalebscstudent+mseuser.meforeignfemalebscstudent+mseuser.meforeignmalebscstudent)%></td>
+</tr>
+</table>
+<br>
+
+<h3>মাস্টার্স পর্যায়ে(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th rowspan="4">মাস্টার্স</th>
+	<td><%=eeeuser.eeeforeignmalemscstudent %></td>
+	<td><%=eeeuser.eeeforeignfemalemscstudent %></td>
+	<td><%=(eeeuser.eeeforeignmalemscstudent+eeeuser.eeeforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=user.cseforeignmalemscstudent %></td>
+	<td><%=user.cseforeignfemalemscstudent %></td>
+	<td><%=(user.cseforeignmalemscstudent+user.cseforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eteuser.eeeforeignmalemscstudent %></td>
+	<td><%=eteuser.eeeforeignfemalemscstudent %></td>
+	<td><%=(eteuser.eeeforeignmalemscstudent+eteuser.eeeforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eceuser.eceforeignmalemscstudent %></td>
+	<td><%=eceuser.eceforeignfemalemscstudent %></td>
+	<td><%=(eceuser.eceforeignmalemscstudent+eceuser.eceforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th>পুরকৌশল বিভাগ</th>
+	<th rowspan="4">মাস্টার্স</th>
+	<td><%=ceuser.meforeignmalemscstudent %></td>
+	<td><%=ceuser.meforeignfemalemscstudent %></td>
+	<td><%=(ceuser.meforeignmalemscstudent+ceuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>বিল্ডিং ইঞ্জিনিয়ারিং এন্ড কনসট্রাকসন মেনেজমেন্ট বিভাগ</th>
+	<td><%=becmuser.meforeignmalemscstudent %></td>
+	<td><%=becmuser.meforeignfemalemscstudent %></td>
+	<td><%=(becmuser.meforeignmalemscstudent+becmuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>আরবান এন্ড রিজিওনাল প্লানিং বিভাগ</th>
+	<td><%=urpuser.meforeignmalemscstudent %></td>
+	<td><%=urpuser.meforeignfemalemscstudent %></td>
+	<td><%=(urpuser.meforeignmalemscstudent+urpuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>আর্কিটেকচার বিভাগ</th>
+	<td><%=archiuser.meforeignmalemscstudent %></td>
+	<td><%=archiuser.meforeignfemalemscstudent %></td>
+	<td><%=(archiuser.meforeignmalemscstudent+archiuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="6">যন্ত্রকৌশল অনুষদ </th>
+	<th>যন্ত্রকৌশল বিভাগ</th>
+	<th rowspan="6">মাস্টার্স</th>
+	<td><%=meuser.meforeignmalemscstudent %></td>
+	<td><%=meuser.meforeignfemalemscstudent %></td>
+	<td><%=(meuser.meforeignmalemscstudent+meuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>ইন্ডাস্ট্রিয়াল এন্ড প্রোডাকশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=ipeuser.meforeignmalemscstudent %></td>
+	<td><%=ipeuser.meforeignfemalemscstudent %></td>
+	<td><%=(ipeuser.meforeignmalemscstudent+ipeuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>গ্লাস এন্ড সিরামিক ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=gceuser.meforeignmalemscstudent %></td>
+	<td><%=gceuser.meforeignfemalemscstudent %></td>
+	<td><%=(gceuser.meforeignmalemscstudent+gceuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mteuser.meforeignmalemscstudent %></td>
+	<td><%=mteuser.meforeignfemalemscstudent %></td>
+	<td><%=(mteuser.meforeignmalemscstudent+mteuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>কেমিক্যাল এন্ড ফুড প্রোসেস ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=cfpeuser.meforeignmalemscstudent %></td>
+	<td><%=cfpeuser.meforeignfemalemscstudent %></td>
+	<td><%=(cfpeuser.meforeignmalemscstudent+cfpeuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mseuser.meforeignmalemscstudent %></td>
+	<td><%=mseuser.meforeignfemalemscstudent %></td>
+	<td><%=(mseuser.meforeignmalemscstudent+mseuser.meforeignfemalemscstudent) %></td>
+</tr>
+<tr>
+	<th colspan="3">বিশ্ববিদ্যালয়ের সর্বমোট</th>
+    <td><%=(eeeuser.eeeforeignmalemscstudent+user.cseforeignmalemscstudent+eteuser.eeeforeignmalemscstudent+eceuser.eceforeignmalemscstudent+ceuser.meforeignmalemscstudent+becmuser.meforeignmalemscstudent+urpuser.meforeignmalemscstudent+archiuser.meforeignmalemscstudent+meuser.meforeignmalemscstudent+ipeuser.meforeignmalemscstudent+gceuser.meforeignmalemscstudent+mteuser.meforeignmalemscstudent+cfpeuser.meforeignmalemscstudent+mseuser.meforeignmalemscstudent)%></td>
+
+    <td><%=(eeeuser.eeeforeignfemalemscstudent+user.cseforeignfemalemscstudent+eteuser.eeeforeignfemalemscstudent+eceuser.eceforeignfemalemscstudent+ceuser.meforeignfemalemscstudent+becmuser.meforeignfemalemscstudent+urpuser.meforeignfemalemscstudent+archiuser.meforeignfemalemscstudent+meuser.meforeignfemalemscstudent+ipeuser.meforeignfemalemscstudent+gceuser.meforeignfemalemscstudent+mteuser.meforeignfemalemscstudent+cfpeuser.meforeignfemalemscstudent+mseuser.meforeignfemalemscstudent)%></td>
+
+    <td><%=(eeeuser.eeeforeignmalemscstudent+eeeuser.eeeforeignfemalemscstudent+user.cseforeignmalemscstudent+user.cseforeignfemalemscstudent+eteuser.eeeforeignmalemscstudent+eteuser.eeeforeignfemalemscstudent+eceuser.eceforeignmalemscstudent+eceuser.eceforeignfemalemscstudent+ceuser.meforeignmalemscstudent+ceuser.meforeignfemalemscstudent+becmuser.meforeignmalemscstudent+becmuser.meforeignfemalemscstudent+urpuser.meforeignmalemscstudent+urpuser.meforeignfemalemscstudent+archiuser.meforeignmalemscstudent+archiuser.meforeignfemalemscstudent+meuser.meforeignmalemscstudent+meuser.meforeignfemalemscstudent+ipeuser.meforeignmalemscstudent+ipeuser.meforeignfemalemscstudent+gceuser.meforeignmalemscstudent+gceuser.meforeignfemalemscstudent+mteuser.meforeignmalemscstudent+mteuser.meforeignfemalemscstudent+cfpeuser.meforeignmalemscstudent+cfpeuser.meforeignfemalemscstudent+mseuser.meforeignmalemscstudent+mseuser.meforeignfemalemscstudent)%></td>
+</tr>
+</table>
+<br>
+
+<h3>এমফিল ও পিএইচডি অন্যান্য পর্যায়ে(বিদেশী শিক্ষার্থীসহ)</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>ডিগ্রি</th>
+	<th colspan="3">ভর্তিকৃত শিক্ষার্থীর সংখ্যা</th>
+</tr>
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>ছাত্র</th>
+	<th>ছাত্রী</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th rowspan="4">পিএইচডি</th>
+	<td><%=eeeuser.eeeforeignmalephdstudent %></td>
+	<td><%=eeeuser.eeeforeignfemalephdstudent %></td>
+	<td><%=(eeeuser.eeeforeignmalephdstudent+eeeuser.eeeforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=user.cseforeignmalephdstudent %></td>
+	<td><%=user.cseforeignfemalephdstudent %></td>
+	<td><%=(user.cseforeignmalephdstudent+user.cseforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eteuser.eeeforeignmalephdstudent %></td>
+	<td><%=eteuser.eeeforeignfemalephdstudent %></td>
+	<td><%=(eteuser.eeeforeignmalephdstudent+eteuser.eeeforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=eceuser.eceforeignmalephdstudent %></td>
+	<td><%=eceuser.eceforeignfemalephdstudent %></td>
+	<td><%=(eceuser.eceforeignmalephdstudent+eceuser.eceforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="4">পুরকৌশল অনুষদ </th>
+	<th>পুরকৌশল বিভাগ</th>
+	<th rowspan="4">পিএইচডি</th>
+	<td><%=ceuser.meforeignmalephdstudent %></td>
+	<td><%=ceuser.meforeignfemalephdstudent %></td>
+	<td><%=(ceuser.meforeignmalephdstudent+ceuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>বিল্ডিং ইঞ্জিনিয়ারিং এন্ড কনসট্রাকসন মেনেজমেন্ট বিভাগ</th>
+	<td><%=becmuser.meforeignmalephdstudent %></td>
+	<td><%=becmuser.meforeignfemalephdstudent %></td>
+	<td><%=(becmuser.meforeignmalephdstudent+becmuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>আরবান এন্ড রিজিওনাল প্লানিং বিভাগ</th>
+	<td><%=urpuser.meforeignmalephdstudent %></td>
+	<td><%=urpuser.meforeignfemalephdstudent %></td>
+	<td><%=(urpuser.meforeignmalephdstudent+urpuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>আর্কিটেকচার বিভাগ</th>
+	<td><%=archiuser.meforeignmalephdstudent %></td>
+	<td><%=archiuser.meforeignfemalephdstudent %></td>
+	<td><%=(archiuser.meforeignmalephdstudent+archiuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="6">যন্ত্রকৌশল অনুষদ </th>
+	<th>যন্ত্রকৌশল বিভাগ</th>
+	<th rowspan="6">পিএইচডি</th>
+	<td><%=meuser.meforeignmalephdstudent %></td>
+	<td><%=meuser.meforeignfemalephdstudent %></td>
+	<td><%=(meuser.meforeignmalephdstudent+meuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>ইন্ডাস্ট্রিয়াল এন্ড প্রোডাকশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=ipeuser.meforeignmalephdstudent %></td>
+	<td><%=ipeuser.meforeignfemalephdstudent %></td>
+	<td><%=(ipeuser.meforeignmalephdstudent+ipeuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>গ্লাস এন্ড সিরামিক ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=gceuser.meforeignmalephdstudent %></td>
+	<td><%=gceuser.meforeignfemalephdstudent %></td>
+	<td><%=(gceuser.meforeignmalephdstudent+gceuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mteuser.meforeignmalephdstudent %></td>
+	<td><%=mteuser.meforeignfemalephdstudent %></td>
+	<td><%=(mteuser.meforeignmalephdstudent+mteuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>কেমিক্যাল এন্ড ফুড প্রোসেস ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=cfpeuser.meforeignmalephdstudent %></td>
+	<td><%=cfpeuser.meforeignfemalephdstudent %></td>
+	<td><%=(cfpeuser.meforeignmalephdstudent+cfpeuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<td><%=mseuser.meforeignmalephdstudent %></td>
+	<td><%=mseuser.meforeignfemalephdstudent %></td>
+	<td><%=(mseuser.meforeignmalephdstudent+mseuser.meforeignfemalephdstudent) %></td>
+</tr>
+<tr>
+	<th rowspan="3">অ্যাপ্লায়েড সায়েন্স এন্ড হিউম্যানিটিজ অনুষদ</th>
+	<th>গণিত বিভাগ</th>
+	<th rowspan="3">এমফিল</th>
+	<td><%=mathuser.meforeignmalemfilstudent %></td>
+	<td><%=mathuser.meforeignfemalemfilstudent %></td>
+	<td><%=(mathuser.meforeignmalemfilstudent+mathuser.meforeignfemalemfilstudent) %></td>
+</tr>
+<tr>
+	<th>পদার্থ বিভাগ</th>
+	<td><%=physicsuser.meforeignmalemfilstudent %></td>
+	<td><%=physicsuser.meforeignfemalemfilstudent %></td>
+	<td><%=(physicsuser.meforeignmalemfilstudent+physicsuser.meforeignfemalemfilstudent) %></td>
+</tr>
+<tr>
+	<th>রসায়ন বিভাগ</th>
+	<td><%=chemistryuser.meforeignmalemfilstudent %></td>
+	<td><%=chemistryuser.meforeignfemalemfilstudent %></td>
+	<td><%=(chemistryuser.meforeignmalemfilstudent+chemistryuser.meforeignfemalemfilstudent) %></td>
+</tr>
+<tr>
+	<th colspan="3">বিশ্ববিদ্যালয়ের সর্বমোট</th>
+    <td><%=(eeeuser.eeeforeignmalephdstudent+user.cseforeignmalephdstudent+eteuser.eeeforeignmalephdstudent+eceuser.eceforeignmalephdstudent+ceuser.meforeignmalephdstudent+becmuser.meforeignmalephdstudent+urpuser.meforeignmalephdstudent+archiuser.meforeignmalephdstudent+meuser.meforeignmalephdstudent+ipeuser.meforeignmalephdstudent+gceuser.meforeignmalephdstudent+mteuser.meforeignmalephdstudent+cfpeuser.meforeignmalephdstudent+mseuser.meforeignmalephdstudent+mathuser.meforeignmalemfilstudent+physicsuser.meforeignmalemfilstudent+chemistryuser.meforeignmalemfilstudent)%></td>
+
+    <td><%=(eeeuser.eeeforeignfemalephdstudent+user.cseforeignfemalephdstudent+eteuser.eeeforeignfemalephdstudent+eceuser.eceforeignfemalephdstudent+ceuser.meforeignfemalephdstudent+becmuser.meforeignfemalephdstudent+urpuser.meforeignfemalephdstudent+archiuser.meforeignfemalephdstudent+meuser.meforeignfemalephdstudent+ipeuser.meforeignfemalephdstudent+gceuser.meforeignfemalephdstudent+mteuser.meforeignfemalephdstudent+cfpeuser.meforeignfemalephdstudent+mseuser.meforeignfemalephdstudent+mathuser.meforeignfemalemfilstudent+physicsuser.meforeignfemalemfilstudent+chemistryuser.meforeignfemalemfilstudent)%></td>
+
+    <td><%=(eeeuser.eeeforeignmalephdstudent+eeeuser.eeeforeignfemalephdstudent+user.cseforeignmalephdstudent+user.cseforeignfemalephdstudent+eteuser.eeeforeignmalephdstudent+eteuser.eeeforeignfemalephdstudent+eceuser.eceforeignmalephdstudent+eceuser.eceforeignfemalephdstudent+ceuser.meforeignmalephdstudent+ceuser.meforeignfemalephdstudent+becmuser.meforeignmalephdstudent+becmuser.meforeignfemalephdstudent+urpuser.meforeignmalephdstudent+urpuser.meforeignfemalephdstudent+archiuser.meforeignmalephdstudent+archiuser.meforeignfemalephdstudent+meuser.meforeignmalephdstudent+meuser.meforeignfemalephdstudent+ipeuser.meforeignmalephdstudent+ipeuser.meforeignfemalephdstudent+gceuser.meforeignmalephdstudent+gceuser.meforeignfemalephdstudent+mteuser.meforeignmalephdstudent+mteuser.meforeignfemalephdstudent+cfpeuser.meforeignmalephdstudent+cfpeuser.meforeignfemalephdstudent+mseuser.meforeignmalephdstudent+mseuser.meforeignfemalephdstudent+mathuser.meforeignmalemfilstudent+mathuser.meforeignfemalemfilstudent+physicsuser.meforeignmalemfilstudent+physicsuser.meforeignfemalemfilstudent+chemistryuser.meforeignmalemfilstudent+chemistryuser.meforeignfemalemfilstudent)%></td>
+</tr>
+</table>
+<br>
+
+<h3><%=user._id%>  সালে মুলবিষয়ভিত্তিক পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+  <tr>
+    <th>মুল বিষয়</th>
+    <th>ছাত্র</th>
+    <th>ছাত্রী</th>
+    <th>মোট</th>
+  </tr>
+  <tr>
+    <th>কলা ও মানবিক</th>
+    <td><%=commiteuser.artsmalestudent%></td>
+    <td><%=commiteuser.artsfemalestudent%></td>
+    <td><%=(commiteuser.artsmalestudent+commiteuser.artsfemalestudent)%></td>
+  </tr>
+  <tr>
+    <th>সামাজিক বিজ্ঞান</th>
+    <td><%=commiteuser.socialsciencemalestudent%></td>
+    <td><%=commiteuser.socialsciencefemalestudent%></td>
+    <td><%=(commiteuser.socialsciencemalestudent+commiteuser.socialsciencefemalestudent)%></td>
+  </tr>
+  <tr>
+    <th>শিক্ষা</th>
+    <td><%=commiteuser.educationmalestudent%></td>
+    <td><%=commiteuser.educationfemalestudent%></td>
+    <td><%=(commiteuser.educationmalestudent+commiteuser.educationfemalestudent)%></td>
+  </tr>
+  <tr>
+    <th>ব্যবসায় প্রশাসন/ব্যবসায় শিক্ষা</th>
+    <td><%=commiteuser.commercemalestudent%></td>
+    <td><%=commiteuser.commercefemalestudent%></td>
+    <td><%=(commiteuser.commercemalestudent+commiteuser.commercefemalestudent)%></td>
+  </tr>
+  <tr>
+    <th>আইন</th>
+    <td><%=commiteuser.lawmalestudent%></td>
+    <td><%=commiteuser.lawfemalestudent%></td>
+    <td><%=(commiteuser.lawmalestudent+commiteuser.lawfemalestudent)%></td>
+  </tr>
+  <tr>
+    <th>ফার্মেসী</th>
+    <td><%=commiteuser.farmecymalestudent%></td>
+    <td><%=commiteuser.farmecyfemalestudent%></td>
+    <td><%=(commiteuser.farmecymalestudent+commiteuser.farmecyfemalestudent)%></td>  
+  </tr>
+  <tr>
+    <th>বিজ্ঞান</th>
+    <td><%=commiteuser.sciencemalestudent%></td>
+    <td><%=commiteuser.sciencefemalestudent%></td>
+    <td><%=(commiteuser.sciencemalestudent+commiteuser.sciencefemalestudent)%></td>
+  </tr>
+  <tr>
+    <th>চিকিৎসা</th>
+    <td><%=commiteuser.advicemalestudent%></td>
+    <td><%=commiteuser.advicefemalestudent%></td>
+    <td><%=(commiteuser.advicemalestudent+commiteuser.advicefemalestudent)%></td>
+  </tr>
+  <tr>
+    <th>কৃষি</th>
+    <td><%=commiteuser.agriculturemalestudent%></td>
+    <td><%=commiteuser.agriculturefemalestudent%></td>
+    <td><%=(commiteuser.agriculturemalestudent+commiteuser.agriculturefemalestudent)%></td>
+  </tr>
+  <tr>
+    <th>প্রকৌশল ও কারিগরি</th>
+    <td><%=commiteuser.engineeringmalestudent%></td>
+    <td><%=commiteuser.engineeringfemalestudent%></td>
+    <td><%=(commiteuser.engineeringmalestudent+commiteuser.engineeringfemalestudent)%></td>
+  </tr>
+  <tr>
+    <th>অন্যান্য(ডিপ্লোমা/সার্টিফিকেট)</th>
+    <td><%=commiteuser.othermalestudent%></td>
+    <td><%=commiteuser.otherfemalestudent%></td>
+    <td><%=(commiteuser.othermalestudent+commiteuser.otherfemalestudent)%></td>
+  </tr>
+  <tr>
+  	<th>সর্বমোট</th>
+    <td><%=(commiteuser.artsmalestudent+commiteuser.socialsciencemalestudent+commiteuser.educationmalestudent+commiteuser.commercemalestudent+commiteuser.lawmalestudent+commiteuser.farmecymalestudent+commiteuser.sciencemalestudent+commiteuser.advicemalestudent+commiteuser.agriculturemalestudent+commiteuser.engineeringmalestudent+commiteuser.othermalestudent)%></td>
+
+    <td><%=(commiteuser.artsfemalestudent+commiteuser.socialsciencefemalestudent+commiteuser.educationfemalestudent+commiteuser.commercefemalestudent+commiteuser.lawfemalestudent+commiteuser.farmecyfemalestudent+commiteuser.sciencefemalestudent+commiteuser.advicefemalestudent+commiteuser.agriculturefemalestudent+commiteuser.engineeringfemalestudent+commiteuser.otherfemalestudent)%></td>
+
+    <td><%=(commiteuser.artsmalestudent+commiteuser.artsfemalestudent+commiteuser.socialsciencemalestudent+commiteuser.socialsciencefemalestudent+commiteuser.educationmalestudent+commiteuser.educationfemalestudent+commiteuser.commercemalestudent+commiteuser.commercefemalestudent+commiteuser.lawmalestudent+commiteuser.lawfemalestudent+commiteuser.farmecymalestudent+commiteuser.farmecyfemalestudent+commiteuser.sciencemalestudent+commiteuser.sciencefemalestudent+commiteuser.advicemalestudent+commiteuser.advicefemalestudent+commiteuser.agriculturemalestudent+commiteuser.agriculturefemalestudent+commiteuser.engineeringmalestudent+commiteuser.engineeringfemalestudent+commiteuser.othermalestudent+commiteuser.otherfemalestudent)%></td>
+  </tr>
+</table>
+<br>
+
+
+<h3><%=user._id%>  সালে ড্রপ আউটের হারঃ </h3> 
+<table border="1" width="900" align="center" class="table2">
+	<tr>
+		<th rowspan="2">ক্রমিক নং</th>
+		<th rowspan="2">অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	    <th rowspan="2">বিভাগ</th>
+	    <th colspan="3">শতকরা হার</th>
+	</tr>
+	<tr>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+	</tr>
+	<tr>
+		<th>০১</th>
+		<td><%=educationsectionuser.dropoutfaculty1%></td>
+		<td><%=educationsectionuser.dropoutdepartment1%></td>
+		<td><%=educationsectionuser.dropoutmalestudent1%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent1%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent1+educationsectionuser.dropoutfemalestudent1)%></td>
+	</tr>
+	<tr>
+		<th>০২</th>
+		<td><%=educationsectionuser.dropoutfaculty2%></td>
+		<td><%=educationsectionuser.dropoutdepartment2%></td>
+		<td><%=educationsectionuser.dropoutmalestudent2%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent2%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent2+educationsectionuser.dropoutfemalestudent2)%></td>
+	</tr>
+	<tr>
+		<th>০৩</th>
+		<td><%=educationsectionuser.dropoutfaculty3%></td>
+		<td><%=educationsectionuser.dropoutdepartment3%></td>
+		<td><%=educationsectionuser.dropoutmalestudent3%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent3%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent3+educationsectionuser.dropoutfemalestudent3)%></td>
+	</tr>
+	<tr>
+		<th>০৪</th>
+		<td><%=educationsectionuser.dropoutfaculty4%></td>
+		<td><%=educationsectionuser.dropoutdepartment4%></td>
+		<td><%=educationsectionuser.dropoutmalestudent4%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent4%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent4+educationsectionuser.dropoutfemalestudent4)%></td>
+	</tr>
+	<tr>
+		<th>০৫</th>
+		<td><%=educationsectionuser.dropoutfaculty5%></td>
+		<td><%=educationsectionuser.dropoutdepartment5%></td>
+		<td><%=educationsectionuser.dropoutmalestudent5%></td>
+		<td><%=educationsectionuser.dropoutfemalestudent5%></td>
+		<td><%=(educationsectionuser.dropoutmalestudent5+educationsectionuser.dropoutfemalestudent5)%></td>
+	</tr>
+</table><br>
+
+<h3><%=user._id%>  সালে বিনাবেতনে ও বৃত্তিপ্রাপ্ত শিক্ষার্থীর বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+	<tr>
+		<th>বিবরণ</th>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+	</tr>
+	<tr>
+		<th>বিনাবেতনে অধ্যায়ন্রত শিক্ষার্থী</th>
+		<td><%=educationsectionuser.fullfreemalestudent%></td>
+		<td><%=educationsectionuser.fullfreefemalestudent%></td>
+		<td><%=(educationsectionuser.fullfreemalestudent+educationsectionuser.fullfreefemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>স্কলারশিপ ও ফেলশিপ প্রাপ্ত শিক্ষার্থীর সংখ্যা</th>
+		<td><%=educationsectionuser.schoolarshipandfeloshipmalestudent%></td>
+		<td><%=educationsectionuser.schoolarshipandfeloshipfemalestudent%></td>
+		<td><%=(educationsectionuser.schoolarshipandfeloshipmalestudent+educationsectionuser.schoolarshipandfeloshipfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>স্কলারশিপ</th>
+		<td><%=educationsectionuser.schoolarshipmalestudent%></td>
+		<td><%=educationsectionuser.schoolarshipfemalestudent%></td>
+		<td><%=(educationsectionuser.schoolarshipmalestudent+educationsectionuser.schoolarshipfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>ফেলশিপ</th>
+		<td><%=educationsectionuser.feloshipmalestudent%></td>
+		<td><%=educationsectionuser.feloshipfemalestudent%></td>
+		<td><%=(educationsectionuser.feloshipmalestudent+educationsectionuser.feloshipfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>অন্যান্য বৃত্তি</th>
+		<td><%=educationsectionuser.otherschoolarshipmalestudent%></td>
+		<td><%=educationsectionuser.otherschoolarshipfemalestudent%></td>
+		<td><%=(educationsectionuser.otherschoolarshipmalestudent+educationsectionuser.otherschoolarshipfemalestudent)%></td>
+	</tr>
+</table><br>
+
+<h3><%=user._id%>  সালে মোট পদ ভিত্তিক শিক্ষক সংখ্যাঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+<tr>
+	<th rowspan="2">পদ</th>
+	<th rowspan="2">অনুমোদিত পদ সংখ্যা</th>
+	<th colspan="3">পদে নিয়োজিত সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন/চুক্তিভিত্তিক/এডহক শিক্ষক সংখ্যা</th>
+	<th colspan="3">মোট</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>প্রফেসর</th>
+	<td><%=foundationsectionuser.totalprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleprofessor%></td>
+	<td><%=foundationsectionuser.approvefemaleprofessor%></td>
+	<td><%=(foundationsectionuser.approvemaleprofessor+foundationsectionuser.approvefemaleprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemaleprofessor%></td>
+	<th><%=foundationsectionuser.parttimefemaleprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemaleprofessor+foundationsectionuser.parttimefemaleprofessor)%></td>	
+	<td><%=foundationsectionuser.totalmaleprofessor%></td>
+	<td><%=foundationsectionuser.totalfemaleprofessor%></td>
+	<td><%=(foundationsectionuser.totalmaleprofessor+foundationsectionuser.totalfemaleprofessor)%></td>
+</tr>
+<tr>
+	<th>এসোসিয়েট প্রফেসর</th>
+	<td><%=foundationsectionuser.totalassociateprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleassociateprofessor%></td>
+	<td><%=foundationsectionuser.approvefemaleassociateprofessor%></td>
+	<td><%=(foundationsectionuser.approvemaleassociateprofessor+foundationsectionuser.approvefemaleassociateprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemaleassociateprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemaleassociateprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemaleassociateprofessor+foundationsectionuser.parttimefemaleassociateprofessor)%></td>
+	<th><%=foundationsectionuser.totalmaleassociateprofessor%></td>
+	<td><%=foundationsectionuser.totalfemaleassociateprofessor%></td>
+	<td><%=(foundationsectionuser.totalmaleassociateprofessor+foundationsectionuser.totalfemaleassociateprofessor)%></td>
+</tr>
+<tr>
+	<th>এসিস্ট্যান্ট প্রফেসর</th>
+	<td><%=foundationsectionuser.totalassistantprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleassistantprofessor%></td>
+	<td><%=foundationsectionuser.approvefemaleassistantprofessor%></td>
+	<td><%=(foundationsectionuser.approvemaleassistantprofessor+foundationsectionuser.approvefemaleassistantprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemaleassistantprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemaleassistantprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemaleassistantprofessor+foundationsectionuser.parttimefemaleassistantprofessor)%></td>
+	<td><%=foundationsectionuser.totalmaleassistantprofessor%></td>
+	<td><%=foundationsectionuser.totalfemaleassistantprofessor%></td>
+	<td><%=(foundationsectionuser.totalmaleassistantprofessor+foundationsectionuser.totalfemaleassistantprofessor)%></td>
+</tr>
+<tr>
+	<th>লেকচারার</th>
+	<td><%=foundationsectionuser.totallecturarapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalelecturar%></td>
+	<td><%=foundationsectionuser.approvefemalelecturar%></td>
+	<td><%=(foundationsectionuser.approvemalelecturar+foundationsectionuser.approvefemalelecturar)%></td>
+	<td><%=foundationsectionuser.parttimemalelecturar%></td>
+	<td><%=foundationsectionuser.parttimefemalelecturar%></th>
+	<td><%=(foundationsectionuser.parttimemalelecturar+foundationsectionuser.parttimefemalelecturar)%></td>	
+	<td><%=foundationsectionuser.totalmalelecturar%></td>
+	<td><%=foundationsectionuser.totalfemalelecturar%></td>
+	<td><%=(foundationsectionuser.totalmalelecturar+foundationsectionuser.totalfemalelecturar)%></td>
+</tr>
+<tr>
+	<th>টিচিং এসিস্ট্যান্ট </th>
+	<td><%=foundationsectionuser.totalteachingassistantapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleteachingassistant%></td>
+	<td><%=foundationsectionuser.approvefemaleteachingassistant%></td>
+	<td><%=(foundationsectionuser.approvemaleteachingassistant+foundationsectionuser.approvefemaleteachingassistant)%></td>
+	<td><%=foundationsectionuser.parttimemaleteachingassistant%></td>
+	<td><%=foundationsectionuser.parttimefemaleteachingassistant%></td>
+	<td><%=(foundationsectionuser.parttimemaleteachingassistant+foundationsectionuser.parttimefemaleteachingassistant)%></td>
+	<td><%=foundationsectionuser.totalmaleteachingassistant%></td>
+	<td><%=foundationsectionuser.totalfemaleteachingassistant%></td>
+	<td><%=(foundationsectionuser.totalmaleteachingassistant+foundationsectionuser.totalfemaleteachingassistant)%></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(foundationsectionuser.totalprofessorapproveseat+foundationsectionuser.totalassociateprofessorapproveseat+foundationsectionuser.totalassistantprofessorapproveseat+foundationsectionuser.totallecturarapproveseat+foundationsectionuser.totalteachingassistantapproveseat)%></td>
+
+	<td><%=(foundationsectionuser.approvemaleprofessor+foundationsectionuser.approvemaleassociateprofessor+foundationsectionuser.approvemaleassistantprofessor+foundationsectionuser.approvemalelecturar+foundationsectionuser.approvemaleteachingassistant)%></td>
+
+	<td><%=(foundationsectionuser.approvefemaleprofessor+foundationsectionuser.approvefemaleassociateprofessor+foundationsectionuser.approvefemaleassistantprofessor+foundationsectionuser.approvefemalelecturar+foundationsectionuser.approvefemaleteachingassistant)%></td>
+
+	<td><%=(foundationsectionuser.approvemaleprofessor+foundationsectionuser.approvefemaleprofessor+foundationsectionuser.approvemaleassociateprofessor+foundationsectionuser.approvefemaleassociateprofessor+foundationsectionuser.approvemaleassistantprofessor+foundationsectionuser.approvefemaleassistantprofessor+foundationsectionuser.approvemalelecturar+foundationsectionuser.approvefemalelecturar+foundationsectionuser.approvemaleteachingassistant+foundationsectionuser.approvefemaleteachingassistant)%></td>
+
+	<td><%=(foundationsectionuser.parttimemaleprofessor+foundationsectionuser.parttimemaleassociateprofessor+foundationsectionuser.parttimemaleassistantprofessor+foundationsectionuser.parttimemalelecturar+foundationsectionuser.parttimemaleteachingassistant)%></td>
+
+	<td><%=(foundationsectionuser.parttimefemaleprofessor+foundationsectionuser.parttimefemaleassociateprofessor+foundationsectionuser.parttimefemaleassistantprofessor+foundationsectionuser.parttimefemalelecturar+foundationsectionuser.parttimefemaleteachingassistant)%></td>
+
+	<td><%=(foundationsectionuser.parttimemaleprofessor+foundationsectionuser.parttimefemaleprofessor+foundationsectionuser.parttimemaleassociateprofessor+foundationsectionuser.parttimefemaleassociateprofessor+foundationsectionuser.parttimemaleassistantprofessor+foundationsectionuser.parttimefemaleassistantprofessor+foundationsectionuser.parttimemalelecturar+foundationsectionuser.parttimefemalelecturar+foundationsectionuser.parttimemaleteachingassistant+foundationsectionuser.parttimefemaleteachingassistant)%></td>
+
+	<td><%=(foundationsectionuser.totalmaleprofessor+foundationsectionuser.totalmaleassociateprofessor+foundationsectionuser.totalmaleassistantprofessor+foundationsectionuser.totalmalelecturar+foundationsectionuser.totalmaleteachingassistant)%></td>
+
+	<td><%=(foundationsectionuser.totalfemaleprofessor+foundationsectionuser.totalfemaleassociateprofessor+foundationsectionuser.totalfemaleassistantprofessor+foundationsectionuser.totalfemalelecturar+foundationsectionuser.totalfemaleteachingassistant)%></td>
+
+	<td><%=(foundationsectionuser.totalmaleprofessor+foundationsectionuser.totalfemaleprofessor+foundationsectionuser.totalmaleassociateprofessor+foundationsectionuser.totalfemaleassociateprofessor+foundationsectionuser.totalmaleassistantprofessor+foundationsectionuser.totalfemaleassistantprofessor+foundationsectionuser.totalmalelecturar+foundationsectionuser.totalfemalelecturar+foundationsectionuser.totalmaleteachingassistant+foundationsectionuser.totalfemaleteachingassistant)%></td>
+</tr>
+<tr>
+	<th>ভিজিটিং প্রফেসর</th>
+	<td><%=foundationsectionuser.totalvisitingprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalevisitingprofessor%></td>
+	<td><%=foundationsectionuser.approvefemalevisitingprofessor%></td>
+	<td><%=(foundationsectionuser.approvemalevisitingprofessor+foundationsectionuser.approvefemalevisitingprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemalevisitingprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemalevisitingprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemalevisitingprofessor+foundationsectionuser.parttimefemalevisitingprofessor)%></td>
+	<td><%=foundationsectionuser.totalmalevisitingprofessor%></td>
+	<td><%=foundationsectionuser.totalfemalevisitingprofessor%></td>
+	<td><%=(foundationsectionuser.totalmalevisitingprofessor+foundationsectionuser.totalfemalevisitingprofessor)%></td>
+</tr>
+<tr>
+	<th>অনারারী প্রফেসর</th>
+	<td><%=foundationsectionuser.totalhonoraryprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalehonoraryprofessor%></td>
+	<td><%=foundationsectionuser.approvefemalehonoraryprofessor%></td>
+	<td><%=(foundationsectionuser.approvemalehonoraryprofessor+foundationsectionuser.approvefemalehonoraryprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemalehonoraryprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemalehonoraryprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemalehonoraryprofessor+foundationsectionuser.parttimefemalehonoraryprofessor)%></td>
+	<td><%=foundationsectionuser.totalmalehonoraryprofessor%></td>
+	<td><%=foundationsectionuser.totalfemalehonoraryprofessor%></td>
+	<td><%=(foundationsectionuser.totalmalehonoraryprofessor+foundationsectionuser.totalfemalehonoraryprofessor)%></td>
+</tr>
+<tr>
+	<th>সুপারনিউমারারী প্রফেসর</th>
+	<td><%=foundationsectionuser.totalsupernumararyprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalesupernumararyprofessor%></td>
+	<td><%=foundationsectionuser.approvefemalesupernumararyprofessor%></td>
+	<td><%=(foundationsectionuser.approvemalesupernumararyprofessor+foundationsectionuser.approvefemalesupernumararyprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemalesupernumararyprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemalesupernumararyprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemalesupernumararyprofessor+foundationsectionuser.parttimefemalesupernumararyprofessor)%></td>
+	<td><%=foundationsectionuser.totalmalesupernumararyprofessor%></td>
+	<td><%=foundationsectionuser.totalfemalesupernumararyprofessor%></td>
+	<td><%=(foundationsectionuser.totalmalesupernumararyprofessor+foundationsectionuser.totalfemalesupernumararyprofessor)%></td>
+</tr>
+<tr>
+	<th>ইমেরিটাস প্রফেসর</th>
+	<td><%=foundationsectionuser.totalemeritusprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleemeritusprofessor%></td>
+	<td><%=foundationsectionuser.approvefemaleemeritusprofessor%></td>
+	<td><%=(foundationsectionuser.approvemaleemeritusprofessor+foundationsectionuser.approvefemaleemeritusprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemaleemeritusprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemaleemeritusprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemaleemeritusprofessor+foundationsectionuser.parttimefemaleemeritusprofessor)%></td>
+	<td><%=foundationsectionuser.totalmaleemeritusprofessor%></td>
+	<td><%=foundationsectionuser.totalfemaleemeritusprofessor%></td>
+	<td><%=(foundationsectionuser.totalmaleemeritusprofessor+foundationsectionuser.totalfemaleemeritusprofessor)%></td>
+</tr>
+<tr>
+	<th>জাতীয় অধ্যাপক</th>
+	<td><%=foundationsectionuser.totalnationalprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalenationalprofessor%></td>
+	<td><%=foundationsectionuser.approvefemalenationalprofessor%></td>
+	<td><%=(foundationsectionuser.approvemalenationalprofessor+foundationsectionuser.approvefemalenationalprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemalenationalprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemalenationalprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemalenationalprofessor+foundationsectionuser.parttimefemalenationalprofessor)%></td>
+	<td><%=foundationsectionuser.totalmalenationalprofessor%></td>
+	<td><%=foundationsectionuser.totalfemalenationalprofessor%></td>
+	<td><%=(foundationsectionuser.totalmalenationalprofessor+foundationsectionuser.totalfemalenationalprofessor)%></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(foundationsectionuser.totalvisitingprofessorapproveseat+foundationsectionuser.totalhonoraryprofessorapproveseat+foundationsectionuser.totalsupernumararyprofessorapproveseat+foundationsectionuser.totalemeritusprofessorapproveseat+foundationsectionuser.totalnationalprofessorapproveseat)%></td>
+
+	<td><%=(foundationsectionuser.approvemalevisitingprofessor+foundationsectionuser.approvemalehonoraryprofessor+foundationsectionuser.approvemalesupernumararyprofessor+foundationsectionuser.approvemaleemeritusprofessor+foundationsectionuser.approvemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.approvefemalevisitingprofessor+foundationsectionuser.approvefemalehonoraryprofessor+foundationsectionuser.approvefemalesupernumararyprofessor+foundationsectionuser.approvefemaleemeritusprofessor+foundationsectionuser.approvefemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.approvemalevisitingprofessor+foundationsectionuser.approvefemalevisitingprofessor+foundationsectionuser.approvemalehonoraryprofessor+foundationsectionuser.approvefemalehonoraryprofessor+foundationsectionuser.approvemalesupernumararyprofessor+foundationsectionuser.approvefemalesupernumararyprofessor+foundationsectionuser.approvemaleemeritusprofessor+foundationsectionuser.approvefemaleemeritusprofessor+foundationsectionuser.approvemalenationalprofessor+foundationsectionuser.approvefemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.parttimemalevisitingprofessor+foundationsectionuser.parttimemalehonoraryprofessor+foundationsectionuser.parttimemalesupernumararyprofessor+foundationsectionuser.parttimemaleemeritusprofessor+foundationsectionuser.parttimemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.parttimefemalevisitingprofessor+foundationsectionuser.parttimefemalehonoraryprofessor+foundationsectionuser.parttimefemalesupernumararyprofessor+foundationsectionuser.parttimefemaleemeritusprofessor+foundationsectionuser.parttimefemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.parttimemalevisitingprofessor+foundationsectionuser.parttimefemalevisitingprofessor+foundationsectionuser.parttimemalehonoraryprofessor+foundationsectionuser.parttimefemalehonoraryprofessor+foundationsectionuser.parttimemalesupernumararyprofessor+foundationsectionuser.parttimefemalesupernumararyprofessor+foundationsectionuser.parttimemaleemeritusprofessor+foundationsectionuser.parttimefemaleemeritusprofessor+foundationsectionuser.parttimemalenationalprofessor+foundationsectionuser.parttimefemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.totalmalevisitingprofessor+foundationsectionuser.totalmalehonoraryprofessor+foundationsectionuser.totalmalesupernumararyprofessor+foundationsectionuser.totalmaleemeritusprofessor+foundationsectionuser.totalmalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.totalfemalevisitingprofessor+foundationsectionuser.totalfemalehonoraryprofessor+foundationsectionuser.totalfemalesupernumararyprofessor+foundationsectionuser.totalfemaleemeritusprofessor+foundationsectionuser.totalfemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.totalmalevisitingprofessor+foundationsectionuser.totalfemalevisitingprofessor+foundationsectionuser.totalmalehonoraryprofessor+foundationsectionuser.totalfemalehonoraryprofessor+foundationsectionuser.totalmalesupernumararyprofessor+foundationsectionuser.totalfemalesupernumararyprofessor+foundationsectionuser.totalmaleemeritusprofessor+foundationsectionuser.totalfemaleemeritusprofessor+foundationsectionuser.totalmalenationalprofessor+foundationsectionuser.totalfemalenationalprofessor)%></td>
+</tr>
+<tr>
+	<th>সর্বমোট</th>
+	<td><%=(foundationsectionuser.totalprofessorapproveseat+foundationsectionuser.totalassociateprofessorapproveseat+foundationsectionuser.totalassistantprofessorapproveseat+foundationsectionuser.totallecturarapproveseat+foundationsectionuser.totalteachingassistantapproveseat+foundationsectionuser.totalvisitingprofessorapproveseat+foundationsectionuser.totalhonoraryprofessorapproveseat+foundationsectionuser.totalsupernumararyprofessorapproveseat+foundationsectionuser.totalemeritusprofessorapproveseat+foundationsectionuser.totalnationalprofessorapproveseat)%></td>
+
+	<td><%=(foundationsectionuser.approvemaleprofessor+foundationsectionuser.approvemaleassociateprofessor+foundationsectionuser.approvemaleassistantprofessor+foundationsectionuser.approvemalelecturar+foundationsectionuser.approvemaleteachingassistant+foundationsectionuser.approvemalevisitingprofessor+foundationsectionuser.approvemalehonoraryprofessor+foundationsectionuser.approvemalesupernumararyprofessor+foundationsectionuser.approvemaleemeritusprofessor+foundationsectionuser.approvemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.approvefemaleprofessor+foundationsectionuser.approvefemaleassociateprofessor+foundationsectionuser.approvefemaleassistantprofessor+foundationsectionuser.approvefemalelecturar+foundationsectionuser.approvefemaleteachingassistant+foundationsectionuser.approvefemalevisitingprofessor+foundationsectionuser.approvefemalehonoraryprofessor+foundationsectionuser.approvefemalesupernumararyprofessor+foundationsectionuser.approvefemaleemeritusprofessor+foundationsectionuser.approvefemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.approvemaleprofessor+foundationsectionuser.approvefemaleprofessor+foundationsectionuser.approvemaleassociateprofessor+foundationsectionuser.approvefemaleassociateprofessor+foundationsectionuser.approvemaleassistantprofessor+foundationsectionuser.approvefemaleassistantprofessor+foundationsectionuser.approvemalelecturar+foundationsectionuser.approvefemalelecturar+foundationsectionuser.approvemaleteachingassistant+foundationsectionuser.approvefemaleteachingassistant+foundationsectionuser.approvemalevisitingprofessor+foundationsectionuser.approvefemalevisitingprofessor+foundationsectionuser.approvemalehonoraryprofessor+foundationsectionuser.approvefemalehonoraryprofessor+foundationsectionuser.approvemalesupernumararyprofessor+foundationsectionuser.approvefemalesupernumararyprofessor+foundationsectionuser.approvemaleemeritusprofessor+foundationsectionuser.approvefemaleemeritusprofessor+foundationsectionuser.approvemalenationalprofessor+foundationsectionuser.approvefemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.parttimemaleprofessor+foundationsectionuser.parttimemaleassociateprofessor+foundationsectionuser.parttimemaleassistantprofessor+foundationsectionuser.parttimemalelecturar+foundationsectionuser.parttimemaleteachingassistant+foundationsectionuser.parttimemalevisitingprofessor+foundationsectionuser.parttimemalehonoraryprofessor+foundationsectionuser.parttimemalesupernumararyprofessor+foundationsectionuser.parttimemaleemeritusprofessor+foundationsectionuser.parttimemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.parttimefemaleprofessor+foundationsectionuser.parttimefemaleassociateprofessor+foundationsectionuser.parttimefemaleassistantprofessor+foundationsectionuser.parttimefemalelecturar+foundationsectionuser.parttimefemaleteachingassistant+foundationsectionuser.parttimefemalevisitingprofessor+foundationsectionuser.parttimefemalehonoraryprofessor+foundationsectionuser.parttimefemalesupernumararyprofessor+foundationsectionuser.parttimefemaleemeritusprofessor+foundationsectionuser.parttimefemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.parttimemaleprofessor+foundationsectionuser.parttimefemaleprofessor+foundationsectionuser.parttimemaleassociateprofessor+foundationsectionuser.parttimefemaleassociateprofessor+foundationsectionuser.parttimemaleassistantprofessor+foundationsectionuser.parttimefemaleassistantprofessor+foundationsectionuser.parttimemalelecturar+foundationsectionuser.parttimefemalelecturar+foundationsectionuser.parttimemaleteachingassistant+foundationsectionuser.parttimefemaleteachingassistant+foundationsectionuser.parttimemalevisitingprofessor+foundationsectionuser.parttimefemalevisitingprofessor+foundationsectionuser.parttimemalehonoraryprofessor+foundationsectionuser.parttimefemalehonoraryprofessor+foundationsectionuser.parttimemalesupernumararyprofessor+foundationsectionuser.parttimefemalesupernumararyprofessor+foundationsectionuser.parttimemaleemeritusprofessor+foundationsectionuser.parttimefemaleemeritusprofessor+foundationsectionuser.parttimemalenationalprofessor+foundationsectionuser.parttimefemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.totalmaleprofessor+foundationsectionuser.totalmaleassociateprofessor+foundationsectionuser.totalmaleassistantprofessor+foundationsectionuser.totalmalelecturar+foundationsectionuser.totalmaleteachingassistant+foundationsectionuser.totalmalevisitingprofessor+foundationsectionuser.totalmalehonoraryprofessor+foundationsectionuser.totalmalesupernumararyprofessor+foundationsectionuser.totalmaleemeritusprofessor+foundationsectionuser.totalmalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.totalfemaleprofessor+foundationsectionuser.totalfemaleassociateprofessor+foundationsectionuser.totalfemaleassistantprofessor+foundationsectionuser.totalfemalelecturar+foundationsectionuser.totalfemaleteachingassistant+foundationsectionuser.totalfemalevisitingprofessor+foundationsectionuser.totalfemalehonoraryprofessor+foundationsectionuser.totalfemalesupernumararyprofessor+foundationsectionuser.totalfemaleemeritusprofessor+foundationsectionuser.totalfemalenationalprofessor)%></td>
+
+	<td><%=(foundationsectionuser.totalmaleprofessor+foundationsectionuser.totalfemaleprofessor+foundationsectionuser.totalmaleassociateprofessor+foundationsectionuser.totalfemaleassociateprofessor+foundationsectionuser.totalmaleassistantprofessor+foundationsectionuser.totalfemaleassistantprofessor+foundationsectionuser.totalmalelecturar+foundationsectionuser.totalfemalelecturar+foundationsectionuser.totalmaleteachingassistant+foundationsectionuser.totalfemaleteachingassistant+foundationsectionuser.totalmalevisitingprofessor+foundationsectionuser.totalfemalevisitingprofessor+foundationsectionuser.totalmalehonoraryprofessor+foundationsectionuser.totalfemalehonoraryprofessor+foundationsectionuser.totalmalesupernumararyprofessor+foundationsectionuser.totalfemalesupernumararyprofessor+foundationsectionuser.totalmaleemeritusprofessor+foundationsectionuser.totalfemaleemeritusprofessor+foundationsectionuser.totalmalenationalprofessor+foundationsectionuser.totalfemalenationalprofessor)%></td>
+</tr>
+</table><br>
+
+<h3><%=user._id%>  সালে ডিগ্রিভিত্তিক শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th rowspan="2">ডিগ্রি</th>
+	<th colspan="3">পূর্ণকালিন  শিক্ষক সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন  শিক্ষক সংখ্যা</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>এমফিল/সমমান</th>
+	<td><%=(user.csefulltimemfilmaleteacher+eeeuser.eeefulltimemfilmaleteacher+eteuser.etefulltimemfilmaleteacher+eceuser.ecefulltimemfilmaleteacher+ceuser.mefulltimemfilmaleteacher+becmuser.mefulltimemfilmaleteacher+urpuser.mefulltimemfilmaleteacher+archiuser.mefulltimemfilmaleteacher+meuser.mefulltimemfilmaleteacher+ipeuser.mefulltimemfilmaleteacher+gceuser.mefulltimemfilmaleteacher+mteuser.mefulltimemfilmaleteacher+mseuser.mefulltimemfilmaleteacher+cfpeuser.mefulltimemfilmaleteacher+humuser.mefulltimemfilmaleteacher+mathuser.mefulltimemfilmaleteacher+physicsuser.mefulltimemfilmaleteacher+chemistryuser.mefulltimemfilmaleteacher)%></td>
+
+	<td><%=(user.csefulltimemfilfemaleteacher+eeeuser.eeefulltimemfilfemaleteacher+eteuser.etefulltimemfilfemaleteacher+eceuser.ecefulltimemfilfemaleteacher+ceuser.mefulltimemfilfemaleteacher+becmuser.mefulltimemfilfemaleteacher+urpuser.mefulltimemfilfemaleteacher+archiuser.mefulltimemfilfemaleteacher+meuser.mefulltimemfilfemaleteacher+ipeuser.mefulltimemfilfemaleteacher+gceuser.mefulltimemfilfemaleteacher+mteuser.mefulltimemfilfemaleteacher+mseuser.mefulltimemfilfemaleteacher+cfpeuser.mefulltimemfilfemaleteacher+humuser.mefulltimemfilfemaleteacher+mathuser.mefulltimemfilfemaleteacher+physicsuser.mefulltimemfilfemaleteacher+chemistryuser.mefulltimemfilfemaleteacher)%></td>
+
+	<td><%=(user.csefulltimemfilmaleteacher+user.csefulltimemfilfemaleteacher+eeeuser.eeefulltimemfilmaleteacher+eeeuser.eeefulltimemfilfemaleteacher+eteuser.etefulltimemfilmaleteacher+eteuser.etefulltimemfilfemaleteacher+eceuser.ecefulltimemfilmaleteacher+eceuser.ecefulltimemfilfemaleteacher+ceuser.mefulltimemfilmaleteacher+ceuser.mefulltimemfilfemaleteacher+becmuser.mefulltimemfilmaleteacher+becmuser.mefulltimemfilfemaleteacher+urpuser.mefulltimemfilmaleteacher+urpuser.mefulltimemfilfemaleteacher+archiuser.mefulltimemfilmaleteacher+archiuser.mefulltimemfilfemaleteacher+meuser.mefulltimemfilmaleteacher+meuser.mefulltimemfilfemaleteacher+ipeuser.mefulltimemfilmaleteacher+ipeuser.mefulltimemfilfemaleteacher+gceuser.mefulltimemfilmaleteacher+gceuser.mefulltimemfilfemaleteacher+mteuser.mefulltimemfilmaleteacher+mteuser.mefulltimemfilfemaleteacher+mseuser.mefulltimemfilmaleteacher+mseuser.mefulltimemfilfemaleteacher+cfpeuser.mefulltimemfilmaleteacher+cfpeuser.mefulltimemfilfemaleteacher+humuser.mefulltimemfilmaleteacher+humuser.mefulltimemfilfemaleteacher+mathuser.mefulltimemfilmaleteacher+mathuser.mefulltimemfilfemaleteacher+physicsuser.mefulltimemfilmaleteacher+physicsuser.mefulltimemfilfemaleteacher+chemistryuser.mefulltimemfilmaleteacher+chemistryuser.mefulltimemfilfemaleteacher)%></td>
+
+	<td><%=(user.cseparttimemfilmaleteacher+eeeuser.eeeparttimemfilmaleteacher+eteuser.eteparttimemfilmaleteacher+eceuser.eceparttimemfilmaleteacher+ceuser.meparttimemfilmaleteacher+becmuser.meparttimemfilmaleteacher+urpuser.meparttimemfilmaleteacher+archiuser.meparttimemfilmaleteacher+meuser.meparttimemfilmaleteacher+ipeuser.meparttimemfilmaleteacher+gceuser.meparttimemfilmaleteacher+mteuser.meparttimemfilmaleteacher+mseuser.meparttimemfilmaleteacher+cfpeuser.meparttimemfilmaleteacher+humuser.meparttimemfilmaleteacher+mathuser.meparttimemfilmaleteacher+physicsuser.meparttimemfilmaleteacher+chemistryuser.meparttimemfilmaleteacher)%></td>
+
+	<td><%=(user.cseparttimemfilfemaleteacher+eeeuser.eeeparttimemfilfemaleteacher+eteuser.eteparttimemfilfemaleteacher+eceuser.eceparttimemfilfemaleteacher+ceuser.meparttimemfilfemaleteacher+becmuser.meparttimemfilfemaleteacher+urpuser.meparttimemfilfemaleteacher+archiuser.meparttimemfilfemaleteacher+meuser.meparttimemfilfemaleteacher+ipeuser.meparttimemfilfemaleteacher+gceuser.meparttimemfilfemaleteacher+mteuser.meparttimemfilfemaleteacher+mseuser.meparttimemfilfemaleteacher+cfpeuser.meparttimemfilfemaleteacher+humuser.meparttimemfilfemaleteacher+mathuser.meparttimemfilfemaleteacher+physicsuser.meparttimemfilfemaleteacher+chemistryuser.meparttimemfilfemaleteacher)%></td>
+
+	<td><%=(user.cseparttimemfilmaleteacher+user.cseparttimemfilfemaleteacher+eeeuser.eeeparttimemfilmaleteacher+eeeuser.eeeparttimemfilfemaleteacher+eteuser.eteparttimemfilmaleteacher+eteuser.eteparttimemfilfemaleteacher+eceuser.eceparttimemfilmaleteacher+eceuser.eceparttimemfilfemaleteacher+ceuser.meparttimemfilmaleteacher+ceuser.meparttimemfilfemaleteacher+becmuser.meparttimemfilmaleteacher+becmuser.meparttimemfilfemaleteacher+urpuser.meparttimemfilmaleteacher+urpuser.meparttimemfilfemaleteacher+archiuser.meparttimemfilmaleteacher+archiuser.meparttimemfilfemaleteacher+meuser.meparttimemfilmaleteacher+meuser.meparttimemfilfemaleteacher+ipeuser.meparttimemfilmaleteacher+ipeuser.meparttimemfilfemaleteacher+gceuser.meparttimemfilmaleteacher+gceuser.meparttimemfilfemaleteacher+mteuser.meparttimemfilmaleteacher+mteuser.meparttimemfilfemaleteacher+mseuser.meparttimemfilmaleteacher+mseuser.meparttimemfilfemaleteacher+cfpeuser.meparttimemfilmaleteacher+cfpeuser.meparttimemfilfemaleteacher+humuser.meparttimemfilmaleteacher+humuser.meparttimemfilfemaleteacher+mathuser.meparttimemfilmaleteacher+mathuser.meparttimemfilfemaleteacher+physicsuser.meparttimemfilmaleteacher+physicsuser.meparttimemfilfemaleteacher+chemistryuser.meparttimemfilmaleteacher+chemistryuser.meparttimemfilfemaleteacher)%></td>
+</tr>
+
+<tr>
+	<th>পিএইচডি/সমমান</th>
+	<td><%=(user.csefulltimephdmaleteacher+eeeuser.eeefulltimephdmaleteacher+eteuser.etefulltimephdmaleteacher+eceuser.ecefulltimephdmaleteacher+ceuser.mefulltimephdmaleteacher+becmuser.mefulltimephdmaleteacher+urpuser.mefulltimephdmaleteacher+archiuser.mefulltimephdmaleteacher+archiuser.mefulltimephdmaleteacher+meuser.mefulltimephdmaleteacher+ipeuser.mefulltimephdmaleteacher+gceuser.mefulltimephdmaleteacher+mteuser.mefulltimephdmaleteacher+mseuser.mefulltimephdmaleteacher+cfpeuser.mefulltimephdmaleteacher+humuser.mefulltimephdmaleteacher+mathuser.mefulltimephdmaleteacher+physicsuser.mefulltimephdmaleteacher+chemistryuser.mefulltimephdmaleteacher)%></td>
+
+	<td><%=(user.csefulltimephdfemaleteacher+eeeuser.eeefulltimephdfemaleteacher+eteuser.etefulltimephdfemaleteacher+eceuser.ecefulltimephdfemaleteacher+ceuser.mefulltimephdfemaleteacher+becmuser.mefulltimephdfemaleteacher+urpuser.mefulltimephdfemaleteacher+archiuser.mefulltimephdfemaleteacher+meuser.mefulltimephdfemaleteacher+ipeuser.mefulltimephdfemaleteacher+gceuser.mefulltimephdfemaleteacher+mteuser.mefulltimephdfemaleteacher+mseuser.mefulltimephdfemaleteacher+cfpeuser.mefulltimephdfemaleteacher+humuser.mefulltimephdfemaleteacher+mathuser.mefulltimephdfemaleteacher+physicsuser.mefulltimephdfemaleteacher+chemistryuser.mefulltimephdfemaleteacher)%></td>
+
+	<td><%=(user.csefulltimephdmaleteacher+user.csefulltimephdfemaleteacher+eeeuser.eeefulltimephdmaleteacher+eeeuser.eeefulltimephdfemaleteacher+eteuser.etefulltimephdmaleteacher+eteuser.etefulltimephdfemaleteacher+eceuser.ecefulltimephdmaleteacher+eceuser.ecefulltimephdfemaleteacher+ceuser.mefulltimephdmaleteacher+ceuser.mefulltimephdfemaleteacher+becmuser.mefulltimephdmaleteacher+becmuser.mefulltimephdfemaleteacher+urpuser.mefulltimephdmaleteacher+urpuser.mefulltimephdfemaleteacher+archiuser.mefulltimephdmaleteacher+archiuser.mefulltimephdfemaleteacher+meuser.mefulltimephdmaleteacher+meuser.mefulltimephdfemaleteacher+ipeuser.mefulltimephdmaleteacher+ipeuser.mefulltimephdfemaleteacher+gceuser.mefulltimephdmaleteacher+gceuser.mefulltimephdfemaleteacher+mteuser.mefulltimephdmaleteacher+mteuser.mefulltimephdfemaleteacher+mseuser.mefulltimephdmaleteacher+mseuser.mefulltimephdfemaleteacher+cfpeuser.mefulltimephdmaleteacher+cfpeuser.mefulltimephdfemaleteacher+humuser.mefulltimephdmaleteacher+humuser.mefulltimephdfemaleteacher+mathuser.mefulltimephdmaleteacher+mathuser.mefulltimephdfemaleteacher+physicsuser.mefulltimephdmaleteacher+physicsuser.mefulltimephdfemaleteacher+chemistryuser.mefulltimephdmaleteacher+chemistryuser.mefulltimephdfemaleteacher)%></td>
+
+	<td><%=(user.cseparttimephdmaleteacher+eeeuser.eeeparttimephdmaleteacher+eteuser.eteparttimephdmaleteacher+eceuser.eceparttimephdmaleteacher+ceuser.meparttimephdmaleteacher+becmuser.meparttimephdmaleteacher+urpuser.meparttimephdmaleteacher+archiuser.meparttimephdmaleteacher+meuser.meparttimephdmaleteacher+ipeuser.meparttimephdmaleteacher+gceuser.meparttimephdmaleteacher+mteuser.meparttimephdmaleteacher+mseuser.meparttimephdmaleteacher+cfpeuser.meparttimephdmaleteacher+humuser.meparttimephdmaleteacher+mathuser.meparttimephdmaleteacher+physicsuser.meparttimephdmaleteacher+chemistryuser.meparttimephdmaleteacher)%></td>
+
+	<td><%=(user.cseparttimephdfemaleteacher+eeeuser.eeeparttimephdfemaleteacher+eteuser.eteparttimephdfemaleteacher+eceuser.eceparttimephdfemaleteacher+ceuser.meparttimephdfemaleteacher+becmuser.meparttimephdfemaleteacher+urpuser.meparttimephdfemaleteacher+archiuser.meparttimephdfemaleteacher+meuser.meparttimephdfemaleteacher+ipeuser.meparttimephdfemaleteacher+gceuser.meparttimephdfemaleteacher+mteuser.meparttimephdfemaleteacher+mseuser.meparttimephdfemaleteacher+cfpeuser.meparttimephdfemaleteacher+humuser.meparttimephdfemaleteacher+mathuser.meparttimephdfemaleteacher+physicsuser.meparttimephdfemaleteacher+chemistryuser.meparttimephdfemaleteacher)%></td>
+
+	<td><%=(user.cseparttimephdmaleteacher+user.cseparttimephdfemaleteacher+eeeuser.eeeparttimephdmaleteacher+eeeuser.eeeparttimephdfemaleteacher+eteuser.eteparttimephdmaleteacher+eteuser.eteparttimephdfemaleteacher+eceuser.eceparttimephdmaleteacher+eceuser.eceparttimephdfemaleteacher+ceuser.meparttimephdmaleteacher+ceuser.meparttimephdfemaleteacher+becmuser.meparttimephdmaleteacher+becmuser.meparttimephdfemaleteacher+urpuser.meparttimephdmaleteacher+urpuser.meparttimephdfemaleteacher+archiuser.meparttimephdmaleteacher+archiuser.meparttimephdfemaleteacher+meuser.meparttimephdmaleteacher+meuser.meparttimephdfemaleteacher+ipeuser.meparttimephdmaleteacher+ipeuser.meparttimephdfemaleteacher+gceuser.meparttimephdmaleteacher+gceuser.meparttimephdfemaleteacher+mteuser.meparttimephdmaleteacher+mteuser.meparttimephdfemaleteacher+mseuser.meparttimephdmaleteacher+mseuser.meparttimephdfemaleteacher+cfpeuser.meparttimephdmaleteacher+cfpeuser.meparttimephdfemaleteacher+humuser.meparttimephdmaleteacher+humuser.meparttimephdfemaleteacher+mathuser.meparttimephdmaleteacher+mathuser.meparttimephdfemaleteacher+physicsuser.meparttimephdmaleteacher+physicsuser.meparttimephdfemaleteacher+chemistryuser.meparttimephdmaleteacher+chemistryuser.meparttimephdfemaleteacher)%></td>
+</tr>
+
+<tr>
+	<th>মাস্টার্স</th>
+	<td><%=(user.csefulltimemscmaleteacher+eeeuser.eeefulltimemscmaleteacher+eteuser.etefulltimemscmaleteacher+eceuser.ecefulltimemscmaleteacher+ceuser.mefulltimemscmaleteacher+becmuser.mefulltimemscmaleteacher+urpuser.mefulltimemscmaleteacher+archiuser.mefulltimemscmaleteacher+meuser.mefulltimemscmaleteacher+ipeuser.mefulltimemscmaleteacher+gceuser.mefulltimemscmaleteacher+mteuser.mefulltimemscmaleteacher+mseuser.mefulltimemscmaleteacher+cfpeuser.mefulltimemscmaleteacher+humuser.mefulltimemscmaleteacher+mathuser.mefulltimemscmaleteacher+physicsuser.mefulltimemscmaleteacher+chemistryuser.mefulltimemscmaleteacher)%></td>
+
+	<td><%=(user.csefulltimemscfemaleteacher+eeeuser.eeefulltimemscfemaleteacher+eteuser.etefulltimemscfemaleteacher+eceuser.ecefulltimemscfemaleteacher+ceuser.mefulltimemscfemaleteacher+becmuser.mefulltimemscfemaleteacher+urpuser.mefulltimemscfemaleteacher+archiuser.mefulltimemscfemaleteacher+meuser.mefulltimemscfemaleteacher+ipeuser.mefulltimemscfemaleteacher+gceuser.mefulltimemscfemaleteacher+mteuser.mefulltimemscfemaleteacher+mseuser.mefulltimemscfemaleteacher+cfpeuser.mefulltimemscfemaleteacher+mathuser.mefulltimemscfemaleteacher+physicsuser.mefulltimemscfemaleteacher+chemistryuser.mefulltimemscfemaleteacher )%></td>
+
+	<td><%=(user.csefulltimemscmaleteacher+user.csefulltimemscfemaleteacher+eeeuser.eeefulltimemscmaleteacher+eeeuser.eeefulltimemscfemaleteacher+eteuser.etefulltimemscmaleteacher+eteuser.etefulltimemscfemaleteacher+eceuser.ecefulltimemscmaleteacher+eceuser.ecefulltimemscfemaleteacher+ceuser.mefulltimemscmaleteacher+ceuser.mefulltimemscfemaleteacher+becmuser.mefulltimemscmaleteacher+becmuser.mefulltimemscfemaleteacher+urpuser.mefulltimemscmaleteacher+urpuser.mefulltimemscfemaleteacher+archiuser.mefulltimemscmaleteacher+archiuser.mefulltimemscfemaleteacher+meuser.mefulltimemscmaleteacher+meuser.mefulltimemscfemaleteacher+ipeuser.mefulltimemscmaleteacher+ipeuser.mefulltimemscfemaleteacher+gceuser.mefulltimemscmaleteacher+gceuser.mefulltimemscfemaleteacher+mteuser.mefulltimemscmaleteacher+mteuser.mefulltimemscfemaleteacher+mseuser.mefulltimemscmaleteacher+mseuser.mefulltimemscfemaleteacher+cfpeuser.mefulltimemscmaleteacher+cfpeuser.mefulltimemscfemaleteacher+humuser.mefulltimemscmaleteacher+humuser.mefulltimemscfemaleteacher+mathuser.mefulltimemscmaleteacher+mathuser.mefulltimemscfemaleteacher+physicsuser.mefulltimemscmaleteacher+physicsuser.mefulltimemscfemaleteacher+chemistryuser.mefulltimemscmaleteacher+chemistryuser.mefulltimemscfemaleteacher)%></td>
+
+	<td><%=(user.cseparttimemscmaleteacher+eeeuser.eeeparttimemscmaleteacher+eteuser.eteparttimemscmaleteacher+eceuser.eceparttimemscmaleteacher+ceuser.meparttimemscmaleteacher+becmuser.meparttimemscmaleteacher+urpuser.meparttimemscmaleteacher+archiuser.meparttimemscmaleteacher+meuser.meparttimemscmaleteacher+ipeuser.meparttimemscmaleteacher+gceuser.meparttimemscmaleteacher+mteuser.meparttimemscmaleteacher+mseuser.meparttimemscmaleteacher+cfpeuser.meparttimemscmaleteacher+humuser.meparttimemscmaleteacher+mathuser.meparttimemscmaleteacher+physicsuser.meparttimemscmaleteacher+chemistryuser.meparttimemscmaleteacher)%></td>
+
+	<td><%=(user.cseparttimemscfemaleteacher+eeeuser.eeeparttimemscfemaleteacher+eteuser.eteparttimemscfemaleteacher+eceuser.eceparttimemscfemaleteacher+ceuser.meparttimemscfemaleteacher+becmuser.meparttimemscfemaleteacher+urpuser.meparttimemscfemaleteacher+archiuser.meparttimemscfemaleteacher+meuser.meparttimemscfemaleteacher+ipeuser.meparttimemscfemaleteacher+gceuser.meparttimemscfemaleteacher+mteuser.meparttimemscfemaleteacher+mseuser.meparttimemscfemaleteacher+cfpeuser.meparttimemscfemaleteacher+humuser.meparttimemscfemaleteacher+mathuser.meparttimemscfemaleteacher+physicsuser.meparttimemscfemaleteacher+chemistryuser.meparttimemscfemaleteacher)%></td>
+
+	<td><%=(user.cseparttimemscmaleteacher+user.cseparttimemscfemaleteacher+eeeuser.eeeparttimemscmaleteacher+eeeuser.eeeparttimemscfemaleteacher+eteuser.eteparttimemscmaleteacher+eteuser.eteparttimemscfemaleteacher+eceuser.eceparttimemscmaleteacher+eceuser.eceparttimemscfemaleteacher+ceuser.meparttimemscmaleteacher+ceuser.meparttimemscfemaleteacher+becmuser.meparttimemscmaleteacher+becmuser.meparttimemscfemaleteacher+urpuser.meparttimemscmaleteacher+urpuser.meparttimemscfemaleteacher+archiuser.meparttimemscmaleteacher+archiuser.meparttimemscfemaleteacher+meuser.meparttimemscmaleteacher+meuser.meparttimemscfemaleteacher+ipeuser.meparttimemscmaleteacher+ipeuser.meparttimemscfemaleteacher+gceuser.meparttimemscmaleteacher+gceuser.meparttimemscfemaleteacher+mteuser.meparttimemscmaleteacher+mteuser.meparttimemscfemaleteacher+mseuser.meparttimemscmaleteacher+mseuser.meparttimemscfemaleteacher+cfpeuser.meparttimemscmaleteacher+cfpeuser.meparttimemscfemaleteacher+humuser.meparttimemscmaleteacher+humuser.meparttimemscfemaleteacher+mathuser.meparttimemscmaleteacher+mathuser.meparttimemscfemaleteacher+physicsuser.meparttimemscmaleteacher+physicsuser.meparttimemscfemaleteacher+chemistryuser.meparttimemscmaleteacher+chemistryuser.meparttimemscfemaleteacher)%></td>
+</tr>
+
+<tr>
+	<th>স্নাতক/স্নাতক(সম্মান)</th>
+	<td><%=(user.csefulltimebscmaleteacher+eeeuser.eeefulltimebscmaleteacher+eteuser.etefulltimebscmaleteacher+eceuser.ecefulltimebscmaleteacher+ceuser.mefulltimebscmaleteacher+becmuser.mefulltimebscmaleteacher+urpuser.mefulltimebscmaleteacher+archiuser.mefulltimebscmaleteacher+meuser.mefulltimebscmaleteacher+ipeuser.mefulltimebscmaleteacher+gceuser.mefulltimebscmaleteacher+mteuser.mefulltimebscmaleteacher+mseuser.mefulltimebscmaleteacher+cfpeuser.mefulltimebscmaleteacher+humuser.mefulltimebscmaleteacher+mathuser.mefulltimebscmaleteacher+physicsuser.mefulltimebscmaleteacher+chemistryuser.mefulltimebscmaleteacher)%></td>
+
+	<td><%=(user.csefulltimebsefemaleteacher+eeeuser.eeefulltimebscfemaleteacher+eteuser.etefulltimebscfemaleteacher+eceuser.ecefulltimebscfemaleteacher+ceuser.mefulltimebscfemaleteacher+becmuser.mefulltimebscfemaleteacher+urpuser.mefulltimebscfemaleteacher+archiuser.mefulltimebscfemaleteacher+meuser.mefulltimebscfemaleteacher+ipeuser.mefulltimebscfemaleteacher+gceuser.mefulltimebscfemaleteacher+mteuser.mefulltimebscfemaleteacher+mseuser.mefulltimebscfemaleteacher+cfpeuser.mefulltimebscfemaleteacher+humuser.mefulltimebscfemaleteacher+mathuser.mefulltimebscfemaleteacher+physicsuser.mefulltimebscfemaleteacher+chemistryuser.mefulltimebscfemaleteacher)%></td>
+
+	<td><%=(user.csefulltimebscmaleteacher+user.csefulltimebsefemaleteacher+eeeuser.eeefulltimebscmaleteacher+eeeuser.eeefulltimebscfemaleteacher+eteuser.etefulltimebscmaleteacher+eteuser.etefulltimebscfemaleteacher+eceuser.ecefulltimebscmaleteacher+eceuser.ecefulltimebscfemaleteacher+ceuser.mefulltimebscmaleteacher+ceuser.mefulltimebscfemaleteacher+becmuser.mefulltimebscmaleteacher+becmuser.mefulltimebscfemaleteacher+urpuser.mefulltimebscmaleteacher+urpuser.mefulltimebscfemaleteacher+archiuser.mefulltimebscmaleteacher+archiuser.mefulltimebscfemaleteacher+meuser.mefulltimebscmaleteacher+meuser.mefulltimebscfemaleteacher+ipeuser.mefulltimebscmaleteacher+ipeuser.mefulltimebscfemaleteacher+gceuser.mefulltimebscmaleteacher+gceuser.mefulltimebscfemaleteacher+mteuser.mefulltimebscmaleteacher+mteuser.mefulltimebscfemaleteacher+mseuser.mefulltimebscmaleteacher+mseuser.mefulltimebscfemaleteacher+cfpeuser.mefulltimebscmaleteacher+cfpeuser.mefulltimebscfemaleteacher+humuser.mefulltimebscmaleteacher+humuser.mefulltimebscfemaleteacher+mathuser.mefulltimebscmaleteacher+mathuser.mefulltimebscfemaleteacher+physicsuser.mefulltimebscmaleteacher+physicsuser.mefulltimebscfemaleteacher+chemistryuser.mefulltimebscmaleteacher+chemistryuser.mefulltimebscfemaleteacher)%></td>
+
+	<td><%=(user.cseparttimebscmaleteacher+eeeuser.eeeparttimebscmaleteacher+eteuser.eteparttimebscmaleteacher+eceuser.eceparttimebscmaleteacher+ceuser.meparttimebscmaleteacher+becmuser.meparttimebscmaleteacher+urpuser.meparttimebscmaleteacher+archiuser.meparttimebscmaleteacher+meuser.meparttimebscmaleteacher+ipeuser.meparttimebscmaleteacher+gceuser.meparttimebscmaleteacher+mteuser.meparttimebscmaleteacher+mseuser.meparttimebscmaleteacher+cfpeuser.meparttimebscmaleteacher+humuser.meparttimebscmaleteacher+mathuser.meparttimebscmaleteacher+physicsuser.meparttimebscmaleteacher+chemistryuser.meparttimebscmaleteacher)%></td>
+
+	<td><%=(user.cseparttimebscfemaleteacher+eeeuser.eeeparttimebscfemaleteacher+eteuser.eteparttimebscfemaleteacher+eceuser.eceparttimebscfemaleteacher+ceuser.meparttimebscfemaleteacher+becmuser.meparttimebscfemaleteacher+urpuser.meparttimebscfemaleteacher+archiuser.meparttimebscfemaleteacher+meuser.meparttimebscfemaleteacher+ipeuser.meparttimebscfemaleteacher+gceuser.meparttimebscfemaleteacher+mteuser.meparttimebscfemaleteacher+mseuser.meparttimebscfemaleteacher+cfpeuser.meparttimebscfemaleteacher+humuser.meparttimebscfemaleteacher+mathuser.meparttimebscfemaleteacher+physicsuser.meparttimebscfemaleteacher+chemistryuser.meparttimebscfemaleteacher)%></td>
+
+	<td><%=(user.cseparttimebscmaleteacher+user.cseparttimebscfemaleteacher+eeeuser.eeeparttimebscmaleteacher+eeeuser.eeeparttimebscfemaleteacher+eteuser.eteparttimebscmaleteacher+eteuser.eteparttimebscfemaleteacher+eceuser.eceparttimebscmaleteacher+eceuser.eceparttimebscfemaleteacher+ceuser.meparttimebscmaleteacher+ceuser.meparttimebscfemaleteacher+becmuser.meparttimebscmaleteacher+becmuser.meparttimebscfemaleteacher+urpuser.meparttimebscmaleteacher+urpuser.meparttimebscfemaleteacher+archiuser.meparttimebscmaleteacher+archiuser.meparttimebscfemaleteacher+meuser.meparttimebscmaleteacher+meuser.meparttimebscfemaleteacher+ipeuser.meparttimebscmaleteacher+ipeuser.meparttimebscfemaleteacher+gceuser.meparttimebscmaleteacher+gceuser.meparttimebscfemaleteacher+mteuser.meparttimebscmaleteacher+mteuser.meparttimebscfemaleteacher+mseuser.meparttimebscmaleteacher+mseuser.meparttimebscfemaleteacher+cfpeuser.meparttimebscmaleteacher+cfpeuser.meparttimebscfemaleteacher+humuser.meparttimebscmaleteacher+humuser.meparttimebscfemaleteacher+mathuser.meparttimebscmaleteacher+mathuser.meparttimebscfemaleteacher+physicsuser.meparttimebscmaleteacher+physicsuser.meparttimebscfemaleteacher+chemistryuser.meparttimebscmaleteacher+chemistryuser.meparttimebscfemaleteacher)%></td>
+</tr>
+
+<tr>
+	<th>অন্যান্য (যদি থাকে)</th>
+	<td><%=(user.csefulltimeothermaleteacher+eeeuser.eeefulltimeothermaleteacher+eteuser.etefulltimeothermaleteacher+eceuser.ecefulltimeothermaleteacher+ceuser.mefulltimeothermaleteacher+becmuser.mefulltimeothermaleteacher+urpuser.mefulltimeothermaleteacher+archiuser.mefulltimeothermaleteacher+meuser.mefulltimeothermaleteacher+ipeuser.mefulltimeothermaleteacher+gceuser.mefulltimeothermaleteacher+mteuser.mefulltimeothermaleteacher+mseuser.mefulltimeothermaleteacher+cfpeuser.mefulltimeothermaleteacher+humuser.mefulltimeothermaleteacher+mathuser.mefulltimeothermaleteacher+physicsuser.mefulltimeothermaleteacher+chemistryuser.mefulltimeothermaleteacher)%></td>
+
+	<td><%=(user.csefulltimeotherfemaleteacher+eeeuser.eeefulltimeotherfemaleteacher+eteuser.etefulltimeotherfemaleteacher+eceuser.ecefulltimeotherfemaleteacher+ceuser.mefulltimeotherfemaleteacher+becmuser.mefulltimeotherfemaleteacher+urpuser.mefulltimeotherfemaleteacher+archiuser.mefulltimeotherfemaleteacher+meuser.mefulltimeotherfemaleteacher+ipeuser.mefulltimeotherfemaleteacher+gceuser.mefulltimeotherfemaleteacher+mteuser.mefulltimeotherfemaleteacher+mseuser.mefulltimeotherfemaleteacher+cfpeuser.mefulltimeotherfemaleteacher+humuser.mefulltimeotherfemaleteacher+mathuser.mefulltimeotherfemaleteacher+physicsuser.mefulltimeotherfemaleteacher+chemistryuser.mefulltimeotherfemaleteacher)%></td>
+
+	<td><%=(user.csefulltimeothermaleteacher+user.csefulltimeotherfemaleteacher+eeeuser.eeefulltimeothermaleteacher+eeeuser.eeefulltimeotherfemaleteacher+eteuser.etefulltimeothermaleteacher+eteuser.etefulltimeotherfemaleteacher+eceuser.ecefulltimeothermaleteacher+eceuser.ecefulltimeotherfemaleteacher+ceuser.mefulltimeothermaleteacher+ceuser.mefulltimeotherfemaleteacher+becmuser.mefulltimeothermaleteacher+becmuser.mefulltimeotherfemaleteacher+urpuser.mefulltimeothermaleteacher+urpuser.mefulltimeotherfemaleteacher+archiuser.mefulltimeothermaleteacher+archiuser.mefulltimeotherfemaleteacher+meuser.mefulltimeothermaleteacher+meuser.mefulltimeotherfemaleteacher+ipeuser.mefulltimeothermaleteacher+ipeuser.mefulltimeotherfemaleteacher+gceuser.mefulltimeothermaleteacher+gceuser.mefulltimeotherfemaleteacher+mteuser.mefulltimeothermaleteacher+mteuser.mefulltimeotherfemaleteacher+mseuser.mefulltimeothermaleteacher+mseuser.mefulltimeotherfemaleteacher+cfpeuser.mefulltimeothermaleteacher+cfpeuser.mefulltimeotherfemaleteacher+humuser.mefulltimeothermaleteacher+humuser.mefulltimeotherfemaleteacher+mathuser.mefulltimeothermaleteacher+mathuser.mefulltimeotherfemaleteacher+physicsuser.mefulltimeothermaleteacher+physicsuser.mefulltimeotherfemaleteacher+chemistryuser.mefulltimeothermaleteacher+chemistryuser.mefulltimeotherfemaleteacher )%></td>
+
+	<td><%=(user.cseparttimeothermaleteacher+eeeuser.eeeparttimeothermaleteacher+eteuser.eteparttimeothermaleteacher+eceuser.eceparttimeothermaleteacher+ceuser.meparttimeothermaleteacher+becmuser.meparttimeothermaleteacher+urpuser.meparttimeothermaleteacher+archiuser.meparttimeothermaleteacher+meuser.meparttimeothermaleteacher+ipeuser.meparttimeothermaleteacher+gceuser.meparttimeothermaleteacher+mteuser.meparttimeothermaleteacher+mseuser.meparttimeothermaleteacher+cfpeuser.meparttimeothermaleteacher+humuser.meparttimeothermaleteacher+mathuser.meparttimeothermaleteacher+physicsuser.meparttimeothermaleteacher+chemistryuser.meparttimeothermaleteacher)%></td>
+
+	<td><%=(user.cseparttimeotherfemaleteacher+eeeuser.eeeparttimeotherfemaleteacher+eteuser.eteparttimeotherfemaleteacher+eceuser.eceparttimeotherfemaleteacher+ceuser.meparttimeotherfemaleteacher+becmuser.meparttimeotherfemaleteacher+urpuser.meparttimeotherfemaleteacher+archiuser.meparttimeotherfemaleteacher+meuser.meparttimeotherfemaleteacher+ipeuser.meparttimeotherfemaleteacher+gceuser.meparttimeotherfemaleteacher+mteuser.meparttimeotherfemaleteacher+mseuser.meparttimeotherfemaleteacher+cfpeuser.meparttimeotherfemaleteacher+humuser.meparttimeotherfemaleteacher+mathuser.meparttimeotherfemaleteacher+physicsuser.meparttimeotherfemaleteacher+chemistryuser.meparttimeotherfemaleteacher)%></td>
+
+	<td><%=(user.cseparttimeothermaleteacher+user.cseparttimeotherfemaleteacher+eeeuser.eeeparttimeothermaleteacher+eeeuser.eeeparttimeotherfemaleteacher+eteuser.eteparttimeothermaleteacher+eteuser.eteparttimeotherfemaleteacher+eceuser.eceparttimeothermaleteacher+eceuser.eceparttimeotherfemaleteacher+ceuser.meparttimeothermaleteacher+ceuser.meparttimeotherfemaleteacher+becmuser.meparttimeothermaleteacher+becmuser.meparttimeotherfemaleteacher+urpuser.meparttimeothermaleteacher+urpuser.meparttimeotherfemaleteacher+archiuser.meparttimeothermaleteacher+archiuser.meparttimeotherfemaleteacher+meuser.meparttimeothermaleteacher+meuser.meparttimeotherfemaleteacher+ipeuser.meparttimeothermaleteacher+ipeuser.meparttimeotherfemaleteacher+gceuser.meparttimeothermaleteacher+gceuser.meparttimeotherfemaleteacher+mteuser.meparttimeothermaleteacher+mteuser.meparttimeotherfemaleteacher+mseuser.meparttimeothermaleteacher+mseuser.meparttimeotherfemaleteacher+cfpeuser.meparttimeothermaleteacher+cfpeuser.meparttimeotherfemaleteacher+humuser.meparttimeothermaleteacher+humuser.meparttimeotherfemaleteacher+mathuser.meparttimeothermaleteacher+mathuser.meparttimeotherfemaleteacher+physicsuser.meparttimeothermaleteacher+physicsuser.meparttimeotherfemaleteacher+chemistryuser.meparttimeothermaleteacher+chemistryuser.meparttimeotherfemaleteacher)%></td>
+</tr>
+</table>
+<br>
+
+<h3><%=user._id%>  সালে কর্মরত ও অনুপস্থিত শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center" class="table2">
+
+<tr>
+	<th>বিবরণ</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>কর্মরত শিক্ষক</th>
+	<td><%=foundationsectionuser.workingmaleteacher%></td>
+	<td><%=foundationsectionuser.workingfemaleteacher%></td>
+	<td><%=(foundationsectionuser.workingmaleteacher+foundationsectionuser.workingfemaleteacher)%></td>
+</tr>
+<tr>
+	<th>অনুপস্থিত শিক্ষক</th>
+	<td><%=foundationsectionuser.absentmaleteacher%></td>
+	<td><%=foundationsectionuser.absentfemaleteacher%></td>
+	<td><%=(foundationsectionuser.absentmaleteacher+foundationsectionuser.absentfemaleteacher)%></td>
+</tr>
+<tr>
+	<th>শিক্ষা ছুটি</th>
+	<td><%=foundationsectionuser.maleeducationvacationteacher%></td>
+	<td><%=foundationsectionuser.femaleeducationvacationteacher%></td>
+	<td><%=(foundationsectionuser.maleeducationvacationteacher+foundationsectionuser.femaleeducationvacationteacher)%></td>
+</tr>
+<tr>
+	<th>প্রেষণ</th>
+	<td><%=foundationsectionuser.maletransmissionteacher%></td>
+	<td><%=foundationsectionuser.femaletransmissionteacher%></td>
+	<td><%=(foundationsectionuser.maletransmissionteacher+foundationsectionuser.femaletransmissionteacher)%></td>
+</tr>
+<tr>
+	<th>লিয়েন</th>
+	<td><%=foundationsectionuser.maleliyenteacher%></td>
+	<td><%=foundationsectionuser.femaleliyenteacher%></td>
+	<td><%=(foundationsectionuser.maleliyenteacher+foundationsectionuser.femaleliyenteacher)%></td>
+</tr>
+<tr>
+	<th>বিনা বেতনে</th>
+	<td><%=foundationsectionuser.malefreesalaryteacher%></td>
+	<td><%=foundationsectionuser.femalefreesalaryteacher%></td>
+	<td><%=(foundationsectionuser.malefreesalaryteacher+foundationsectionuser.femalefreesalaryteacher)%></td>
+</tr>
+<tr>
+	<th>অননুমদিত</th>
+	<td><%=foundationsectionuser.maleunapproveteacher%></td>
+	<td><%=foundationsectionuser.femaleunapproveteacher%></td>
+	<td><%=(foundationsectionuser.maleunapproveteacher+foundationsectionuser.femaleunapproveteacher)%></td>
+</tr>
+<tr>
+	<th>খন্ডকালিন/চুক্তিভিত্তিক/অন্যান্য</th>
+	<td><%=foundationsectionuser.maleparttimeteacher%></td>
+	<td><%=foundationsectionuser.femaleparttimeteacher%></td>
+	<td><%=(foundationsectionuser.maleparttimeteacher+foundationsectionuser.femaleparttimeteacher)%></td>
+</tr>
+<tr>
+	<th>সর্বমোট</th>
+	<td><%=(foundationsectionuser.workingmaleteacher+foundationsectionuser.maleeducationvacationteacher+foundationsectionuser.maletransmissionteacher+foundationsectionuser.maleliyenteacher+foundationsectionuser.malefreesalaryteacher+foundationsectionuser.maleunapproveteacher+foundationsectionuser.maleparttimeteacher)%></td>
+
+	<td><%=(foundationsectionuser.workingfemaleteacher+foundationsectionuser.femaleeducationvacationteacher+foundationsectionuser.femaletransmissionteacher+foundationsectionuser.femaleliyenteacher+foundationsectionuser.femalefreesalaryteacher+foundationsectionuser.femaleunapproveteacher+foundationsectionuser.femaleparttimeteacher)%></td>
+
+	<td><%=(foundationsectionuser.workingmaleteacher+foundationsectionuser.workingfemaleteacher+foundationsectionuser.maleeducationvacationteacher+foundationsectionuser.femaleeducationvacationteacher+foundationsectionuser.maletransmissionteacher+foundationsectionuser.femaletransmissionteacher+foundationsectionuser.maleliyenteacher+foundationsectionuser.femaleliyenteacher+foundationsectionuser.malefreesalaryteacher+foundationsectionuser.femalefreesalaryteacher+foundationsectionuser.maleunapproveteacher+foundationsectionuser.femaleunapproveteacher+foundationsectionuser.maleparttimeteacher+foundationsectionuser.femaleparttimeteacher)%></td>
+</tr>
+</table>
+<br>
+
+<h3><%=user._id%>  সালে অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমি ও অন্যান্য বিষয়ভিত্তিক শিক্ষক-শিক্ষার্থীর অনুপাতঃ</h3>
+<table border="1" width="900" align="center" class="table2">
+  <tr>
+    <th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+      <th>বিভাগের নাম</th>
+    <th>মোট শিক্ষক</th>
+    <th>ছাত্র</th>
+    <th>ছাত্রী</th>
+    <th>মোট শিক্ষার্থী</th>
+    <th>শিক্ষকঃশিক্ষার্থী</th>
+  </tr>
+
+  <tr>
+      <th rowspan="4">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+      <th>তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+      <td><%=commiteuser.totaleeeteacher%></td>
+      <td><%=commiteuser.eeemalestudent%></td>
+      <td><%=commiteuser.eeefemalestudent%></td>
+      <td><%=commiteuser.totaleeestudent%></td>
+      <td rowspan="4"><%=commiteuser.eeeteacheronupatstudent%></td>
+  </tr>
+
+  <tr>
+     <th>কম্পিউটার সায়েন্স এন্ড ইঞ্জনিয়ারিং বিভাগ</th>
+     <td><%=commiteuser.totalcseteacher%></td>
+     <td><%=commiteuser.csemalestudent%></td>
+     <td><%=commiteuser.csefemalestudent%></td>
+     <td><%=commiteuser.totalcsestudent%></td>
+  </tr>
+
+  <tr>
+     <th>ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+     <td><%=commiteuser.totaleteteacher%></td>
+     <td><%=commiteuser.etemalestudent%></td>
+     <td><%=commiteuser.etefemalestudent%></td>
+     <td><%=commiteuser.totaletestudent%></td>
+  </tr>
+  <tr>
+     <th>ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+     <td><%=commiteuser.totaleceteacher%></td>
+     <td><%=commiteuser.ecemalestudent%></td>
+     <td><%=commiteuser.ecefemalestudent%></td>
+     <td><%=commiteuser.totalecestudent%></td>
+  </tr>
+  <tr>
+     <th rowspan="6">যন্ত্রকৌশল অনুষদ </th>
+     <th>যন্ত্রকৌশল বিভাগ</th>
+     <td><%=commiteuser.totalmeteacher%></td>
+     <td><%=commiteuser.memalestudent%></td>
+     <td><%=commiteuser.mefemalestudent%></td>
+     <td><%=commiteuser.totalmestudent%></td>
+     <td rowspan="6"><%=commiteuser.meteacheronupatstudent%></td>
+  </tr>
+  <tr>
+     <th>ইন্ডাস্ট্রিয়াল এন্ড প্রোডাকশন ইঞ্জিনিয়ারিং বিভাগ</th>
+     <td><%=commiteuser.totalipeteacher%></td>
+     <td><%=commiteuser.ipemalestudent%></td>
+     <td><%=commiteuser.ipefemalestudent%></td>
+     <td><%=commiteuser.totalipestudent%></td>
+  </tr>
+  <tr>
+     <th>গ্লাস এন্ড সিরামিক ইঞ্জিনিয়ারিং বিভাগ</th>
+     <td><%=commiteuser.totalgceteacher%></td>
+     <td><%=commiteuser.gcemalestudent%></td>
+     <td><%=commiteuser.gcefemalestudent%></td>
+     <td><%=commiteuser.totalgcestudent%></td>
+  </tr>
+  <tr>
+     <th>মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+     <td><%=commiteuser.totalmteteacher%></td>
+     <td><%=commiteuser.mtemalestudent%></td>
+     <td><%=commiteuser.mtefemalestudent%></td>
+     <td><%=commiteuser.totalmtestudent%></td>
+  </tr>
+  <tr>
+     <th>মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+     <td><%=commiteuser.totalmseteacher%></td>
+     <td><%=commiteuser.msemalestudent%></td>
+     <td><%=commiteuser.msefemalestudent%></td>
+     <td><%=commiteuser.totalmsestudent%></td>
+  </tr>
+  <tr>
+     <th>কেমিক্যাল এন্ড ফুড প্রোসেস ইঞ্জিনিয়ারিং বিভাগ</th>
+     <td><%=commiteuser.totalcfpeteacher%></td>
+     <td><%=commiteuser.cfpemalestudent%></td>
+     <td><%=commiteuser.cfpefemalestudent%></td>
+     <td><%=commiteuser.totalcfpestudent%></td>
+  </tr>
+  <tr>
+     <th rowspan="4">পুরকৌশল অনুষদ </th>
+     <th>পুরকৌশল বিভাগ</th>
+     <td><%=commiteuser.totalceteacher%></td>
+     <td><%=commiteuser.cemalestudent%></td>
+     <td><%=commiteuser.cefemalestudent%></td>
+     <td><%=commiteuser.totalcestudent%></td>
+     <td rowspan="4"><%=commiteuser.ceteacheronupatstudent%></td>
+  </tr>
+  <tr>
+     <th>আর্কিটেকচার বিভাগ</th>
+     <td><%=commiteuser.totalarchiteacher%></td>
+     <td><%=commiteuser.archimalestudent%></td>
+     <td><%=commiteuser.archimalestudent%></td>
+     <td><%=commiteuser.totalarchistudent%></td>
+  </tr>
+  <tr>
+     <th>আরবান এন্ড রিজিওনাল প্লানিং বিভাগ</th>
+     <td><%=commiteuser.totalurpteacher%></td>
+     <td><%=commiteuser.urpmalestudent%></td>
+     <td><%=commiteuser.urpfemalestudent%></td>
+     <td><%=commiteuser.totalurpstudent%></td>
+  </tr>
+  <tr>
+     <th>বিল্ডিং ইঞ্জিনিয়ারিং এন্ড কনসট্রাকসন মেনেজমেন্ট বিভাগ</th>
+     <td><%=commiteuser.totalbecmteacher%></td>
+     <td><%=commiteuser.becmmalestudent%></td>
+     <td><%=commiteuser.becmfemalestudent%></td>
+     <td><%=commiteuser.totalbecmstudent%></td>
+  </tr>
+  <tr>
+     <th rowspan="4">অ্যাপ্লায়েড সায়েন্স এন্ড হিউম্যানিটিজ অনুষদ </th>
+     <th>গণিত বিভাগ</th>
+     <td><%=commiteuser.totalmathteacher%></td>
+     <td><%=commiteuser.mathmalestudent%></td>
+     <td><%=commiteuser.mathfemalestudent%></td>
+     <td><%=commiteuser.totalmathstudent%></td>
+     <td rowspan="4"><%=commiteuser.mathteacheronupatstudent%></td>
+  </tr>
+  <tr>
+     <th>পদার্থ বিভাগ</th>
+     <td><%=commiteuser.totalphysicsteacher%></td>
+     <td><%=commiteuser.physicsmalestudent%></td>
+     <td><%=commiteuser.physicsfemalestudent%></td>
+     <td><%=commiteuser.totalphysicsstudent%></td>
+  </tr>
+  <tr>
+     <th>রসায়ন বিভাগ</th>
+     <td><%=commiteuser.totalchemistryteacher%></td>
+     <td><%=commiteuser.chemistrymalestudent%></td>
+     <td><%=commiteuser.chemistryfemalestudent%></td>
+     <td><%=commiteuser.totalchemistrystudent%></td>
+  </tr>
+  <tr>
+     <th>মানবিক বিভাগ</th>
+     <td><%=commiteuser.totalhumteacher%></td>
+     <td><%=commiteuser.hummalestudent%></td>
+     <td><%=commiteuser.humfemalestudent%></td>
+     <td><%=commiteuser.totalhumstudent%></td>
+  </tr>
+</table>
+<br>
+
+<h3><%=user._id%>  সালে কর্মকর্তা ও কর্মচারী পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+<tr>
+	<th rowspan="2">কর্মকর্তা ও কর্মচারী</th>
+	<th rowspan="2">অনুমোদিত পদ সংখ্যা</th>
+	<th colspan="3">সংখ্যা</th>
+</tr>
+<tr>
+<th>পুরুষ</th>
+<th>মহিলা</th>
+<th>মোট</th>
+</tr>
+<tr>
+	<th>কর্মকর্তা(স্থায়ী)</th>
+	<td><%=foundationsectionuser.totalpermanentofficerapproveseat%></td>
+	<td><%=foundationsectionuser.permanentmaleofficer%></td>
+	<td><%=foundationsectionuser.permanentfemaleofficer%></td>
+	<td><%=(foundationsectionuser.permanentmaleofficer+foundationsectionuser.permanentfemaleofficer)%></td>
+</tr>
+<tr>
+	<th>কর্মকর্তা(চুক্তিভিত্তিক)</th>
+	<td><%=foundationsectionuser.totalcontactualofficerapproveseat%></td>
+	<td><%=foundationsectionuser.contactualmaleofficer%></td>
+	<td><%=foundationsectionuser.contactualfemaleofficer%></td>
+    <td><%=(foundationsectionuser.contactualmaleofficer+foundationsectionuser.contactualfemaleofficer)%></td>
+</tr>
+<tr>
+	<th>তৃতীয় শ্রেনীর কর্মচারী(স্থায়ী)</th>
+	<td><%=foundationsectionuser.totalthirdclasspermanentemployeapproveseat%></td>
+	<td><%=foundationsectionuser.thirdclasspermanentmaleemploye%></td>
+	<td><%=foundationsectionuser.thirdclasspermanentfemaleemploye%></td>
+	<td><%=(foundationsectionuser.thirdclasspermanentmaleemploye+foundationsectionuser.thirdclasspermanentfemaleemploye)%></td>
+</tr>
+<tr>
+	<th>চথুরথ শ্রেনীর কর্মচারী(স্থায়ী)</th>
+	<td><%=foundationsectionuser.totalfourthclasspermanentemployeapproveseat%></td>
+	<td><%=foundationsectionuser.fourthclasspermanentmaleemploye%></td>
+	<td><%=foundationsectionuser.fourthclasspermanentfemaleemploye%></td>
+	<td><%=(foundationsectionuser.fourthclasspermanentmaleemploye+foundationsectionuser.fourthclasspermanentfemaleemploye)%></td>
+</tr>
+<tr>
+	<th>কর্মচারী(আঢকভিত্তিক)</th>
+	<td><%=foundationsectionuser.totaladhokemployeapproveseat%></td>
+	<td><%=foundationsectionuser.adhokmaleeemploye%></td>
+	<td><%=foundationsectionuser.adhokfemaleeemploye%></td>
+	<td><%=(foundationsectionuser.adhokmaleeemploye+foundationsectionuser.adhokfemaleeemploye)%></td>
+</tr>
+<tr>
+	<th>কর্মচারী(দৈনিক হাজিরাভিত্তিক)</th>
+	<td><%=foundationsectionuser.totaldailypresentemployeapproveseat%></td>
+	<td><%=foundationsectionuser.dailypresentmaleeemploye%></td>
+	<td><%=foundationsectionuser.dailypresentfemaleeemploye%></td>
+	<td><%=(foundationsectionuser.dailypresentmaleeemploye+foundationsectionuser.dailypresentfemaleeemploye)%></td>
+</tr>
+<tr>
+	<th>সর্বমোট</th>
+	<td><%=(foundationsectionuser.totalpermanentofficerapproveseat+foundationsectionuser.totalcontactualofficerapproveseat+foundationsectionuser.totalthirdclasspermanentemployeapproveseat+foundationsectionuser.totalfourthclasspermanentemployeapproveseat+foundationsectionuser.totaladhokemployeapproveseat+foundationsectionuser.totaldailypresentemployeapproveseat)%></td>
+
+	<td><%=(foundationsectionuser.permanentmaleofficer+foundationsectionuser.contactualmaleofficer+foundationsectionuser.thirdclasspermanentmaleemploye+foundationsectionuser.fourthclasspermanentmaleemploye+foundationsectionuser.adhokmaleeemploye+foundationsectionuser.dailypresentmaleeemploye)%></td>
+
+	<td><%=(foundationsectionuser.permanentfemaleofficer+foundationsectionuser.contactualfemaleofficer+foundationsectionuser.thirdclasspermanentfemaleemploye+foundationsectionuser.fourthclasspermanentfemaleemploye+foundationsectionuser.adhokfemaleeemploye+foundationsectionuser.dailypresentfemaleeemploye)%></td>
+
+	<td><%=(foundationsectionuser.permanentmaleofficer+foundationsectionuser.permanentfemaleofficer+foundationsectionuser.contactualmaleofficer+foundationsectionuser.contactualfemaleofficer+foundationsectionuser.thirdclasspermanentmaleemploye+foundationsectionuser.thirdclasspermanentfemaleemploye+foundationsectionuser.fourthclasspermanentmaleemploye+foundationsectionuser.fourthclasspermanentfemaleemploye+foundationsectionuser.adhokmaleeemploye+foundationsectionuser.adhokfemaleeemploye+foundationsectionuser.dailypresentmaleeemploye+foundationsectionuser.dailypresentfemaleeemploye)%></td>
+
+</tr>
+</table>
+<br>
+
+<h3><%=user._id%>  সালে শিক্ষক,কর্মকর্তা,কর্মচারী ও শিক্ষার্থীর অনুপাতঃ</h3>
+<table border="1" width="900" align="center">
+  <tr>
+    <th>শিক্ষকঃশিক্ষার্থী </th>
+    <th>কর্মকর্তাঃশিক্ষার্থী</th>
+    <th>কর্মচারীঃশিক্ষার্থী</th>
+  </tr>
+  <tr>
+    <td><%=commiteuser.teacheronupatstudent%></td>
+    <td><%=commiteuser.officeronupatstudent%></td>
+    <td><%=commiteuser.employeonupatstudent%></td>
+  </tr>
+</table>
+<br>
+
+<h3><%=user._id%>  সালে গ্রন্থাগার ও পাথপকরনের বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+    <tr>
+     <th>বিবরণ</th>
+     <th>বই</th>
+     <th>জার্নাল</th>
+     <th>অডিওভিজুয়েল সামগ্রী</th>
+  </tr>
+  <tr>
+     <th>গ্রন্থাগার সামগ্রীর মোট মজুদ সংখ্যা</th>
+     <td><%=libraryuser.totallibrarybook%></td>
+     <td><%=libraryuser.totaljournal%></td>
+     <td><%=libraryuser.totalaudiovisual%></td>
+  </tr>
+  <tr>
+     <th>সংগৃহীত সংখ্যা</th>
+     <td><%=libraryuser.totalcollectedlibrarybook%></td>
+     <td><%=libraryuser.totalcollectedjournal%></td>
+     <td><%=libraryuser.totalcollectedaudiovisual%></td>
+  </tr>
+  <tr>
+     <th>গৃহীত ইলেক্ট্রনিক বই ও সাময়িকী</th>
+     <td><%=libraryuser.totalsubscribedlibrarybook%></td>
+     <td><%=libraryuser.totalsubscribedjournal%></td>
+     <td><%=libraryuser.totalsubscribedaudiovisual%></td>
+  </tr>
+  <tr>
+     <th>অন্যান্য</th>
+     <td><%=libraryuser.totalotherlibrarybook%></td>
+     <td><%=libraryuser.totalotherjournal%></td>
+     <td><%=libraryuser.totalotheraudiovisual%></td>
+  </tr>
+</table><br>
+
+<h3><%=user._id%>  সালে গ্রন্থাগার সামগ্রী সংগ্রহের খাতওয়ারী ব্যয়(টাকায়)</h3>
+<table border="1" width="900" align="center" class="table1">
+    <tr>
+        <th>উৎস</th>
+        <th>রাজস্ব বরাদ্দ</th>
+        <th>উন্নয়ন বরাদ্দ</th>
+        <th>নিজস্ব বরাদ্দ</th>
+        <th>বিদেশী উৎস/অন্যান্য </th>
+    </tr>
+    <tr>
+        <th>ব্যয়</th>
+        <td><%=accountsectionuser.revenueallocation%></td>
+        <td><%=accountsectionuser.developmentallocation%></td>
+        <td><%=accountsectionuser.ownallocation%></td>
+        <td><%=accountsectionuser.foreignsource%></td>
+    </tr>
+</table>
+<br>
+
+<h3><%=user._id%>  সালে গ্রন্থাগারে নিয়োজিত জনবলঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+<tr>
+  <th rowspan="2">জনবল</th>
+  <th colspan="3">সংখ্যা</th>
+</tr>
+<tr>
+  <th>পুরুষ</th>
+  <th>মহিলা</th>
+  <th>মোট</th>
+</tr>
+<tr>
+  <th>লাইব্রেরি সায়েন্সে ডিগ্রিপ্রাপ্ত</th>
+  <td><%=libraryuser.librarygraduatedmale%></td>
+  <td><%=libraryuser.librarygraduatedfemale%></td>
+  <td><%=(libraryuser.librarygraduatedmale+libraryuser.librarygraduatedfemale)%></td>
+</tr>
+<tr>
+  <th>অন্যান্য</th>
+  <td><%=libraryuser.libraryothermale%></td>
+  <td><%=libraryuser.libraryotherfemale%></td>
+  <td><%=(libraryuser.libraryothermale+libraryuser.libraryotherfemale)%></td>
+</tr>
+</table><br>
+
+<h3>গবেষণা ও প্রকাশনা</h3>
+<h3><%=user._id%>  সালে তড়িৎ ও কম্পিউটার কৌশল অনুষদের গবেষণা ও প্রকাশনার বিস্তারিত বিবরন </h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="44">তড়িৎ ও কম্পিউটার কৌশল অনুষদ </th>
+	<th rowspan="11">তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=eeeuser.eeeresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eeeuser.eeeresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eeeuser.eeeresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eeeuser.eeeresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eeeuser.eeeresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eeeuser.eeeresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=eeeuser.eeejournal %><br><hr><%=eeeuser.eeeconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=eeeuser.eeeresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=eeeuser.eeeresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=eeeuser.eeeresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(eeeuser.eeeresearch1+eeeuser.eeeresearch2+eeeuser.eeeresearch3+eeeuser.eeeresearch4+eeeuser.eeeresearch5+eeeuser.eeeresearch6+eeeuser.eeejournal+eeeuser.eeeconference+eeeuser.eeeresearch8+eeeuser.eeeresearch9+eeeuser.eeeresearch10)%></td>
+</tr>
+
+
+<tr>
+	<th rowspan="11">কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=user.cseresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=user.cseresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=user.cseresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=user.cseresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=user.cseresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=user.cseresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=user.csejournal %><br><hr><%=user.cseconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=user.cseresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=user.cseresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=user.cseresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(user.cseresearch1+user.cseresearch2+user.cseresearch3+user.cseresearch4+user.cseresearch5+user.cseresearch6+user.csejournal+user.cseconference+user.cseresearch8+user.cseresearch9+user.cseresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">ইলেকট্রনিক্স এন্ড টেলিকমিউনিকেশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=eteuser.eteresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eteuser.eteresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eteuser.eteresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eteuser.eteresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eteuser.eteresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eteuser.eteresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=eteuser.etejournal %><br><hr><%=eteuser.eteconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=eteuser.eteresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=eteuser.eteresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=eteuser.eteresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(eteuser.eteresearch1+eteuser.eteresearch2+eteuser.eteresearch3+eteuser.eteresearch4+eteuser.eteresearch5+eteuser.eteresearch6+eteuser.etejournal+eteuser.eteconference+eteuser.eteresearch8+eteuser.eteresearch9+eteuser.eteresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">ইলেক্ট্রিক্যাল এন্ড কম্পিউটার ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=eceuser.eceresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eceuser.eceresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=eceuser.eceresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eceuser.eceresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eceuser.eceresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=eceuser.eceresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ</th>
+<td><%=eceuser.ecejournal %><br><hr><%=eceuser.ececonference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=eceuser.eceresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=eceuser.eceresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=eceuser.eceresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(eceuser.eceresearch1+eceuser.eceresearch2+eceuser.eceresearch3+eceuser.eceresearch4+eceuser.eceresearch5+eceuser.eceresearch6+eceuser.ecejournal+eceuser.ececonference+eceuser.eceresearch8+eceuser.eceresearch9+eceuser.eceresearch10)%></td>
+</tr>
+<tr>
+	<th colspan="3">সর্বমোট</th>
+	<td><%=(eeeuser.eeeresearch1+eeeuser.eeeresearch2+eeeuser.eeeresearch3+eeeuser.eeeresearch4+eeeuser.eeeresearch5+eeeuser.eeeresearch6+eeeuser.eeejournal+eeeuser.eeeconference+eeeuser.eeeresearch8+eeeuser.eeeresearch9+eeeuser.eeeresearch10+user.cseresearch1+user.cseresearch2+user.cseresearch3+user.cseresearch4+user.cseresearch5+user.cseresearch6+user.csejournal+user.cseconference+user.cseresearch8+user.cseresearch9+user.cseresearch10+eteuser.eteresearch1+eteuser.eteresearch2+eteuser.eteresearch3+eteuser.eteresearch4+eteuser.eteresearch5+eteuser.eteresearch6+eteuser.etejournal+eteuser.eteconference+eteuser.eteresearch8+eteuser.eteresearch9+eteuser.eteresearch10+eceuser.eceresearch1+eceuser.eceresearch2+eceuser.eceresearch3+eceuser.eceresearch4+eceuser.eceresearch5+eceuser.eceresearch6+eceuser.ecejournal+eceuser.ececonference+eceuser.eceresearch8+eceuser.eceresearch9+eceuser.eceresearch10)%></td>
+</tr>
+</table>
+<br>
+
+<h3><%=user._id%>  সালে যন্ত্রকৌশল অনুষদের গবেষণা ও প্রকাশনার বিস্তারিত বিবরন</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="66">যন্ত্রকৌশল অনুষদ </th>
+	<th rowspan="11">যন্ত্রকৌশল বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=meuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=meuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=meuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=meuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=meuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=meuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=meuser.mejournal %><br><hr><%=meuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=meuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=meuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=meuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(meuser.meresearch1+meuser.meresearch2+meuser.meresearch3+meuser.meresearch4+meuser.meresearch5+meuser.meresearch6+meuser.mejournal+meuser.meconference+meuser.meresearch8+meuser.meresearch9+meuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">ইন্ডাস্ট্রিয়াল এন্ড প্রোডাকশন ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=ipeuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=ipeuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=ipeuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=ipeuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=ipeuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=ipeuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=ipeuser.mejournal %><br><hr><%=ipeuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=ipeuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=ipeuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=ipeuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(ipeuser.meresearch1+ipeuser.meresearch2+ipeuser.meresearch3+ipeuser.meresearch4+ipeuser.meresearch5+ipeuser.meresearch6+ipeuser.mejournal+ipeuser.meconference+ipeuser.meresearch8+ipeuser.meresearch9+ipeuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">গ্লাস এন্ড সিরামিক ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=gceuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=gceuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=gceuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=gceuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=gceuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=gceuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=gceuser.mejournal %><br><hr><%=gceuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=gceuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=gceuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=gceuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(gceuser.meresearch1+gceuser.meresearch2+gceuser.meresearch3+gceuser.meresearch4+gceuser.meresearch5+gceuser.meresearch6+gceuser.mejournal+gceuser.meconference+gceuser.meresearch8+gceuser.meresearch9+gceuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">মেকাট্রনিক্স ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=mteuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mteuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mteuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mteuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mteuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mteuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=mteuser.mejournal %><br><hr><%=mteuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=mteuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=mteuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=mteuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(mteuser.meresearch1+mteuser.meresearch2+mteuser.meresearch3+mteuser.meresearch4+mteuser.meresearch5+mteuser.meresearch6+mteuser.mejournal+mteuser.meconference+mteuser.meresearch8+mteuser.meresearch9+mteuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">মেটেরিয়্যাল সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=mseuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mseuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mseuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mseuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mseuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mseuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=mseuser.mejournal%><br><hr><%=mseuser.meconference%></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=mseuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=mseuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=mseuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(mseuser.meresearch1+mseuser.meresearch2+mseuser.meresearch3+mseuser.meresearch4+mseuser.meresearch5+mseuser.meresearch6+mseuser.mejournal+mseuser.meconference+mseuser.meresearch8+mseuser.meresearch9+mseuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">কেমিক্যাল এন্ড ফুড প্রোসেস ইঞ্জিনিয়ারিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=cfpeuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=cfpeuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=cfpeuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=cfpeuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=cfpeuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=cfpeuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=cfpeuser.mejournal %><br><hr><%=cfpeuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=cfpeuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=cfpeuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=cfpeuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(cfpeuser.meresearch1+cfpeuser.meresearch2+cfpeuser.meresearch3+cfpeuser.meresearch4+cfpeuser.meresearch5+cfpeuser.meresearch6+cfpeuser.mejournal+cfpeuser.meconference+cfpeuser.meresearch8+cfpeuser.meresearch9+cfpeuser.meresearch10)%></td>
+</tr>
+<tr>
+	<th colspan="3">সর্বমোট</th>
+	<td><%=(meuser.meresearch1+meuser.meresearch2+meuser.meresearch3+meuser.meresearch4+meuser.meresearch5+meuser.meresearch6+meuser.mejournal+meuser.meconference+meuser.meresearch8+meuser.meresearch9+meuser.meresearch10+ipeuser.meresearch1+ipeuser.meresearch2+ipeuser.meresearch3+ipeuser.meresearch4+ipeuser.meresearch5+ipeuser.meresearch6+ipeuser.mejournal+ipeuser.meconference+ipeuser.meresearch8+ipeuser.meresearch9+ipeuser.meresearch10+gceuser.meresearch1+gceuser.meresearch2+gceuser.meresearch3+gceuser.meresearch4+gceuser.meresearch5+gceuser.meresearch6+gceuser.mejournal+gceuser.meconference+gceuser.meresearch8+gceuser.meresearch9+gceuser.meresearch10+mteuser.meresearch1+mteuser.meresearch2+mteuser.meresearch3+mteuser.meresearch4+mteuser.meresearch5+mteuser.meresearch6+mteuser.mejournal+mteuser.meconference+mteuser.meresearch8+mteuser.meresearch9+mteuser.meresearch10+mseuser.meresearch1+mseuser.meresearch2+mseuser.meresearch3+mseuser.meresearch4+mseuser.meresearch5+mseuser.meresearch6+mseuser.mejournal+mseuser.meconference+mseuser.meresearch8+mseuser.meresearch9+mseuser.meresearch10+cfpeuser.meresearch1+cfpeuser.meresearch2+cfpeuser.meresearch3+cfpeuser.meresearch4+cfpeuser.meresearch5+cfpeuser.meresearch6+cfpeuser.mejournal+cfpeuser.meconference+cfpeuser.meresearch8+cfpeuser.meresearch9+cfpeuser.meresearch10)%></td>
+</tr>
+</table><br>
+
+<h3><%=user._id%>  সালে পুরকৌশল অনুষদের গবেষণা ও প্রকাশনার বিস্তারিত বিবরন</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="44">পুরকৌশল অনুষদ </th>
+	<th rowspan="11">পুরকৌশল বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=ceuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=ceuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=ceuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=ceuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=ceuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=ceuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=ceuser.mejournal %><br><hr><%=ceuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=ceuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=ceuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=ceuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(ceuser.meresearch1+ceuser.meresearch2+ceuser.meresearch3+ceuser.meresearch4+ceuser.meresearch5+ceuser.meresearch6+ceuser.mejournal+ceuser.meconference+ceuser.meresearch8+ceuser.meresearch9+ceuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">বিল্ডিং ইঞ্জিনিয়ারিং এন্ড কনসট্রাকসন মেনেজমেন্ট বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=becmuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=becmuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=becmuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=becmuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=becmuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=becmuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=becmuser.mejournal %><br><hr><%=becmuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=becmuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=becmuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=becmuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(becmuser.meresearch1+becmuser.meresearch2+becmuser.meresearch3+becmuser.meresearch4+becmuser.meresearch5+becmuser.meresearch6+becmuser.mejournal+becmuser.meconference+becmuser.meresearch8+becmuser.meresearch9+becmuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">আরবান এন্ড রিজিওনাল প্লানিং বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=urpuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=urpuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=urpuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=urpuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=urpuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=urpuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=urpuser.mejournal %><br><hr><%=urpuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=urpuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=urpuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=urpuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(urpuser.meresearch1+urpuser.meresearch2+urpuser.meresearch3+urpuser.meresearch4+urpuser.meresearch5+urpuser.meresearch6+urpuser.mejournal+urpuser.meconference+urpuser.meresearch8+urpuser.meresearch9+urpuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">আর্কিটেকচার বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=archiuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=archiuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=archiuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=archiuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=archiuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=archiuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=archiuser.mejournal%><br><hr><%=archiuser.meconference%></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=archiuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=archiuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=archiuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(archiuser.meresearch1+archiuser.meresearch2+archiuser.meresearch3+archiuser.meresearch4+archiuser.meresearch5+archiuser.meresearch6+archiuser.mejournal+archiuser.meconference+archiuser.meresearch8+archiuser.meresearch9+archiuser.meresearch10)%></td>
+</tr>
+<tr>
+	<th colspan="3">সর্বমোট</th>
+	<td><%=(ceuser.meresearch1+ceuser.meresearch2+ceuser.meresearch3+ceuser.meresearch4+ceuser.meresearch5+ceuser.meresearch6+ceuser.mejournal+ceuser.meconference+ceuser.meresearch8+ceuser.meresearch9+ceuser.meresearch10+becmuser.meresearch1+becmuser.meresearch2+becmuser.meresearch3+becmuser.meresearch4+becmuser.meresearch5+becmuser.meresearch6+becmuser.mejournal+becmuser.meconference+becmuser.meresearch8+becmuser.meresearch9+becmuser.meresearch10+urpuser.meresearch1+urpuser.meresearch2+urpuser.meresearch3+urpuser.meresearch4+urpuser.meresearch5+urpuser.meresearch6+urpuser.mejournal+urpuser.meconference+urpuser.meresearch8+urpuser.meresearch9+urpuser.meresearch10+archiuser.meresearch1+archiuser.meresearch2+archiuser.meresearch3+archiuser.meresearch4+archiuser.meresearch5+archiuser.meresearch6+archiuser.mejournal+archiuser.meconference+archiuser.meresearch8+archiuser.meresearch9+archiuser.meresearch10)%></td>
+</tr>
+</table><br>
+
+<h3><%=user._id%>  সালে অ্যাপ্লায়েড সায়েন্স এন্ড হিউম্যানিটিজ অনুষদের গবেষণা ও প্রকাশনার বিস্তারিত বিবরন</h3>
+<table border="1" width="900" align="center">
+<tr>
+	<th>অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th>বিভাগের নাম</th>
+	<th>গবেষণা/প্রকাশনা(প্রকাশিত ও অপ্রকাশিত) এর বিবরণ</th>
+	<th>সংখ্যা</th>
+</tr>
+<tr>
+	<th rowspan="44">অ্যাপ্লায়েড সায়েন্স এন্ড হিউম্যানিটিজ অনুষদ</th>
+	<th rowspan="11">গণিত বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=mathuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mathuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=mathuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mathuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mathuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=mathuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=mathuser.mejournal%><br><hr><%=mathuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=mathuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=mathuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=mathuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(mathuser.meresearch1+mathuser.meresearch2+mathuser.meresearch3+mathuser.meresearch4+mathuser.meresearch5+mathuser.meresearch6+mathuser.mejournal+mathuser.meconference+mathuser.meresearch8+mathuser.meresearch9+mathuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">পদার্থ বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=physicsuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=physicsuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=physicsuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=physicsuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=physicsuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=physicsuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=physicsuser.mejournal%><br><hr><%=physicsuser.meconference%></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=physicsuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=physicsuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=physicsuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(physicsuser.meresearch1+physicsuser.meresearch2+physicsuser.meresearch3+physicsuser.meresearch4+physicsuser.meresearch5+physicsuser.meresearch6+physicsuser.mejournal+physicsuser.meconference+physicsuser.meresearch8+physicsuser.meresearch9+physicsuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">রসায়ন বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=chemistryuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=chemistryuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=chemistryuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=chemistryuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=chemistryuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=chemistryuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=chemistryuser.mejournal %><br><hr><%=chemistryuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=chemistryuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=chemistryuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=chemistryuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(chemistryuser.meresearch1+chemistryuser.meresearch2+chemistryuser.meresearch3+chemistryuser.meresearch4+chemistryuser.meresearch5+chemistryuser.meresearch6+chemistryuser.mejournal+chemistryuser.meconference+chemistryuser.meresearch8+chemistryuser.meresearch9+chemistryuser.meresearch10)%></td>
+</tr>
+
+<tr>
+	<th rowspan="11">মানবিক বিভাগ</th>
+	<th>নিজস্ব ও সরকারিখাতে অর্থায়নে পরিচালিত গবেষণা প্রকল্প </th>
+	<td><%=humuser.meresearch1 %></td>
+</tr>
+<tr>
+	<th>দেশের বিভিন্ন সরকারি ও বেসরকারি প্রতিষ্ঠানের আর্থিক সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=humuser.meresearch2 %></td>
+</tr>
+<tr>
+	<th>বিদেশী সংস্থার সাহায্যে পরিচালিত গবেষণা প্রকল্প</th>
+	<td><%=humuser.meresearch3 %></td>
+</tr>
+<tr>
+	<th>মাস্টার্স পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=humuser.meresearch4 %></td>
+</tr>
+<tr>
+	<th>এমফিল পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=humuser.meresearch5 %></td>
+</tr>
+<tr>
+	<th>পিএইচডি পর্যায়ে অভিসন্দর্ভ</th>
+	<td><%=humuser.meresearch6 %></td>
+</tr>
+<tr>
+<th>পিয়ার রিভিউকৃত দেশী এবং বিদেশী সাময়িকীতে প্রকাশিত প্রবন্ধ Journal and Conference</th>
+<td><%=humuser.mejournal %><br><hr><%=humuser.meconference %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত পিয়ার রিভিউকৃত সাময়িকী</th>
+	<td><%=humuser.meresearch8 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত বই</th>
+	<td><%=humuser.meresearch9 %></td>
+</tr>
+<tr>
+	<th>প্রকাশিত ইলেকট্রনিক বই/সাময়িকী</th>
+	<td><%=humuser.meresearch10 %></td>
+</tr>
+<tr>
+	<th>মোট</th>
+	<td><%=(humuser.meresearch1+humuser.meresearch2+humuser.meresearch3+humuser.meresearch4+humuser.meresearch5+humuser.meresearch6+humuser.mejournal+humuser.meconference+humuser.meresearch8+humuser.meresearch9+humuser.meresearch10)%></td>
+</tr>
+<tr>
+	<th colspan="3">সর্বমোট</th>
+	<td><%=(mathuser.meresearch1+mathuser.meresearch2+mathuser.meresearch3+mathuser.meresearch4+mathuser.meresearch5+mathuser.meresearch6+mathuser.mejournal+mathuser.meconference+mathuser.meresearch8+mathuser.meresearch9+mathuser.meresearch10+physicsuser.meresearch1+physicsuser.meresearch2+physicsuser.meresearch3+physicsuser.meresearch4+physicsuser.meresearch5+physicsuser.meresearch6+physicsuser.mejournal+physicsuser.meconference+physicsuser.meresearch8+physicsuser.meresearch9+physicsuser.meresearch10+chemistryuser.meresearch1+chemistryuser.meresearch2+chemistryuser.meresearch3+chemistryuser.meresearch4+chemistryuser.meresearch5+chemistryuser.meresearch6+chemistryuser.mejournal+chemistryuser.meconference+chemistryuser.meresearch8+chemistryuser.meresearch9+chemistryuser.meresearch10+humuser.meresearch1+humuser.meresearch2+humuser.meresearch3+humuser.meresearch4+humuser.meresearch5+humuser.meresearch6+humuser.mejournal+humuser.meconference+humuser.meresearch8+humuser.meresearch9+humuser.meresearch10)%></td>
+</tr>
+</table><br>
+
+<h3><%=user._id%>  সালে গবেষণা খাতে ব্যায়ের পরিমান</h3>
+<table border="1" width="900" align="center" class="table2">
+    <tr>
+      <th>উৎস</th>
+      <th>টাকার পরিমান</th>
+      <th>ব্যয়ের পরিমান(টাকায়)</th>
+      <th>ব্যয়ের কত শতাংশ</th>   
+    </tr>
+    <tr> 
+      <th>রাজস্ব বরাদ্দ</th>
+      <td><%=accountsectionuser.rrevenueallocation%></td>
+      <td><%=accountsectionuser.revenueallocationexpense%></td>
+      <td><%=accountsectionuser.percentageofrevenueallocation%></td>   
+    </tr>
+    <tr>
+      <th>উন্নয়ন বরাদ্দ</th>
+      <td><%=accountsectionuser.rdevelopmentallocation%></td>
+      <td><%=accountsectionuser.developmentallocationexpense%></td>
+      <td><%=accountsectionuser.percentageofdevelopmentallocation%></td>   
+    </tr>
+    <tr>
+      <th>নিজস্ব বরাদ্দ</th>
+      <td><%=accountsectionuser.rownallocation%></td>
+      <td><%=accountsectionuser.ownallocationexpense%></td>
+      <td><%=accountsectionuser.percentageofownallocation%></td>   
+    </tr>
+
+    <tr>
+      <th>বিদেশী উৎস/ফান্ড</th>
+      <td><%=accountsectionuser.rforeignsource%></td>
+      <td><%=accountsectionuser.foreignsourceexpense%></td>
+      <td><%=accountsectionuser.percentageofforeignsource%></td>     
+    </tr>
+    <tr>
+      <th>অন্যান্য উৎস/ফান্ড</th>
+      <td><%=accountsectionuser.rothersourceallocation%></td>
+      <td><%=accountsectionuser.othersource%></td>
+      <td><%=accountsectionuser.percentageofother%></td>     
+    </tr>
+</table><br>
+
+<h3><%=user._id%>  সালে বিশ্ববিদ্যালয়ের বাজেটের অর্থের উৎসঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>উৎস</th>
+        <th>অর্থের পরিমান</th>
+    </tr>
+    <tr>
+        <th>i.</th>
+        <th>বিমক করতৃক অনুদান</th>
+        <td><%=accountsectionuser.insolvencygrant%></td>
+    </tr>
+    <tr>
+        <th>ii.</th>
+        <th>নিজস্ব আয়</th>
+        <td><%=accountsectionuser.ownincome%></td>
+    </tr>
+    <tr>
+        <th>iii.</th>
+        <th>বিশেষ উন্নয়ন বরাদ্দ</th>
+        <td><%=accountsectionuser.specialdevelopmentallocation%></td>
+    </tr>
+    <tr>
+        <th>iv.</th>
+        <th>অন্যান্য</th>
+        <td><%=accountsectionuser.otherallocation%></td>
+    </tr>
+    <tr>
+        <th></th>
+        <th>সর্বমোট</th>
+        <td><%=(accountsectionuser.insolvencygrant+accountsectionuser.ownincome+accountsectionuser.specialdevelopmentallocation+accountsectionuser.otherallocation)%></td>
+    </tr>
+</table>
+<br>
+<h3><%=user._id%>  সালে বিভিন্ন খাতে মোট ব্যয়ের বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>খাত</th>
+        <th>টাকার পরিমান</th>
+        <th>বাজেটের কত শতাংশ</th>
+    </tr>
+    <tr>
+        <th>i.</th>
+        <th>শিক্ষা</th>
+        <td><%=accountsectionuser.educationexpense%></td>
+        <th><%=accountsectionuser.percentageofeducationbudget%></td>
+    </tr>
+    <tr>
+        <th>ii.</th>
+        <th>গবেষণা</th>
+        <td><%=accountsectionuser.researchexpense%></td>
+        <td><%=accountsectionuser.percentageofresearchbudget%></td>
+    </tr>
+    <tr>
+        <th>iii.</th>
+        <th>বেতন ভাতা</th>
+        <td><%=accountsectionuser.salaryexpense%></td>
+        <td><%=accountsectionuser.percentageofsalarybudget%></td>
+    </tr>
+    <tr>
+        <th>iv.</th>
+        <th>গবেষণা বৃত্তি</th>
+        <td><%=accountsectionuser.researchschoolarshipexpense%></td>
+        <td><%=accountsectionuser.percentageofresearchschoolarshipbudget%></td>
+    </tr>
+    <tr>
+        <th>v.</th>
+        <th>পরিবহণ</th>
+        <td><%=accountsectionuser.transportationexpense%></td>
+        <td><%=accountsectionuser.percentageoftransportationbudget%></td>
+    </tr>
+    <tr>
+        <th>vi.</th>
+        <th>বিদু্যৎ</th>
+        <td><%=accountsectionuser.electricityexpense%></td>
+        <td><%=accountsectionuser.percentageofelectricitybudget%></td>
+    </tr>
+    <tr>
+        <th>vii.</th>
+        <th>অবকাঠামোগত উন্নয়ন ও রক্ষনাবেক্ষন</th>
+        <td><%=accountsectionuser.infrastructuralexpense%></td>
+        <td><%=accountsectionuser.percentageofinfrastructuralbudget%></td>
+    </tr>
+    <tr>
+        <th>viii.</th>
+        <th>অন্যান্য</th>
+        <td><%=accountsectionuser.otherexpense%></td>
+        <td><%=accountsectionuser.percentageofotherbudget%></td>
+    </tr>
+</table>
+<br>
+
+<h3><%=user._id%> সালে ভৌত কাঠামোর বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>কক্ষ/ভবনের প্রকার</th>
+        <th>সংখ্যা</th>
+        <th>মোট আয়তন(বর্গফুট)</th>
+    </tr>
+    <tr>
+        <th>i.</th>
+        <th>শ্রেনী কক্ষ</th>
+        <td><%=engineeringsectionuser.totalclassroom%></td>
+        <td><%=engineeringsectionuser.totalclassroomvolume%></td>
+    </tr>
+    <tr>
+        <th>ii.</th>
+        <th>প্রশাসনিক</th>
+        <td><%=engineeringsectionuser.totaladministratorroom%></td>
+        <td><%=engineeringsectionuser.totaladministratorroomvolume%></td>
+    </tr>
+    <tr>
+        <th>iii.</th>
+        <th>গ্রন্থাগর</th>
+        <td><%=engineeringsectionuser.totallibraryroom%></td>
+        <td><%=engineeringsectionuser.totalalibraryroomvolume%></td>
+    </tr>
+    <tr>
+        <th>iv.</th>
+        <th>ল্যাব্রেটরি</th>
+        <td><%=engineeringsectionuser.totallabratoryroom%></td>
+        <td><%=engineeringsectionuser.totallabratoryroomvolume%></td>
+    </tr>
+    <tr>
+        <th>v.</th>
+        <th>হল/ছাত্রাবাস</th>
+        <td><%=engineeringsectionuser.totalhallroom%></td>
+        <th><%=engineeringsectionuser.totalhallroomvolume%></td>
+    </tr>
+    <tr>
+        <th>vi.</th>
+        <th>মিলনায়তন</th>
+        <td><%=engineeringsectionuser.totalauditorium%></td>
+        <td><%=engineeringsectionuser.totalauditoriumvolume%></td>
+    </tr>
+    <tr>
+        <th>vii.</th>
+        <th>ব্যায়ামগার</th>
+        <td><%=engineeringsectionuser.totalexerciseroom%></td>
+        <td><%=engineeringsectionuser.totalexerciseroomvolume%></td>
+    </tr>
+    <tr>
+        <th>viii.</th>
+        <th>খেলার মাঠ</th>
+        <td><%=engineeringsectionuser.totalplayground%></td>
+        <td><%=engineeringsectionuser.totalplaygroundvolume%></td>
+    </tr>
+    <tr>
+        <th>ix.</th>
+        <th>সুইমিংপুল</th>
+        <td><%=engineeringsectionuser.totalswimingpool%></td>
+        <td><%=engineeringsectionuser.totalswimingpoolvolume%></td>
+    </tr>
+    <tr>
+        <th>x.</th>
+        <th>অথিতি ভবন</th>
+        <td><%=engineeringsectionuser.totalguesthouse%></td>
+        <td><%=engineeringsectionuser.totalguesthousevolume%></td>
+    </tr>
+    <tr>
+        <th>xi.</th>
+        <th>শিক্ষকদের আবাসিক বাসস্থান</th>
+        <td><%=engineeringsectionuser.totalteacherresidentialaccommodation%></td>
+        <td><%=engineeringsectionuser.totalteacherresidentialaccommodationvolume%></td>
+    </tr>
+    <tr>
+        <th>xii.</th>
+        <th>কর্মকর্তাদের আবাসিক বাসস্থান</th>
+        <td><%=engineeringsectionuser.totalofficerresidentialaccommodation%></td>
+        <td><%=engineeringsectionuser.totalofficerresidentialaccommodationvolume%></td>
+    </tr>
+    <tr>
+        <th>xiii.</th>
+        <th>কর্মচারীদের আবাসিক বাসস্থান</th>
+        <td><%=engineeringsectionuser.totalemployeresidentialaccommodation%></td>
+        <td><%=engineeringsectionuser.totalemployeresidentialaccommodationvolume%></td>
+    </tr>
+    <tr>
+        <th>xiv.</th>
+        <th>ভিসি বাংলো</th>
+        <td><%=engineeringsectionuser.vcbanglo%></td>
+        <td><%=engineeringsectionuser.vcbanglovolume%></td> 
+    </tr>
+</table>
+<br>
+
+<h3><%=user._id%> সালে আবাসিক শিক্ষার্থীর পরিসংখ্যান</h3>
+<table border="1" width="900" align="center">
+	<tr>
+		<th rowspan="2">হল/ডরমিটরি নাম</th>
+		<th colspan="3">সংখ্যা</th>
+	</tr>
+	<tr>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+	</tr>
+	<tr>
+		<th>বঙ্গবন্ধু হল</th>
+		<td><%=halluser.bongobondhuhallmalestudent%></td>
+		<td><%=halluser.bongobondhuhallfemalestudent%></td>
+		<td><%=(halluser.bongobondhuhallmalestudent+halluser.bongobondhuhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>শহীদ প্রেসিডেন্ট জিয়াউর রহমান হল</th>
+		<td><%=halluser.ziahallmalestudent%></td>
+		<td><%=halluser.ziahallfemalestudent%></td>
+		<td><%=(halluser.ziahallmalestudent+halluser.ziahallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>শহীদ লেঃ সেলিম হল</th>
+		<td><%=halluser.selimhallmalestudent%></td>
+		<td><%=halluser.selimhallfemalestudent%></td>
+		<td><%=(halluser.selimhallmalestudent+halluser.selimhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>শহীদ শহিদুল ইসলাম হল</th>
+		<td><%=halluser.shohidulhallmalestudent%></td>
+		<td><%=halluser.shohidulhallfemalestudent%></td>
+		<td><%=(halluser.shohidulhallmalestudent+halluser.shohidulhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>শহীদ আব্দুল হামিদ হল</th>
+		<td><%=halluser.hamidhallmalestudent%></td>
+		<td><%=halluser.hamidhallfemalestudent%></td>
+		<td><%=(halluser.hamidhallmalestudent+halluser.hamidhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>টিনশেড হল</th>
+		<td><%=halluser.tinshedhallmalestudent%></td>
+		<td><%=halluser.tinshedhallfemalestudent%></td>
+		<td><%=(halluser.tinshedhallmalestudent+halluser.tinshedhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>দেশরত্ন শেখ হাসিনা হল</th>
+		<td><%=halluser.shekhhasinahallmalestudent%></td>
+		<td><%=halluser.shekhhasinahallfemalestudent%></td>
+		<td><%=(halluser.shekhhasinahallmalestudent+halluser.shekhhasinahallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>সর্বমোট</th>
+
+		<td><%=(halluser.bongobondhuhallmalestudent+halluser.ziahallmalestudent+halluser.selimhallmalestudent+halluser.shohidulhallmalestudent+halluser.hamidhallmalestudent+halluser.tinshedhallmalestudent+halluser.shekhhasinahallmalestudent)%></td>
+
+		<td><%=(halluser.bongobondhuhallfemalestudent+halluser.ziahallfemalestudent+halluser.selimhallfemalestudent+halluser.shohidulhallfemalestudent+halluser.hamidhallfemalestudent+halluser.tinshedhallfemalestudent+halluser.shekhhasinahallfemalestudent)%></td>
+
+		<td><%=(halluser.bongobondhuhallmalestudent+halluser.bongobondhuhallfemalestudent+halluser.ziahallmalestudent+halluser.ziahallfemalestudent+halluser.selimhallmalestudent+halluser.selimhallfemalestudent+halluser.shohidulhallmalestudent+halluser.shohidulhallfemalestudent+halluser.hamidhallmalestudent+halluser.hamidhallfemalestudent+halluser.tinshedhallmalestudent+halluser.tinshedhallfemalestudent+halluser.shekhhasinahallmalestudent+halluser.shekhhasinahallfemalestudent)%></td>
+	</tr>
+</table>
+<br>
+
+<h3><%=user._id%> সালে আবাসিক সুবিধাপ্রাপ্ত শিক্ষক, কর্মকর্তা ও কর্মচারীদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+    <tr>
+        <th rowspan="2">পদ</th>
+        <th colspan="3">সংখ্যা</th>
+    </tr>
+    <tr>
+        <th>পুরুষ</th>
+        <th>মহিলা</th>
+        <th>মোট</th>
+    </tr>
+    <tr>
+        <th>শিক্ষক</th>
+        <td><%=accountsectionuser.residentialadvantagemaleteacher%></td>
+        <td><%=accountsectionuser.residentialadvantagefemaleteacher%></td>
+        <td><%=(accountsectionuser.residentialadvantagemaleteacher+accountsectionuser.residentialadvantagefemaleteacher)%></td>
+    </tr>
+    <tr>
+        <th>কর্মকর্তা</th>
+        <td><%=accountsectionuser.residentialadvantagemaleofficer%></td>
+        <td><%=accountsectionuser.residentialadvantagefemaleofficer%></td>
+        <td><%=(accountsectionuser.residentialadvantagemaleofficer+accountsectionuser.residentialadvantagefemaleofficer)%></td>
+    </tr>
+    <tr>
+        <th>তৃতীয় শ্রেণীর কর্মচারী</th>
+        <td><%=accountsectionuser.residentialadvantagemalethirdclassemploye%></td>
+        <td><%=accountsectionuser.residentialadvantagefemalethirdclassemploye%></td>
+        <td><%=(accountsectionuser.residentialadvantagemalethirdclassemploye+accountsectionuser.residentialadvantagefemalethirdclassemploye)%></td>
+    </tr>
+    <tr>
+        <th>চতুর্থ শ্রেণীর কর্মচারী</th>
+        <td><%=accountsectionuser.residentialadvantagemalefourthclassemploye%></td>
+        <td><%=accountsectionuser.residentialadvantagefemalefourthclassemploye%></td>
+        <td><%=(accountsectionuser.residentialadvantagemalefourthclassemploye+accountsectionuser.residentialadvantagefemalefourthclassemploye)%></td>
+    </tr>
+</table>
+<br>
+
+<h3><%=user._id%> সালে জানুয়ারী থেকে ডিসেম্বরের মধ্যে বিশ্ববিদ্যালয়ের ডিগ্রিপ্রাপ্ত শিক্ষার্থীর পরিসংখানঃ</h3>
+<table border="1" width="900" align="center" class="table4">
+	<tr>
+		<th rowspan="2">ডিগ্রির নাম</th>
+		<th rowspan="2">বিষয়</th>
+		<th rowspan="2">সেশন</th>
+		<th colspan="3">পরীক্ষার্থীর সংখ্যা</th>
+		<th colspan="3">উত্তীর্ণ</th>
+		<th rowspan="2">শতকরা হার</th>
+	</tr>
+	<tr>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+	</tr>
+	<tr>
+		<th>স্নাতক(সম্মান)</th>
+		<th>বি এসসি(সম্মান)</th>
+		<td><%=educationsectionuser.bscpasssession%></td>
+		<td><%=educationsectionuser.bscadmitmalestudent%></td>
+		<td><%=educationsectionuser.bscadmitfemalestudent%></td>
+		<td><%=(educationsectionuser.bscadmitmalestudent+educationsectionuser.bscadmitfemalestudent)%></td>
+		<td><%=educationsectionuser.bscpassmalestudent%></td>
+		<td><%=educationsectionuser.bscpassfemalestudent%></td>
+		<td><%=(educationsectionuser.bscpassmalestudent+educationsectionuser.bscpassfemalestudent)%></td>
+		<td><%=educationsectionuser.percentageofbscpass%></td>
+	</tr>
+	<tr>
+		<th>মাস্টার্স</th>
+		<th>এম এসসি</th>
+		<td><%=educationsectionuser.mscpasssession%></td>
+		<td><%=educationsectionuser.mscadmitmalestudent%></td>
+		<td><%=educationsectionuser.mscadmitfemalestudent%></td>
+        <td><%=(educationsectionuser.mscadmitmalestudent+educationsectionuser.mscadmitfemalestudent)%></td>
+		<td><%=educationsectionuser.mscpassmalestudent%></td>
+		<td><%=educationsectionuser.mscpassfemalestudent%></td>
+		<td><%=(educationsectionuser.mscpassmalestudent+educationsectionuser.mscpassfemalestudent)%></td>
+		<td><%=educationsectionuser.percentageofmscpass%></td>
+	</tr>
+	<tr>
+		<th>এম ফিল</th>
+		<th>এম.ফিল</th>
+		<td><%=educationsectionuser.mfilpasssession%></td>
+		<td><%=educationsectionuser.mfiladmitmalestudent%></td>
+		<td><%=educationsectionuser.mfiladmitfemalestudent%></td>
+		<td><%=(educationsectionuser.mfiladmitmalestudent+educationsectionuser.mfiladmitfemalestudent)%></td>
+		<td><%=educationsectionuser.mfilpassmalestudent%></td>
+		<td><%=educationsectionuser.mfilpassfemalestudent%></td>
+		<td><%=(educationsectionuser.mfilpassmalestudent+educationsectionuser.mfilpassfemalestudent)%></td>
+		<td><%=educationsectionuser.percentageofmfilpass%></td>
+	</tr>
+	<tr>
+		<th>পিএইচ ডি</th>
+		<th>পিএইচ.ডি</th>
+		<td><%=educationsectionuser.phdpasssession%></td>
+		<td><%=educationsectionuser.phdadmitmalestudent%></td>
+		<td><%=educationsectionuser.phdadmitfemalestudent%></td>
+		<td><%=(educationsectionuser.phdadmitmalestudent+educationsectionuser.phdadmitfemalestudent)%></td>
+		<td><%=educationsectionuser.phdpassmalestudent%></td>
+		<td><%=educationsectionuser.phdpassfemalestudent%></td>
+		<td><%=(educationsectionuser.phdpassmalestudent+educationsectionuser.phdpassfemalestudent)%></td>
+		<td><%=educationsectionuser.percentageofphdpass%></td>
+	</tr>
+</table>
+<br>
+
+<h3>এক নজরে বিশ্ববিদ্যালয়ের উল্লেখযোগ্য তথ্যঃ</h3>
+<table border="1" width="900" align="center">
+    <tr>
+      <th>বিশ্ববিদ্যালয়ের উল্লেখযোগ্য তথ্য পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>শিক্ষক পরিসংখ্যানঃ</th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>নিজস্ব জমির পরিমান(একর)-</th>
+      <td><%=commiteuser.totalland%></td>
+      <th>মোট শিক্ষক</th>
+      <td><%=commiteuser.totalteacher%></th>
+    </tr>
+    <tr>
+      <th>ছাত্রাবাস-</th>
+      <td><%=commiteuser.totalhall%></td>
+      <th>মোট মহিলা শিক্ষক-</th>
+      <td><%=commiteuser.totalfemaleteacher%></td>
+    </tr>
+    <tr>
+      <th>মোট অনুষদ সংখ্যা-</th>
+      <td><%=commiteuser.totalfaculty%></td>
+      <th>খন্ডকালীন/চুক্তিভিত্তিক/এডহক শিক্ষক-</th>
+      <td><%=commiteuser.parttimeteacher%></td>
+    </tr>
+    <tr>
+      <th>মোট বিভাগ সংখ্যা-</th>
+      <td><%=commiteuser.totaldepartment%></td>
+      <th>পিএইচডি/সমমান ডিগ্রী শিক্ষক-</th>
+      <td><%=commiteuser.totalphdteacher%></td>
+    </tr>
+    <tr>
+      <th>মোট ইনস্টিটিঊট সংখ্যা-</th>
+      <td><%=commiteuser.totalinstitute%></td>
+      <th>অধ্যাপক-</th>
+      <td><%=commiteuser.totalprofessor%></td>
+    </tr>
+    <tr>
+      <th>মোট অভিভুক্ত ও অঙ্গীভুক্ত কলেজ/মাদ্রাসার সংখ্যা-</th>
+      <td><%=commiteuser.totalcollage%></td>
+      <th>সহযোগী অধ্যাপক-</th>
+      <td><%=commiteuser.tatalassociateproffesor%></td>
+    </tr>
+    <tr>
+      <th>ভর্তিকৃত শিক্ষার্থী পরিসংখানঃ</th>
+      <th></th>
+      <th>সহকারী অধ্যাপক- </th>
+      <td><%=commiteuser.asistantproffesor%></td>
+    </tr>
+    <tr>
+      <th>মোট আসন সংখ্যা-</th>
+      <td><%=commiteuser.totalseat%></td>
+      <th>প্রভাষক-</th>
+      <td><%=commiteuser.totallecturar%></td>
+    </tr>
+    <tr>
+      <th>ভরতিকৃত শিক্ষার্থী সংখ্যা- </th>
+      <td><%=commiteuser.totaladmissionstudent%></td>
+      <th>অনুমোদিত অনুপস্থিত শিক্ষক-</th>
+      <td><%=commiteuser.approveabsentteacher%></td>
+    </tr>
+    <tr>
+      <th>মোট ছাত্রী সংখ্যা-</th>
+      <td><%=commiteuser.totalfemalestudent%></td>
+      <th>অননুমোদিত অনুপস্থিত শিক্ষক-</th>
+      <td><%=commiteuser.unapprovedteacher%></td>
+    </tr>
+    <tr>
+      <th>অধ্যয়নরত মোট শিক্ষার্থী পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>কর্মকর্তা ও কর্মচারীদের পরিসংখ্যানঃ</th>
+      <th></th>
+    </tr> 
+    <tr>
+      <th>মোট শিক্ষার্থী সংখ্যা-</th>
+      <td><%=commiteuser.totalstudents%></td>
+      <th>কর্মকর্তার সংখ্যা-</th>
+      <td><%=commiteuser.employeenum%></td>
+    </tr>
+
+    <tr>
+      <th></th>
+      <th></th>
+      <th>কর্মচারীর সংখ্যা-</th>
+      <td><%=commiteuser.totalemployeenum%></td>
+    </tr>
+
+    <tr>
+      <th>স্নাতক পর্যায়ে -</th>
+      <td><%=commiteuser.totalbscstudents%></td>
+      <th>শিক্ষক-শিক্ষার্থী অনুপাত-</th>
+      <td><%=commiteuser.teacherstudentsratio%></td>
+    </tr>
+
+    <tr>
+      <th>স্নাতক সম্মান পর্যায়ে-</th>
+      <td><%=commiteuser.totalbscsnexttudents%></td>
+      <th>কর্মকর্তা-শিক্ষার্থী অনুপাত-</th>
+      <td><%=commiteuser.employeestudentsratio%></td>
+    </tr>
+    
+
+    <tr>
+      <th>স্নাতকোত্তর পর্যায়ে-</th>
+      <td><%=commiteuser.totalbscsnexttotudents%></td>
+      <th>কর্মচারী-শিক্ষার্থী অনুপাত-</th>
+      <td><%=commiteuser.totalemployeestudentsratio%></td>
+    </tr>
+
+    <tr>
+      <th>এমফিল পিএইচডি ও অন্যান্য উচ্চতর পর্যায়ে-</th>
+      <td><%=commiteuser.mphilphdtotudents%></td>
+      <th>আবাসিক পরিসংখ্যানঃ</th>
+      <th></th>
+    </tr>
+    
+    <tr>
+      <th>মুল বিষয়ভিত্তিক শিক্ষার্থী পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>ছাত্র</th>
+      <td><%=commiteuser.residencemale%></td>
+    </tr>
+     
+    <tr>
+      <th>কলা ও মানবিক-</th>
+      <td><%=commiteuser.hum%></td>
+      <th>ছাত্রী-</th>
+      <td><%=commiteuser.residencefemale%></td>
+    </tr>
+
+    <tr>
+      <th>সামাজিক বিজ্ঞান-</th>
+      <td><%=commiteuser.socialscience%></td>
+      <th>আবাসিক শিক্ষক-</th>
+      <td><%=commiteuser.residenceteacher%></td>
+    </tr>
+
+    <tr>
+      <th>শিক্ষা-</th>
+      <td><%=commiteuser.education%></td>
+      <th>কর্মকর্তা-</th>
+      <td><%=commiteuser.residenceemployee%></td>
+    </tr>    
+
+    <tr>
+      <th>ব্যাবসায় প্রশাসন-</th>
+      <td><%=commiteuser.management%></td>
+      <th>কর্মচারী-</th>
+      <td><%=commiteuser.residenceemployeer%></td>
+    </tr>
+
+
+     <tr>
+      <th>আইন-</th>
+      <td><%=commiteuser.law%></td>
+      <th>সর্বমোট ব্যায়ঃ (লক্ষ টাকায়)</th>
+      <th></th>
+    </tr>
+
+    <tr>
+      <th>ফার্মেসী-</th>
+      <td><%=commiteuser.phermacy%></td>
+      <th>রাজস্ব ও উন্নয়ন-</th>
+      <td><%=commiteuser.vatdevelopement%></td>
+    </tr>
+
+    <tr>
+      <th>বিজ্ঞান-</th>
+      <td><%=commiteuser.science%></td>
+      <th>নিজস্ব আয়-</th>
+      <td><%=commiteuser.selfincome%></td>
+    </tr>
+
+
+    <tr>
+      <th>চিকিৎসা-</th>
+      <td><%=commiteuser.medical%></td>
+      <th>অন্যান্য-</th>
+      <td><%=commiteuser.others%></td>
+    </tr>
+
+    <tr>
+      <th>কৃষি-</th>
+      <td><%=commiteuser.agri%></td>
+      <th>শিক্ষাখাত-</th>
+      <td><%=commiteuser.edu%></td>
+    </tr>
+
+
+    <tr>
+      <th>প্রকৌশল ও কারিগরি-</th>
+      <td><%=commiteuser.engineering%></td>
+      <th>গবেষণা খাত-</th>
+      <td><%=commiteuser.research%></td>
+    </tr>
+     
+
+    <tr>
+      <th>অন্যান্য-</th>
+      <td><%=commiteuser.others1%></td>
+      <th>গবেষণা বৃত্তি-</th>
+      <td><%=commiteuser.researchstipend%></td>
+    </tr>
+
+
+    <tr>
+      <th>ডিগ্রিভিত্তিক উত্তীর্ণ শিক্ষার্থীর পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>বেতন ভাতা খাত-</th>
+      <td><%=commiteuser.salary%></th>
+    </tr>
+     
+    <tr>
+      <th>স্নাতক পাস-</th>
+      <td><%=commiteuser.masters%></td>
+      <th>পরিবহন খাত-</th>
+      <td><%=commiteuser.transportsec%></td>
+    </tr>
+
+    <tr>
+      <th>স্নাতক সম্মান-</th>
+      <td><%=commiteuser.masterspass%></td>
+      <th>বিদ্যুৎ খাত-</th>
+      <td><%=commiteuser.electricsection%></td>
+    </tr>
+
+    <tr>
+      <th>স্নাতক(কারিগরি ও প্রযুক্তি)-</th>
+      <td><%=commiteuser.masterstechnical%></td>
+      <th>অবকাঠামো উন্নয়ন ও রক্ষণাবেক্ষণ-</th>
+      <td><%=commiteuser.infrasturctures%></td>
+    </tr>
+
+    <tr>
+      <th>স্নাতকোত্তর-</th>
+      <td><%=commiteuser.masterspasssss%></td>
+      <th>চিকিৎসা খাত-</th>
+      <td><%=commiteuser.medicalsection%></td>
+    </tr>
+
+    <tr>
+      <th>স্নাতকোত্তর(কারিগরি ও প্রযুক্তি)-</th>
+      <td><%=commiteuser.masterspassssstechnical%></td>
+      <th>অন্যান্য-</th>
+      <td><%=commiteuser.otherssection%></td>
+    </tr>
+
+    <tr>
+      <th>এমফিল পিএইচডি ও অন্যান্য পর্যায়ে-</th>
+      <td><%=commiteuser.mastersmphilothers%></td>
+      <th>গ্রন্থাগারে বই পাঠোপকরনের বিবরণ </th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>সার্টিফিকেট, ডিপ্লোমা-</th>
+      <td><%=commiteuser.certificate%></td>
+      <th>গ্রন্থাগারে সামগ্রীর মোট মজুদ সংখ্যা-</th>
+      <td><%=commiteuser.libarysec%></td>
+    </tr>
+     
+     <tr>
+      <th>শিক্ষার্থী প্রতি মাথাপিছু ব্যয় পরিসংখ্যানঃ</th>
+      <th></th>
+      <th>সংগ্রহীত সংখ্যা(Acquisition)-</th>
+      <td><%=commiteuser.collectionnumber%></td>
+    </tr>
+
+
+    <tr>
+      <th>অস্বাভাবিক পরিস্থিতির জন্য ক্লাস না হওয়া দিন-</th>
+      <td><%=commiteuser.suspendclassday%></td>
+      <th>পরিচালিত গবেষণা প্রকল্পের পরিসংখ্যানঃ</th>
+      <td><%=commiteuser.researchcollectionnumber%></td>
+    </tr>
+</table><br>
+
+</div>
+</body>
+</html>

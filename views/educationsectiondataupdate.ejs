@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+    <style>
+    	.table1 tr th input{
+    		resize: horizontal;
+    		width: 110px;
+    	}
+    	.table2 tr th input{
+          width: 200px;
+    	}
+    	.table3 tr th input{
+    		width: 200px;
+    	}
+    	.table4 tr th input{
+    		resize: horizontal;
+    		width: 100px;
+    	}
+    </style>
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/educationsection">insert</a></li>
+    <li>
+      <form action="/educationsectiondata" method="GET">
+        <input type="number" name="educationsectionsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/educationsectionlogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<form action="/educationsectionuser/<%=educationsectionuser._id%>" method="post">
+<p> সালঃ<input type="number" name="session"></p>
+
+<h3>বিদেশী শিক্ষার্থীঃ </h3> 
+<h3>ছাত্রঃ<input type="number" name="cseforeignbscmalestudent" value="<%=educationsectionuser.cseforeignbscmalestudent%>"> ছাত্রীঃ<input type="number" name="cseforeignbsctfemalestudent" value="<%=educationsectionuser.cseforeignbsctfemalestudent%>"></h3>
+<table border="1" width="900" align="center" class="table1">
+<tr>
+    <th rowspan="2">ক্রমিক নং</th>
+    <th rowspan="2">লিঙ্গ(ছেলে/মেয়ে)</th>
+    <th rowspan="2">অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	<th rowspan="2">বিভাগ</th>
+	<th rowspan="2">ডিগ্রি</th>
+	<th rowspan="2">দেশের নাম</th>
+	<th colspan="2">শিক্ষার্থীর অধ্যয়ন ব্যয়</th>
+</tr>
+<tr>
+	<th>বৃত্তি</th>
+	<th>নিজ</th>	
+</tr>
+<tr>
+    <th>০১</th>
+    <th><input type="text" name="gender1" value="<%=educationsectionuser.gender1%>"></th>
+	<th><input type="text" name="faculty1" value="<%=educationsectionuser.faculty1%>"></th>
+	<th><input type="text" name="department1" value="<%=educationsectionuser.department1%>"></th>
+	<th><input type="text" name="degree1" value="<%=educationsectionuser.degree1%>"></th>
+	<th><input type="text" name="foreignstudentcountry1" value="<%=educationsectionuser.foreignstudentcountry1%>"></th>
+	<th><input type="text" name="foreignschoolarshipbscstudent1" value="<%=educationsectionuser.foreignschoolarshipbscstudent1%>"></th>
+	<th><input type="text" name="foreignownexpensebscstudent1" value="<%=educationsectionuser.foreignownexpensebscstudent1%>"></th>
+</tr>
+<tr>
+    <th>০২</th>
+    <th><input type="text" name="gender2" value="<%=educationsectionuser.gender2%>"></th>
+	<th><input type="text" name="faculty2" value="<%=educationsectionuser.faculty2%>"></th>
+	<th><input type="text" name="department2" value="<%=educationsectionuser.department2%>"></th>
+	<th><input type="text" name="degree2" value="<%=educationsectionuser.degree2%>"></th>
+	<th><input type="text" name="foreignstudentcountry2" value="<%=educationsectionuser.foreignstudentcountry2%>"></th>
+	<th><input type="text" name="foreignschoolarshipbscstudent2" value="<%=educationsectionuser.foreignschoolarshipbscstudent2%>"></th>
+	<th><input type="text" name="foreignownexpensebscstudent2" value="<%=educationsectionuser.foreignownexpensebscstudent2%>"></th>
+</tr>
+<tr>
+    <th>০৩</th>
+    <th><input type="text" name="gender3" value="<%=educationsectionuser.gender3%>"></th>
+	<th><input type="text" name="faculty3" value="<%=educationsectionuser.faculty3%>"></th>
+	<th><input type="text" name="department3" value="<%=educationsectionuser.department3%>"></th>
+	<th><input type="text" name="degree3" value="<%=educationsectionuser.degree3%>"></th>
+	<th><input type="text" name="foreignstudentcountry3" value="<%=educationsectionuser.foreignstudentcountry3%>"></th>
+	<th><input type="text" name="foreignschoolarshipbscstudent3" value="<%=educationsectionuser.foreignschoolarshipbscstudent3%>"></th>
+	<th><input type="text" name="foreignownexpensebscstudent3" value="<%=educationsectionuser.foreignownexpensebscstudent3%>"></th>
+</tr>
+<tr>
+    <th>০৪</th>
+    <th><input type="text" name="gender4" value="<%=educationsectionuser.gender4%>"></th>
+	<th><input type="text" name="faculty4" value="<%=educationsectionuser.faculty4%>"></th>
+	<th><input type="text" name="department4" value="<%=educationsectionuser.department4%>"></th>
+	<th><input type="text" name="degree4" value="<%=educationsectionuser.degree4%>"></th>
+	<th><input type="text" name="foreignstudentcountry4" value="<%=educationsectionuser.foreignstudentcountry4%>"></th>
+	<th><input type="text" name="foreignschoolarshipbscstudent4" value="<%=educationsectionuser.foreignschoolarshipbscstudent4%>"></th>
+	<th><input type="text" name="foreignownexpensebscstudent4" value="<%=educationsectionuser.foreignownexpensebscstudent4%>"></th>
+</tr><tr>
+    <th>০৫</th>
+    <th><input type="text" name="gender5" value="<%=educationsectionuser.gender5%>"></th>
+	<th><input type="text" name="faculty5" value="<%=educationsectionuser.faculty5%>"></th>
+	<th><input type="text" name="department5" value="<%=educationsectionuser.department5%>"></th>
+	<th><input type="text" name="degree5" value="<%=educationsectionuser.degree5%>"></th>
+	<th><input type="text" name="foreignstudentcountry5" value="<%=educationsectionuser.foreignstudentcountry5%>"></th>
+	<th><input type="text" name="foreignschoolarshipbscstudent5" value="<%=educationsectionuser.foreignschoolarshipbscstudent5%>"></th>
+	<th><input type="text" name="foreignownexpensebscstudent5" value="<%=educationsectionuser.foreignownexpensebscstudent5%>"></th>
+</tr>
+<tr>
+    <th>০৬</th>
+    <th><input type="text" name="gender6" value="<%=educationsectionuser.gender6%>"></th>
+	<th><input type="text" name="faculty6" value="<%=educationsectionuser.faculty6%>"></th>
+	<th><input type="text" name="department6" value="<%=educationsectionuser.department6%>"></th>
+	<th><input type="text" name="degree6" value="<%=educationsectionuser.degree6%>"></th>
+	<th><input type="text" name="foreignstudentcountry6" value="<%=educationsectionuser.foreignstudentcountry6%>"></th>
+	<th><input type="text" name="foreignschoolarshipbscstudent6" value="<%=educationsectionuser.foreignschoolarshipbscstudent6%>"></th>
+	<th><input type="text" name="foreignownexpensebscstudent6" value="<%=educationsectionuser.foreignownexpensebscstudent6%>"></th>
+</tr>
+<tr>
+    <th>0৭</th>
+    <th><input type="text" name="gender7" value="<%=educationsectionuser.gender7%>"></th>
+	<th><input type="text" name="faculty7" value="<%=educationsectionuser.faculty7%>"></th>
+	<th><input type="text" name="department7" value="<%=educationsectionuser.department7%>"></th>
+	<th><input type="text" name="degree7" value="<%=educationsectionuser.degree7%>"></th>
+	<th><input type="text" name="foreignstudentcountry7" value="<%=educationsectionuser.foreignstudentcountry7%>"></th>
+	<th><input type="text" name="foreignschoolarshipbscstudent7" value="<%=educationsectionuser.foreignschoolarshipbscstudent7%>"></th>
+	<th><input type="text" name="foreignownexpensebscstudent7" value="<%=educationsectionuser.foreignownexpensebscstudent7%>"></th>
+</tr>
+</table><br>
+
+
+<h3>ড্রপ আউটের হারঃ </h3> 
+<table border="1" width="900" align="center" class="table2">
+	<tr>
+		<th rowspan="2">ক্রমিক নং</th>
+		<th rowspan="2">অনুষদ/স্কুল্/ইনস্টিটিউট/একাডেমির নাম</th>
+	    <th rowspan="2">বিভাগ</th>
+	    <th colspan="2">শতকরা হার</th>
+	</tr>
+	<tr>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+	</tr>
+	<tr>
+		<th>০১</th>
+		<th><input type="text" name="dropoutfaculty1" value="<%=educationsectionuser.dropoutfaculty1%>"></th>
+		<th><input type="text" name="dropoutdepartment1" value="<%=educationsectionuser.dropoutdepartment1%>"></th>
+		<th><input type="text" name="dropoutmalestudent1" value="<%=educationsectionuser.dropoutmalestudent1%>"></th>
+		<th><input type="text" name="dropoutfemalestudent1" value="<%=educationsectionuser.dropoutfemalestudent1%>"></th>
+	</tr>
+	<tr>
+		<th>০২</th>
+		<th><input type="text" name="dropoutfaculty2" value="<%=educationsectionuser.dropoutfaculty2%>"></th>
+		<th><input type="text" name="dropoutdepartment2" value="<%=educationsectionuser.dropoutdepartment2%>"></th>
+		<th><input type="text" name="dropoutmalestudent2" value="<%=educationsectionuser.dropoutmalestudent2%>"></th>
+		<th><input type="text" name="dropoutfemalestudent2" value="<%=educationsectionuser.dropoutfemalestudent2%>"></th>
+	</tr>
+	<tr>
+		<th>০৩</th>
+		<th><input type="text" name="dropoutfaculty3" value="<%=educationsectionuser.dropoutfaculty3%>"></th>
+		<th><input type="text" name="dropoutdepartment3" value="<%=educationsectionuser.dropoutdepartment3%>"></th>
+		<th><input type="text" name="dropoutmalestudent3" value="<%=educationsectionuser.dropoutmalestudent3%>"></th>
+		<th><input type="text" name="dropoutfemalestudent3" value="<%=educationsectionuser.dropoutfemalestudent3%>"></th>
+	</tr>
+	<tr>
+		<th>০৪</th>
+		<th><input type="text" name="dropoutfaculty4" value="<%=educationsectionuser.dropoutfaculty4%>"></th>
+		<th><input type="text" name="dropoutdepartment4" value="<%=educationsectionuser.dropoutdepartment4%>"></th>
+		<th><input type="text" name="dropoutmalestudent4" value="<%=educationsectionuser.dropoutmalestudent4%>"></th>
+		<th><input type="text" name="dropoutfemalestudent4" value="<%=educationsectionuser.dropoutfemalestudent4%>"></th>
+	</tr>
+	<tr>
+		<th>০৫</th>
+		<th><input type="text" name="dropoutfaculty5" value="<%=educationsectionuser.dropoutfaculty5%>"></th>
+		<th><input type="text" name="dropoutdepartment5" value="<%=educationsectionuser.dropoutdepartment5%>"></th>
+		<th><input type="text" name="dropoutmalestudent5" value="<%=educationsectionuser.dropoutmalestudent5%>"></th>
+		<th><input type="text" name="dropoutfemalestudent5" value="<%=educationsectionuser.dropoutfemalestudent5%>"></th>
+	</tr>
+</table><br>
+
+<h3>বিনাবেতনে ও বৃত্তিপ্রাপ্ত শিক্ষার্থীর বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+	<tr>
+		<th>বিবরণ</th>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+	</tr>
+	<tr>
+		<th>বিনাবেতনে অধ্যায়ন্রত শিক্ষার্থী</th>
+		<th><input type="number" name="fullfreemalestudent" value="<%=educationsectionuser.fullfreemalestudent%>"></th>
+		<th><input type="number" name="fullfreefemalestudent" value="<%=educationsectionuser.fullfreefemalestudent%>"></th>
+	</tr>
+	<tr>
+		<th>স্কলারশিপ ও ফেলশিপ প্রাপ্ত শিক্ষার্থীর সংখ্যা</th>
+		<th><input type="number" name="schoolarshipandfeloshipmalestudent" value="<%=educationsectionuser.schoolarshipandfeloshipmalestudent%>"></th>
+		<th><input type="number" name="schoolarshipandfeloshipfemalestudent" value="<%=educationsectionuser.schoolarshipandfeloshipfemalestudent%>"></th>
+	</tr>
+	<tr>
+		<th>স্কলারশিপ</th>
+		<th><input type="number" name="schoolarshipmalestudent" value="<%=educationsectionuser.schoolarshipmalestudent%>"></th>
+		<th><input type="number" name="schoolarshipfemalestudent" value="<%=educationsectionuser.schoolarshipfemalestudent%>"></th>
+	</tr>
+	<tr>
+		<th>ফেলশিপ</th>
+		<th><input type="number" name="feloshipmalestudent" value="<%=educationsectionuser.feloshipmalestudent%>"></th>
+		<th><input type="number" name="feloshipfemalestudent" value="<%=educationsectionuser.feloshipfemalestudent%>"></th>
+	</tr>
+	<tr>
+		<th>অন্যান্য বৃত্তি</th>
+		<th><input type="number" name="otherschoolarshipmalestudent" value="<%=educationsectionuser.otherschoolarshipmalestudent%>"></th>
+		<th><input type="number" name="otherschoolarshipfemalestudent" value="<%=educationsectionuser.otherschoolarshipfemalestudent%>"></th>
+	</tr>
+</table><br>
+
+<h3>জানুয়ারী থেকে ডিসেম্বরের মধ্যে বিশ্ববিদ্যালয়ের ডিগ্রিপ্রাপ্ত শিক্ষার্থীর পরিসংখানঃ</h3>
+<table border="1" width="900" align="center" class="table4">
+	<tr>
+		<th rowspan="2">ডিগ্রির নাম</th>
+		<th rowspan="2">বিষয়</th>
+		<th rowspan="2">সেশন</th>
+		<th colspan="2">পরীক্ষার্থীর সংখ্যা</th>
+		<th colspan="2">উত্তীর্ণ</th>
+		<th rowspan="2">শতকরা হার</th>
+	</tr>
+	<tr>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+	</tr>
+	<tr>
+		<th>স্নাতক(সম্মান)</th>
+		<th>বি এসসি(সম্মান)</th>
+		<th><input type="text" name="bscpasssession" value="<%=educationsectionuser.bscpasssession%>"></th>
+		<th><input type="number" name="bscadmitmalestudent" value="<%=educationsectionuser.bscadmitmalestudent%>"></th>
+		<th><input type="number" name="bscadmitfemalestudent" value="<%=educationsectionuser.bscadmitfemalestudent%>"></th>
+		<th><input type="number" name="bscpassmalestudent" value="<%=educationsectionuser.bscpassmalestudent%>"></th>
+		<th><input type="number" name="bscpassfemalestudent" value="<%=educationsectionuser.bscpassfemalestudent%>"></th>
+		<th><input type="text" name="percentageofbscpass" value="<%=educationsectionuser.percentageofbscpass%>"></th>
+	</tr>
+	<tr>
+		<th>মাস্টার্স</th>
+		<th>এম এসসি</th>
+		<th><input type="text" name="mscpasssession" value="<%=educationsectionuser.mscpasssession%>"></th>
+		<th><input type="number" name="mscadmitmalestudent" value="<%=educationsectionuser.mscadmitmalestudent%>"></th>
+		<th><input type="number" name="mscadmitfemalestudent" value="<%=educationsectionuser.mscadmitfemalestudent%>"></th>
+		<th><input type="number" name="mscpassmalestudent" value="<%=educationsectionuser.mscpassmalestudent%>"></th>
+		<th><input type="number" name="mscpassfemalestudent" value="<%=educationsectionuser.mscpassfemalestudent%>"></th>
+		<th><input type="text" name="percentageofmscpass" value="<%=educationsectionuser.percentageofmscpass%>"></th>
+	</tr>
+	<tr>
+		<th>এম ফিল</th>
+		<th>এম.ফিল</th>
+		<th><input type="text" name="mfilpasssession" value="<%=educationsectionuser.mfilpasssession%>"></th>
+		<th><input type="number" name="mfiladmitmalestudent" value="<%=educationsectionuser.mfiladmitmalestudent%>"></th>
+		<th><input type="number" name="mfiladmitfemalestudent" value="<%=educationsectionuser.mfiladmitfemalestudent%>"></th>
+		<th><input type="number" name="mfilpassmalestudent" value="<%=educationsectionuser.mfilpassmalestudent%>"></th>
+		<th><input type="number" name="mfilpassfemalestudent" value="<%=educationsectionuser.mfilpassfemalestudent%>"></th>
+		<th><input type="text" name="percentageofmfilpass" value="<%=educationsectionuser.percentageofmfilpass%>"></th>
+	</tr>
+	<tr>
+		<th>পিএইচ ডি</th>
+		<th>পিএইচ.ডি</th>
+		<th><input type="text" name="phdpasssession" value="<%=educationsectionuser.phdpasssession%>"></th>
+		<th><input type="number" name="phdadmitmalestudent" value="<%=educationsectionuser.phdadmitmalestudent%>"></th>
+		<th><input type="number" name="phdadmitfemalestudent" value="<%=educationsectionuser.phdadmitfemalestudent%>"></th>
+		<th><input type="number" name="phdpassmalestudent" value="<%=educationsectionuser.phdpassmalestudent%>"></th>
+		<th><input type="number" name="phdpassfemalestudent" value="<%=educationsectionuser.phdpassfemalestudent%>"></th>
+		<th><input type="text" name="percentageofphdpass" value="<%=educationsectionuser.percentageofphdpass%>"></th>
+	</tr>
+</table><br>
+<button type="submit">update</button>
+</form>
+<br>
+</div>
+</body>
+</html>

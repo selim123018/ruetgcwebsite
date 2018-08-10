@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	<style>
+	   .table1 tr th input{
+			resize: horizontal;
+			width: 250px;
+		}
+	</style>
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/engineeringsection">insert</a></li>
+    <li>
+      <form action="/engineeringsectiondata" method="GET">
+        <input type="number" name="engineeringsectionsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/engineeringsectionlogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<form action="/engineeringsectionnew" method="post">
+<p> সালঃ<input type="number" name="session"></p>
+
+<h3>ভৌত কাঠামোর বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>কক্ষ/ভবনের প্রকার</th>
+        <th>সংখ্যা</th>
+        <th>মোট আয়তন(বর্গফুট)</th>
+    </tr>
+    <tr>
+        <th>i.</th>
+        <th>শ্রেনী কক্ষ</th>
+        <th><input type="number" name="totalclassroom"></th>
+        <th><input type="text" name="totalclassroomvolume"></th>
+    </tr>
+    <tr>
+        <th>ii.</th>
+        <th>প্রশাসনিক</th>
+        <th><input type="number" name="totaladministratorroom"></th>
+        <th><input type="text" name="totaladministratorroomvolume"></th>
+    </tr>
+    <tr>
+        <th>iii.</th>
+        <th>গ্রন্থাগর</th>
+        <th><input type="number" name="totallibraryroom"></th>
+        <th><input type="text" name="totalalibraryroomvolume"></th>
+    </tr>
+    <tr>
+        <th>iv.</th>
+        <th>ল্যাব্রেটরি</th>
+        <th><input type="number" name="totallabratoryroom"></th>
+        <th><input type="text" name="totallabratoryroomvolume"></th>
+    </tr>
+    <tr>
+        <th>v.</th>
+        <th>হল/ছাত্রাবাস</th>
+        <th><input type="number" name="totalhallroom"></th>
+        <th><input type="text" name="totalhallroomvolume"></th>
+    </tr>
+    <tr>
+        <th>vi.</th>
+        <th>মিলনায়তন</th>
+        <th><input type="number" name="totalauditorium"></th>
+        <th><input type="text" name="totalauditoriumvolume"></th>
+    </tr>
+    <tr>
+        <th>vii.</th>
+        <th>ব্যায়ামগার</th>
+        <th><input type="number" name="totalexerciseroom"></th>
+        <th><input type="text" name="totalexerciseroomvolume"></th>
+    </tr>
+    <tr>
+        <th>viii.</th>
+        <th>খেলার মাঠ</th>
+        <th><input type="number" name="totalplayground"></th>
+        <th><input type="text" name="totalplaygroundvolume"></th>
+    </tr>
+    <tr>
+        <th>ix.</th>
+        <th>সুইমিংপুল</th>
+        <th><input type="number" name="totalswimingpool"></th>
+        <th><input type="text" name="totalswimingpoolvolume"></th>
+    </tr>
+    <tr>
+        <th>x.</th>
+        <th>অথিতি ভবন</th>
+        <th><input type="number" name="totalguesthouse"></th>
+        <th><input type="text" name="totalguesthousevolume"></th>
+    </tr>
+    <tr>
+        <th>xi.</th>
+        <th>শিক্ষকদের আবাসিক বাসস্থান</th>
+        <th><input type="number" name="totalteacherresidentialaccommodation"></th>
+        <th><input type="text" name="totalteacherresidentialaccommodationvolume"></th>
+    </tr>
+    <tr>
+        <th>xii.</th>
+        <th>কর্মকর্তাদের আবাসিক বাসস্থান</th>
+        <th><input type="number" name="totalofficerresidentialaccommodation"></th>
+        <th><input type="text" name="totalofficerresidentialaccommodationvolume"></th>
+    </tr>
+    <tr>
+        <th>xiii.</th>
+        <th>কর্মচারীদের আবাসিক বাসস্থান</th>
+        <th><input type="number" name="totalemployeresidentialaccommodation"></th>
+        <th><input type="text" name="totalemployeresidentialaccommodationvolume"></th>
+    </tr>
+    <tr>
+        <th>xiv.</th>
+        <th>ভিসি বাংলো</th>
+        <th><input type="number" name="vcbanglo"></th>
+        <th><input type="text" name="vcbanglovolume"></th>
+    </tr>
+</table>
+<br>
+<button type="submit">submit</button>
+</form>
+<br>
+</div>
+</body>
+</html>

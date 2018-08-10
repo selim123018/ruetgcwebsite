@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+</head>
+<body>
+     
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/accountsection">insert</a></li>
+    <li>
+      <form action="/accountsectiondata" method="GET">
+        <input type="number" name="accountsectionsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/accountsectionlogout">logout</a></li>
+  </ul>
+ </div> 
+
+<div class="form">
+<form action="/accountsectionuser/<%=accountsectionuser._id%>" method="post">
+<h3>গ্রন্থাগার সামগ্রী সংগ্রহের খাতওয়ারী ব্যয়(টাকায়)</h3>
+<table border="1" width="900" align="center" class="table1">
+    <tr>
+        <th>উৎস</th>
+        <th>রাজস্ব বরাদ্দ</th>
+        <th>উন্নয়ন বরাদ্দ</th>
+        <th>নিজস্ব বরাদ্দ</th>
+        <th>বিদেশী উৎস/অন্যান্য </th>
+    </tr>
+    <tr>
+        <th>ব্যয়</th>
+        <th><input type="number" name="revenueallocation" value="<%=accountsectionuser.revenueallocation%>"></th>
+        <th><input type="number" name="developmentallocation" value="<%=accountsectionuser.developmentallocation%>"></th>
+        <th><input type="number" name="ownallocation" value="<%=accountsectionuser.ownallocation%>"></th>
+        <th><input type="number" name="foreignsource" value="<%=accountsectionuser.foreignsource%>"></th>
+    </tr>
+</table>
+<br>
+<h3>গবেষণা খাতে ব্যায়ের পরিমান</h3>
+<table border="1" width="900" align="center" class="table2">
+    <tr>
+      <th>উৎস</th>
+      <th>টাকার পরিমান</th>
+      <th>ব্যয়ের পরিমান(টাকায়)</th>
+      <th>ব্যয়ের কত শতাংশ</th>   
+    </tr>
+    <tr> 
+      <th>রাজস্ব বরাদ্দ</th>
+      <th><input type="number" name="rrevenueallocation" value="<%=accountsectionuser.rrevenueallocation%>"></th>
+      <th><input type="number" name="revenueallocationexpense" value="<%=accountsectionuser.revenueallocationexpense%>"></th>
+      <th><input type="text" name="percentageofrevenueallocation" value="<%=accountsectionuser.percentageofrevenueallocation%>"></th>   
+    </tr>
+    <tr>
+      <th>উন্নয়ন বরাদ্দ</th>
+      <th><input type="number" name="rdevelopmentallocation" value="<%=accountsectionuser.rdevelopmentallocation%>"></th>
+      <th><input type="number" name="developmentallocationexpense" value="<%=accountsectionuser.developmentallocationexpense%>"></th>
+      <th><input type="text" name="percentageofdevelopmentallocation" value="<%=accountsectionuser.percentageofdevelopmentallocation%>"></th>   
+    </tr>
+    <tr>
+      <th>নিজস্ব বরাদ্দ</th>
+      <th><input type="number" name="rownallocation" value="<%=accountsectionuser.rownallocation%>"></th>
+      <th><input type="number" name="ownallocationexpense" value="<%=accountsectionuser.ownallocationexpense%>"></th>
+      <th><input type="text" name="percentageofownallocation" value="<%=accountsectionuser.percentageofownallocation%>"></th>   
+    </tr>
+
+    <tr>
+      <th>বিদেশী উৎস/ফান্ড</th>
+      <th><input type="number" name="rforeignsource" value="<%=accountsectionuser.rforeignsource%>"></th>
+      <th><input type="number" name="foreignsourceexpense" value="<%=accountsectionuser.foreignsourceexpense%>"></th>
+      <th><input type="text" name="percentageofforeignsource" value="<%=accountsectionuser.percentageofforeignsource%>"></th>     
+    </tr>
+    <tr>
+      <th>অন্যান্য উৎস/ফান্ড</th>
+      <th><input type="number" name="rothersourceallocation" value="<%=accountsectionuser.rothersourceallocation%>"></th>
+      <th><input type="number" name="othersource" value="<%=accountsectionuser.othersource%>"></th>
+      <th><input type="text" name="percentageofother" value="<%=accountsectionuser.percentageofother%>"></th>     
+    </tr>
+</table><br>
+<h3>বিশ্ববিদ্যালয়ের বাজেটের অর্থের উৎসঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>উৎস</th>
+        <th>অর্থের পরিমান</th>
+    </tr>
+    <tr>
+        <th>i.</th>
+        <th>বিমক করতৃক অনুদান</th>
+        <th><input type="number" name="insolvencygrant" value="<%=accountsectionuser.insolvencygrant%>"></th>
+    </tr>
+    <tr>
+        <th>ii.</th>
+        <th>নিজস্ব আয়</th>
+        <th><input type="number" name="ownincome" value="<%=accountsectionuser.ownincome%>"></th>
+    </tr>
+    <tr>
+        <th>iii.</th>
+        <th>বিশেষ উন্নয়ন বরাদ্দ</th>
+        <th><input type="number" name="specialdevelopmentallocation" value="<%=accountsectionuser.specialdevelopmentallocation%>"></th>
+    </tr>
+    <tr>
+        <th>iv.</th>
+        <th>অন্যান্য</th>
+        <th><input type="number" name="otherallocation" value="<%=accountsectionuser.otherallocation%>"></th>
+    </tr>
+</table>
+<br>
+<h3>বিভিন্ন খাতে মোট ব্যয়ের বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>খাত</th>
+        <th>টাকার পরিমান</th>
+        <th>বাজেটের কত শতাংশ</th>
+    </tr>
+    <tr>
+        <th>i.</th>
+        <th>শিক্ষা</th>
+        <th><input type="number" name="educationexpense" value="<%=accountsectionuser.educationexpense%>"></th>
+        <th><input type="text" name="percentageofeducationbudget" value="<%=accountsectionuser.percentageofeducationbudget%>"></th>
+    </tr>
+    <tr>
+        <th>ii.</th>
+        <th>গবেষণা</th>
+        <th><input type="number" name="researchexpense" value="<%=accountsectionuser.researchexpense%>"></th>
+        <th><input type="text" name="percentageofresearchbudget" value="<%=accountsectionuser.percentageofresearchbudget%>"></th>
+    </tr>
+    <tr>
+        <th>iii.</th>
+        <th>বেতন ভাতা</th>
+        <th><input type="number" name="salaryexpense" value="<%=accountsectionuser.salaryexpense%>"></th>
+        <th><input type="text" name="percentageofsalarybudget" value="<%=accountsectionuser.percentageofsalarybudget%>"></th>
+    </tr>
+    <tr>
+        <th>iv.</th>
+        <th>গবেষণা বৃত্তি</th>
+        <th><input type="number" name="researchschoolarshipexpense" value="<%=accountsectionuser.researchschoolarshipexpense%>"></th>
+        <th><input type="text" name="percentageofresearchschoolarshipbudget" value="<%=accountsectionuser.percentageofresearchschoolarshipbudget%>"></th>
+    </tr>
+    <tr>
+        <th>v.</th>
+        <th>পরিবহণ</th>
+        <th><input type="number" name="transportationexpense" value="<%=accountsectionuser.transportationexpense%>"></th>
+        <th><input type="text" name="percentageoftransportationbudget" value="<%=accountsectionuser.percentageoftransportationbudget%>"></th>
+    </tr>
+    <tr>
+        <th>vi.</th>
+        <th>বিদু্যৎ</th>
+        <th><input type="number" name="electricityexpense" value="<%=accountsectionuser.electricityexpense%>"></th>
+        <th><input type="text" name="percentageofelectricitybudget" value="<%=accountsectionuser.percentageofelectricitybudget%>"></th>
+    </tr>
+    <tr>
+        <th>vii.</th>
+        <th>অবকাঠামোগত উন্নয়ন ও রক্ষনাবেক্ষন</th>
+        <th><input type="number" name="infrastructuralexpense" value="<%=accountsectionuser.infrastructuralexpense%>"></th>
+        <th><input type="text" name="percentageofinfrastructuralbudget" value="<%=accountsectionuser.percentageofinfrastructuralbudget%>"></th>
+    </tr>
+    <tr>
+        <th>viii.</th>
+        <th>চিকিত্সা</th>
+        <th><input type="number" name="medicationexpense" value="<%=accountsectionuser.medicationexpense%>"></th>
+        <th><input type="text" name="percentageofmedication" value="<%=accountsectionuser.percentageofmedication%>"></th>
+    </tr>
+    <tr>
+        <th>viii.</th>
+        <th>অন্যান্য</th>
+        <th><input type="number" name="otherexpense" value="<%=accountsectionuser.otherexpense%>"></th>
+        <th><input type="text" name="percentageofotherbudget" value="<%=accountsectionuser.percentageofotherbudget%>"></th>
+    </tr>
+    <tr>
+        <th>x.</th>
+        <th>প্রশাসনিক ব্যয়</th>
+        <th><input type="number" name="administrasionexpense" value="<%=accountsectionuser.administrasionexpense%>"></th>
+        <th><input type="text" name="percentageofadministrasionexpense" value="<%=accountsectionuser.percentageofadministrasionexpense%>"></th>
+    </tr>
+    <tr>
+        <th>xi.</th>
+        <th>পেনশন খাতে ব্যয়</th>
+        <th><input type="number" name="pensonexpense" value="<%=accountsectionuser.pensonexpense%>"></th>
+        <th><input type="text" name="percentageofotherbudget" value="<%=accountsectionuser.percentageofpensonexpense%>"></th>
+    </tr>
+</table>
+<br>
+<h3>আবাসিক সুবিধাপ্রাপ্ত শিক্ষক, কর্মকর্তা ও কর্মচারীদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+    <tr>
+        <th rowspan="2">পদ</th>
+        <th colspan="2">সংখ্যা</th>
+    </tr>
+    <tr>
+        <th>পুরুষ</th>
+        <th>মহিলা</th>
+    </tr>
+    <tr>
+        <th>শিক্ষক</th>
+        <th><input type="number" name="residentialadvantagemaleteacher" value="<%=accountsectionuser.residentialadvantagemaleteacher%>"></th>
+        <th><input type="number" name="residentialadvantagefemaleteacher" value="<%=accountsectionuser.residentialadvantagefemaleteacher%>"></th>
+    </tr>
+    <tr>
+        <th>কর্মকর্তা</th>
+        <th><input type="number" name="residentialadvantagemaleofficer" value="<%=accountsectionuser.residentialadvantagemaleofficer%>"></th>
+        <th><input type="number" name="residentialadvantagefemaleofficer" value="<%=accountsectionuser.residentialadvantagefemaleofficer%>"></th>
+    </tr>
+    <tr>
+        <th>তৃতীয় শ্রেণীর কর্মচারী</th>
+        <th><input type="number" name="residentialadvantagemalethirdclassemploye" value="<%=accountsectionuser.residentialadvantagemalethirdclassemploye%>"></th>
+        <th><input type="number" name="residentialadvantagefemalethirdclassemploye" value="<%=accountsectionuser.residentialadvantagefemalethirdclassemploye%>"></th>
+    </tr>
+    <tr>
+        <th>চতুর্থ শ্রেণীর কর্মচারী</th>
+        <th><input type="number" name="residentialadvantagemalefourthclassemploye" value="<%=accountsectionuser.residentialadvantagemalefourthclassemploye%>"></th>
+        <th><input type="number" name="residentialadvantagefemalefourthclassemploye" value="<%=accountsectionuser.residentialadvantagefemalefourthclassemploye%>"></th>
+    </tr>
+</table>
+<br>
+<button type="submit">update</button>
+</form>
+<br>
+</div>
+</body>
+</html>

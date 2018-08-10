@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/public/style.css">
+  
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/library">insert</a></li>
+    <li>
+      <form action="/librarydata" method="GET">
+        <input type="number" name="librarysession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/librarylogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<form action="/libraryuser/<%=libraryuser._id%>" method="post">
+<h3>গ্রন্থাগার ও পাথপকরনের বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+    <tr>
+     <th>বিবরণ</th>
+     <th>বই</th>
+     <th>জার্নাল</th>
+     <th>অডিওভিজুয়েল সামগ্রী</th>
+  </tr>
+  <tr>
+     <th>গ্রন্থাগার সামগ্রীর মোট মজুদ সংখ্যা</th>
+     <th><input type="number" name="totallibrarybook"  value="<%=libraryuser.totallibrarybook%>"></th>
+     <th><input type="number" name="totaljournal" value="<%=libraryuser.totaljournal%>"></th>
+     <th><input type="number" name="totalaudiovisual" value="<%=libraryuser.totalaudiovisual%>"></th>
+  </tr>
+  <tr>
+     <th>সংগৃহীত সংখ্যা</th>
+     <th><input type="number" name="totalcollectedlibrarybook" value="<%=libraryuser.totalcollectedlibrarybook%>"></th>
+     <th><input type="number" name="totalcollectedjournal" value="<%=libraryuser.totalcollectedjournal%>"></th>
+     <th><input type="number" name="totalcollectedaudiovisual" value="<%=libraryuser.totalcollectedaudiovisual%>"></th>
+  </tr>
+  <tr>
+     <th>গৃহীত ইলেক্ট্রনিক বই ও সাময়িকী</th>
+     <th><input type="number" name="totalsubscribedlibrarybook" value="<%=libraryuser.totalsubscribedlibrarybook%>"></th>
+     <th><input type="number" name="totalsubscribedjournal" value="<%=libraryuser.totalsubscribedjournal%>"></th>
+     <th><input type="number" name="totalsubscribedaudiovisual" value="<%=libraryuser.totalsubscribedaudiovisual%>"></th>
+  </tr>
+  <tr>
+     <th>অন্যান্য</th>
+     <th><input type="number" name="totalotherlibrarybook" value="<%=libraryuser.totalotherlibrarybook%>"></th>
+     <th><input type="number" name="totalotherjournal" value="<%=libraryuser.totalotherjournal%>"></th>
+     <th><input type="number" name="totalotheraudiovisual" value="<%=libraryuser.totalotheraudiovisual%>"></th>
+  </tr>
+</table><br>
+
+<h3>গ্রন্থাগারে নিয়োজিত জনবলঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+<tr>
+  <th rowspan="2">জনবল</th>
+  <th colspan="2">সংখ্যা</th>
+</tr>
+<tr>
+  <th>পুরুষ</th>
+  <th>মহিলা</th>
+</tr>
+<tr>
+  <th>লাইব্রেরি সায়েন্সে ডিগ্রিপ্রাপ্ত</th>
+  <th><input type="number" name="librarygraduatedmale" value="<%=libraryuser.librarygraduatedmale%>"></th>
+  <th><input type="number" name="librarygraduatedfemale" value="<%=libraryuser.librarygraduatedfemale%>"></th>
+</tr>
+<tr>
+  <th>অন্যান্য</th>
+  <th><input type="number" name="libraryothermale" value="<%=libraryuser.libraryothermale%>"></th>
+  <th><input type="number" name="libraryotherfemale" value="<%=libraryuser.libraryotherfemale%>"></th>
+</tr>
+</table><br>
+<button type="submit">update</button>
+</form>
+<br>
+</div>
+</body>
+</html>

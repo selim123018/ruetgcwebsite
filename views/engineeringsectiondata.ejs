@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/engineeringsection">insert</a></li>
+    <li>
+      <form action="/engineeringsectiondata" method="GET">
+        <input type="number" name="engineeringsectionsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/engineeringsectionlogout">logout</a></li>
+  </ul>
+ </div>
+<div class="form">
+<h3>ভৌত কাঠামোর বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>কক্ষ/ভবনের প্রকার</th>
+        <th>সংখ্যা</th>
+        <th>মোট আয়তন(বর্গফুট)</th>
+    </tr>
+    <tr>
+        <th>i.</th>
+        <th>শ্রেনী কক্ষ</th>
+        <td><%=engineeringsectionuser.totalclassroom%></td>
+        <td><%=engineeringsectionuser.totalclassroomvolume%></td>
+    </tr>
+    <tr>
+        <th>ii.</th>
+        <th>প্রশাসনিক</th>
+        <td><%=engineeringsectionuser.totaladministratorroom%></td>
+        <td><%=engineeringsectionuser.totaladministratorroomvolume%></td>
+    </tr>
+    <tr>
+        <th>iii.</th>
+        <th>গ্রন্থাগর</th>
+        <td><%=engineeringsectionuser.totallibraryroom%></td>
+        <td><%=engineeringsectionuser.totalalibraryroomvolume%></td>
+    </tr>
+    <tr>
+        <th>iv.</th>
+        <th>ল্যাব্রেটরি</th>
+        <td><%=engineeringsectionuser.totallabratoryroom%></td>
+        <td><%=engineeringsectionuser.totallabratoryroomvolume%></td>
+    </tr>
+    <tr>
+        <th>v.</th>
+        <th>হল/ছাত্রাবাস</th>
+        <td><%=engineeringsectionuser.totalhallroom%></td>
+        <th><%=engineeringsectionuser.totalhallroomvolume%></td>
+    </tr>
+    <tr>
+        <th>vi.</th>
+        <th>মিলনায়তন</th>
+        <td><%=engineeringsectionuser.totalauditorium%></td>
+        <td><%=engineeringsectionuser.totalauditoriumvolume%></td>
+    </tr>
+    <tr>
+        <th>vii.</th>
+        <th>ব্যায়ামগার</th>
+        <td><%=engineeringsectionuser.totalexerciseroom%></td>
+        <td><%=engineeringsectionuser.totalexerciseroomvolume%></td>
+    </tr>
+    <tr>
+        <th>viii.</th>
+        <th>খেলার মাঠ</th>
+        <td><%=engineeringsectionuser.totalplayground%></td>
+        <td><%=engineeringsectionuser.totalplaygroundvolume%></td>
+    </tr>
+    <tr>
+        <th>ix.</th>
+        <th>সুইমিংপুল</th>
+        <td><%=engineeringsectionuser.totalswimingpool%></td>
+        <td><%=engineeringsectionuser.totalswimingpoolvolume%></td>
+    </tr>
+    <tr>
+        <th>x.</th>
+        <th>অথিতি ভবন</th>
+        <td><%=engineeringsectionuser.totalguesthouse%></td>
+        <td><%=engineeringsectionuser.totalguesthousevolume%></td>
+    </tr>
+    <tr>
+        <th>xi.</th>
+        <th>শিক্ষকদের আবাসিক বাসস্থান</th>
+        <td><%=engineeringsectionuser.totalteacherresidentialaccommodation%></td>
+        <td><%=engineeringsectionuser.totalteacherresidentialaccommodationvolume%></td>
+    </tr>
+    <tr>
+        <th>xii.</th>
+        <th>কর্মকর্তাদের আবাসিক বাসস্থান</th>
+        <td><%=engineeringsectionuser.totalofficerresidentialaccommodation%></td>
+        <td><%=engineeringsectionuser.totalofficerresidentialaccommodationvolume%></td>
+    </tr>
+    <tr>
+        <th>xii.</th>
+        <th>কর্মচারীদের আবাসিক বাসস্থান</th>
+        <td><%=engineeringsectionuser.totalemployeresidentialaccommodation%></td>
+        <td><%=engineeringsectionuser.totalemployeresidentialaccommodationvolume%></td>
+    </tr>
+    <tr>
+        <th>xiv.</th>
+        <th>ভিসি বাংলো</th>
+        <td><%=engineeringsectionuser.vcbanglo%></td>
+        <td><%=engineeringsectionuser.vcbanglovolume%></td> 
+    </tr>
+</table>
+<br>
+<h3>
+<a href="engineeringsectionuser/<%=engineeringsectionuser._id %>/edit">Update</a>
+<a href="engineeringsectionuser/<%=engineeringsectionuser._id %>/delete">Delete</a>
+</h3>
+</div>
+</body>
+</html>

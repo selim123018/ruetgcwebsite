@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/accountsection">insert</a></li>
+    <li>
+      <form action="/accountsectiondata" method="GET">
+        <input type="number" name="accountsectionsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/accountsectionlogout">logout</a></li>
+  </ul>
+ </div>   
+
+<div class="form">
+<h3>গ্রন্থাগার সামগ্রী সংগ্রহের খাতওয়ারী ব্যয়(টাকায়)</h3>
+<table border="1" width="900" align="center" class="table1">
+    <tr>
+        <th>উৎস</th>
+        <th>রাজস্ব বরাদ্দ</th>
+        <th>উন্নয়ন বরাদ্দ</th>
+        <th>নিজস্ব বরাদ্দ</th>
+        <th>বিদেশী উৎস/অন্যান্য </th>
+    </tr>
+    <tr>
+        <th>ব্যয়</th>
+        <td><%=accountsectionuser.revenueallocation%></td>
+        <td><%=accountsectionuser.developmentallocation%></td>
+        <td><%=accountsectionuser.ownallocation%></td>
+        <td><%=accountsectionuser.foreignsource%></td>
+    </tr>
+</table>
+<br>
+<h3>গবেষণা খাতে ব্যায়ের পরিমান</h3>
+<table border="1" width="900" align="center" class="table2">
+    <tr>
+      <th>উৎস</th>
+      <th>টাকার পরিমান</th>
+      <th>ব্যয়ের পরিমান(টাকায়)</th>
+      <th>ব্যয়ের কত শতাংশ</th>   
+    </tr>
+    <tr> 
+      <th>রাজস্ব বরাদ্দ</th>
+      <td><%=accountsectionuser.rrevenueallocation%></td>
+      <td><%=accountsectionuser.revenueallocationexpense%></td>
+      <td><%=accountsectionuser.percentageofrevenueallocation%></td>   
+    </tr>
+    <tr>
+      <th>উন্নয়ন বরাদ্দ</th>
+      <td><%=accountsectionuser.rdevelopmentallocation%></td>
+      <td><%=accountsectionuser.developmentallocationexpense%></td>
+      <td><%=accountsectionuser.percentageofdevelopmentallocation%></td>   
+    </tr>
+    <tr>
+      <th>নিজস্ব বরাদ্দ</th>
+      <td><%=accountsectionuser.rownallocation%></td>
+      <td><%=accountsectionuser.ownallocationexpense%></td>
+      <td><%=accountsectionuser.percentageofownallocation%></td>   
+    </tr>
+
+    <tr>
+      <th>বিদেশী উৎস/ফান্ড</th>
+      <td><%=accountsectionuser.rforeignsource%></td>
+      <td><%=accountsectionuser.foreignsourceexpense%></td>
+      <td><%=accountsectionuser.percentageofforeignsource%></td>     
+    </tr>
+    <tr>
+      <th>অন্যান্য উৎস/ফান্ড</th>
+      <td><%=accountsectionuser.rothersourceallocation%></td>
+      <td><%=accountsectionuser.othersource%></td>
+      <td><%=accountsectionuser.percentageofother%></td>     
+    </tr>
+</table><br>
+
+<h3>বিশ্ববিদ্যালয়ের বাজেটের অর্থের উৎসঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>উৎস</th>
+        <th>অর্থের পরিমান</th>
+    </tr>
+    <tr>
+        <th>i.</th>
+        <th>বিমক করতৃক অনুদান</th>
+        <td><%=accountsectionuser.insolvencygrant%></td>
+    </tr>
+    <tr>
+        <th>ii.</th>
+        <th>নিজস্ব আয়</th>
+        <td><%=accountsectionuser.ownincome%></td>
+    </tr>
+    <tr>
+        <th>iii.</th>
+        <th>বিশেষ উন্নয়ন বরাদ্দ</th>
+        <td><%=accountsectionuser.specialdevelopmentallocation%></td>
+    </tr>
+    <tr>
+        <th>iv.</th>
+        <th>অন্যান্য</th>
+        <td><%=accountsectionuser.otherallocation%></td>
+    </tr>
+</table>
+<br>
+<h3>বিভিন্ন খাতে মোট ব্যয়ের বিবরণঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>খাত</th>
+        <th>টাকার পরিমান</th>
+        <th>বাজেটের কত শতাংশ</th>
+    </tr>
+    <tr>
+        <th>i.</th>
+        <th>শিক্ষা</th>
+        <td><%=accountsectionuser.educationexpense%></td>
+        <th><%=accountsectionuser.percentageofeducationbudget%></td>
+    </tr>
+    <tr>
+        <th>ii.</th>
+        <th>গবেষণা</th>
+        <td><%=accountsectionuser.researchexpense%></td>
+        <td><%=accountsectionuser.percentageofresearchbudget%></td>
+    </tr>
+    <tr>
+        <th>iii.</th>
+        <th>বেতন ভাতা</th>
+        <td><%=accountsectionuser.salaryexpense%></td>
+        <td><%=accountsectionuser.percentageofsalarybudget%></td>
+    </tr>
+    <tr>
+        <th>iv.</th>
+        <th>গবেষণা বৃত্তি</th>
+        <td><%=accountsectionuser.researchschoolarshipexpense%></td>
+        <td><%=accountsectionuser.percentageofresearchschoolarshipbudget%></td>
+    </tr>
+    <tr>
+        <th>v.</th>
+        <th>পরিবহণ</th>
+        <td><%=accountsectionuser.transportationexpense%></td>
+        <td><%=accountsectionuser.percentageoftransportationbudget%></td>
+    </tr>
+    <tr>
+        <th>vi.</th>
+        <th>বিদু্যৎ</th>
+        <td><%=accountsectionuser.electricityexpense%></td>
+        <td><%=accountsectionuser.percentageofelectricitybudget%></td>
+    </tr>
+    <tr>
+        <th>vii.</th>
+        <th>অবকাঠামোগত উন্নয়ন ও রক্ষনাবেক্ষন</th>
+        <td><%=accountsectionuser.infrastructuralexpense%></td>
+        <td><%=accountsectionuser.percentageofinfrastructuralbudget%></td>
+    </tr>
+    <tr>
+       <th>viii.</th>
+        <th>চিকিত্সা</th>
+        <td><%=accountsectionuser.medicationexpense%></td>
+        <td><%=accountsectionuser.percentageofmedication%></td>
+    </tr>
+    <tr>
+        <th>viii.</th>
+        <th>অন্যান্য</th>
+        <td><%=accountsectionuser.otherexpense%></td>
+        <td><%=accountsectionuser.percentageofotherbudget%></td>
+    </tr>
+    <tr>
+        <th>x.</th>
+        <th>প্রশাসনিক ব্যয়</th>
+        <td><%=accountsectionuser.administrasionexpense%></td>
+        <td><%=accountsectionuser.percentageofadministrasionexpense%></td>
+    </tr>
+    <tr>
+        <th>xi.</th>
+        <th>পেনশন খাতে ব্যয়</th>
+        <td><%=accountsectionuser.pensonexpense%></td>
+        <td><%=accountsectionuser.percentageofpensonexpense%></td>
+    </tr>
+</table>
+<br>
+<h3>আবাসিক সুবিধাপ্রাপ্ত শিক্ষক, কর্মকর্তা ও কর্মচারীদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+    <tr>
+        <th rowspan="2">পদ</th>
+        <th colspan="3">সংখ্যা</th>
+    </tr>
+    <tr>
+        <th>পুরুষ</th>
+        <th>মহিলা</th>
+        <th>মোট</th>
+    </tr>
+    <tr>
+        <th>শিক্ষক</th>
+        <td><%=accountsectionuser.residentialadvantagemaleteacher%></td>
+        <td><%=accountsectionuser.residentialadvantagefemaleteacher%></td>
+        <td><%=(accountsectionuser.residentialadvantagemaleteacher+accountsectionuser.residentialadvantagefemaleteacher)%></td>
+    </tr>
+    <tr>
+        <th>কর্মকর্তা</th>
+        <td><%=accountsectionuser.residentialadvantagemaleofficer%></td>
+        <td><%=accountsectionuser.residentialadvantagefemaleofficer%></td>
+        <td><%=(accountsectionuser.residentialadvantagemaleofficer+accountsectionuser.residentialadvantagefemaleofficer)%></td>
+    </tr>
+    <tr>
+        <th>তৃতীয় শ্রেণীর কর্মচারী</th>
+        <td><%=accountsectionuser.residentialadvantagemalethirdclassemploye%></td>
+        <td><%=accountsectionuser.residentialadvantagefemalethirdclassemploye%></td>
+        <td><%=(accountsectionuser.residentialadvantagemalethirdclassemploye+accountsectionuser.residentialadvantagefemalethirdclassemploye)%></td>
+    </tr>
+    <tr>
+        <th>চতুর্থ শ্রেণীর কর্মচারী</th>
+        <td><%=accountsectionuser.residentialadvantagemalefourthclassemploye%></td>
+        <td><%=accountsectionuser.residentialadvantagefemalefourthclassemploye%></td>
+        <td><%=(accountsectionuser.residentialadvantagemalefourthclassemploye+accountsectionuser.residentialadvantagefemalefourthclassemploye)%></td>
+    </tr>
+</table>
+<br>
+<h3>
+<a href="accountsectionuser/<%=accountsectionuser._id %>/edit">Update</a>
+<a href="accountsectionuser/<%=accountsectionuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	<style>
+		.table1 tr th input{
+			resize: horizontal;
+			width: 105px;
+		}
+		.table2 tr th input{
+			resize: horizontal;
+			width: 215px;
+		}
+		.table3 tr th input{
+			resize: horizontal;
+			width: 215px;
+		}
+	</style>
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/foundationsection">insert</a></li>
+    <li>
+      <form action="/foundationsectiondata" method="GET">
+        <input type="number" name="foundationsectionsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/foundationsectionlogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<form action="/foundationsectionnew" method="post">
+<p> সালঃ<input type="number" name="session"></p>
+
+<h3>মোট পদ ভিত্তিক শিক্ষক সংখ্যাঃ</h3>
+<table border="1" width="950" align="center" class="table1">
+<tr>
+	<th rowspan="2">পদ</th>
+	<th rowspan="2">অনুমোদিত পদ সংখ্যা</th>
+	<th colspan="2">পদে নিয়োজিত সংখ্যা</th>
+	<th colspan="2">খন্ডকালিন/চুক্তিভিত্তিক/এডহক শিক্ষক সংখ্যা</th>
+	<th colspan="2">মোট</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+</tr>
+<tr>
+	<th>প্রফেসর</th>
+	<th><input type="number" name="totalprofessorapproveseat"></th>
+	<th><input type="number" name="approvemaleprofessor"></th>
+	<th><input type="number" name="approvefemaleprofessor"></th>
+	<th><input type="number" name="parttimemaleprofessor"></th>
+	<th><input type="number" name="parttimefemaleprofessor"></th>
+	<th><input type="number" name="totalmaleprofessor"></th>
+	<th><input type="number" name="totalfemaleprofessor"></th>
+</tr>
+<tr>
+	<th>এসোসিয়েট প্রফেসর</th>
+	<th><input type="number" name="totalassociateprofessorapproveseat"></th>
+	<th><input type="number" name="approvemaleassociateprofessor"></th>
+	<th><input type="number" name="approvefemaleassociateprofessor"></th>
+	<th><input type="number" name="parttimemaleassociateprofessor"></th>
+	<th><input type="number" name="parttimefemaleassociateprofessor"></th>
+	<th><input type="number" name="totalmaleassociateprofessor"></th>
+	<th><input type="number" name="totalfemaleassociateprofessor"></th>
+</tr>
+<tr>
+	<th>এসিস্ট্যান্ট প্রফেসর</th>
+	<th><input type="number" name="totalassistantprofessorapproveseat"></th>
+	<th><input type="number" name="approvemaleassistantprofessor"></th>
+	<th><input type="number" name="approvefemaleassistantprofessor"></th>
+	<th><input type="number" name="parttimemaleassistantprofessor"></th>
+	<th><input type="number" name="parttimefemaleassistantprofessor"></th>
+	<th><input type="number" name="totalmaleassistantprofessor"></th>
+	<th><input type="number" name="totalfemaleassistantprofessor"></th>
+</tr>
+<tr>
+	<th>লেকচারার</th>
+	<th><input type="number" name="totallecturarapproveseat"></th>
+	<th><input type="number" name="approvemalelecturar"></th>
+	<th><input type="number" name="approvefemalelecturar"></th>
+	<th><input type="number" name="parttimemalelecturar"></th>
+	<th><input type="number" name="parttimefemalelecturar"></th>
+	<th><input type="number" name="totalmalelecturar"></th>
+	<th><input type="number" name="totalfemalelecturar"></th>
+</tr>
+<tr>
+	<th>টিচিং এসিস্ট্যান্ট </th>
+	<th><input type="number" name="totalteachingassistantapproveseat"></th>
+	<th><input type="number" name="approvemaleteachingassistant"></th>
+	<th><input type="number" name="approvefemaleteachingassistant"></th>
+	<th><input type="number" name="parttimemaleteachingassistant"></th>
+	<th><input type="number" name="parttimefemaleteachingassistant"></th>
+	<th><input type="number" name="totalmaleteachingassistant"></th>
+	<th><input type="number" name="totalfemaleteachingassistant"></th>
+</tr>
+<tr>
+	<th>ভিজিটিং প্রফেসর</th>
+	<th><input type="number" name="totalvisitingprofessorapproveseat"></th>
+	<th><input type="number" name="approvemalevisitingprofessor"></th>
+	<th><input type="number" name="approvefemalevisitingprofessor"></th>
+	<th><input type="number" name="parttimemalevisitingprofessor"></th>
+	<th><input type="number" name="parttimefemalevisitingprofessor"></th>
+	<th><input type="number" name="totalmalevisitingprofessor"></th>
+	<th><input type="number" name="totalfemalevisitingprofessor"></th>
+</tr>
+<tr>
+	<th>অনারারী প্রফেসর</th>
+	<th><input type="number" name="totalhonoraryprofessorapproveseat"></th>
+	<th><input type="number" name="approvemalehonoraryprofessor"></th>
+	<th><input type="number" name="approvefemalehonoraryprofessor"></th>
+	<th><input type="number" name="parttimemalehonoraryprofessor"></th>
+	<th><input type="number" name="parttimefemalehonoraryprofessor"></th>
+	<th><input type="number" name="totalmalehonoraryprofessor"></th>
+	<th><input type="number" name="totalfemalehonoraryprofessor"></th>
+</tr>
+<tr>
+	<th>সুপারনিউমারারী প্রফেসর</th>
+	<th><input type="number" name="totalsupernumararyprofessorapproveseat"></th>
+	<th><input type="number" name="approvemalesupernumararyprofessor"></th>
+	<th><input type="number" name="approvefemalesupernumararyprofessor"></th>
+	<th><input type="number" name="parttimemalesupernumararyprofessor"></th>
+	<th><input type="number" name="parttimefemalesupernumararyprofessor"></th>
+	<th><input type="number" name="totalmalesupernumararyprofessor"></th>
+	<th><input type="number" name="totalfemalesupernumararyprofessor"></th>
+</tr>
+<tr>
+	<th>ইমেরিটাস প্রফেসর</th>
+	<th><input type="number" name="totalemeritusprofessorapproveseat"></th>
+	<th><input type="number" name="approvemaleemeritusprofessor"></th>
+	<th><input type="number" name="approvefemaleemeritusprofessor"></th>
+	<th><input type="number" name="parttimemaleemeritusprofessor"></th>
+	<th><input type="number" name="parttimefemaleemeritusprofessor"></th>
+	<th><input type="number" name="totalmaleemeritusprofessor"></th>
+	<th><input type="number" name="totalfemaleemeritusprofessor"></th>
+</tr>
+<tr>
+	<th>জাতীয় অধ্যাপক</th>
+	<th><input type="number" name="totalnationalprofessorapproveseat"></th>
+	<th><input type="number" name="approvemalenationalprofessor"></th>
+	<th><input type="number" name="approvefemalenationalprofessor"></th>
+	<th><input type="number" name="parttimemalenationalprofessor"></th>
+	<th><input type="number" name="parttimefemalenationalprofessor"></th>
+	<th><input type="number" name="totalmalenationalprofessor"></th>
+	<th><input type="number" name="totalfemalenationalprofessor"></th>
+</tr>
+</table>
+<br>
+
+<h3>কর্মরত ও অনুপস্থিত শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="950" align="center" class="table2">
+
+<tr>
+	<th>বিবরণ</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+</tr>
+<tr>
+	<th>কর্মরত শিক্ষক</th>
+	<th><input type="number" name="workingmaleteacher"></th>
+	<th><input type="number" name="workingfemaleteacher"></th>
+</tr>
+<tr>
+	<th>অনুপস্থিত শিক্ষক</th>
+	<th><input type="number" name="absentmaleteacher"></th>
+	<th><input type="number" name="absentfemaleteacher"></th>
+</tr>
+<tr>
+	<th>শিক্ষা ছুটি</th>
+	<th><input type="number" name="maleeducationvacationteacher"></th>
+	<th><input type="number" name="femaleeducationvacationteacher"></th>
+</tr>
+<tr>
+	<th>প্রেষণ</th>
+	<th><input type="number" name="maletransmissionteacher"></th>
+	<th><input type="number" name="femaletransmissionteacher"></th>
+</tr>
+<tr>
+	<th>লিয়েন</th>
+	<th><input type="number" name="maleliyenteacher"></th>
+	<th><input type="number" name="femaleliyenteacher"></th>
+</tr>
+<tr>
+	<th>বিনা বেতনে</th>
+	<th><input type="number" name="malefreesalaryteacher"></th>
+	<th><input type="number" name="femalefreesalaryteacher"></th>
+</tr>
+<tr>
+	<th>অননুমদিত</th>
+	<th><input type="number" name="maleunapproveteacher"></th>
+	<th><input type="number" name="femaleunapproveteacher"></th>
+</tr>
+<tr>
+	<th>খন্ডকালিন/চুক্তিভিত্তিক/অন্যান্য</th>
+	<th><input type="number" name="maleparttimeteacher"></th>
+	<th><input type="number" name="femaleparttimeteacher"></th>
+</tr>
+</table>
+<br>
+<h3>কর্মকর্তা ও কর্মচারী পরিসংখ্যানঃ</h3>
+<table border="1" width="950" align="center" class="table3">
+<tr>
+	<th rowspan="2">কর্মকর্তা ও কর্মচারী</th>
+	<th rowspan="2">অনুমোদিত পদ সংখ্যা</th>
+	<th colspan="2">সংখ্যা</th>
+</tr>
+<tr>
+<th>পুরুষ</th>
+<th>মহিলা</th>
+</tr>
+<tr>
+	<th>কর্মকর্তা(স্থায়ী)</th>
+	<th><input type="number" name="totalpermanentofficerapproveseat"></th>
+	<th><input type="number" name="permanentmaleofficer"></th>
+	<th><input type="number" name="permanentfemaleofficer"></th>
+</tr>
+<tr>
+	<th>কর্মকর্তা(চুক্তিভিত্তিক)</th>
+	<th><input type="number" name="totalcontactualofficerapproveseat"></th>
+	<th><input type="number" name="contactualmaleofficer"></th>
+	<th><input type="number" name="contactualfemaleofficer"></th>
+</tr>
+<tr>
+	<th>তৃতীয় শ্রেনীর কর্মচারী(স্থায়ী)</th>
+	<th><input type="number" name="totalthirdclasspermanentemployeapproveseat"></th>
+	<th><input type="number" name="thirdclasspermanentmaleemploye"></th>
+	<th><input type="number" name="thirdclasspermanentfemaleemploye"></th>
+</tr>
+<tr>
+	<th>চথুরথ শ্রেনীর কর্মচারী(স্থায়ী)</th>
+	<th><input type="number" name="totalfourthclasspermanentemployeapproveseat"></th>
+	<th><input type="number" name="fourthclasspermanentmaleemploye"></th>
+	<th><input type="number" name="fourthclasspermanentfemaleemploye"></th>
+</tr>
+<tr>
+	<th>কর্মচারী(আঢকভিত্তিক)</th>
+	<th><input type="number" name="totaladhokemployeapproveseat"></th>
+	<th><input type="number" name="adhokmaleeemploye"></th>
+	<th><input type="number" name="adhokfemaleeemploye"></th>
+</tr>
+<tr>
+	<th>কর্মচারী(দৈনিক হাজিরাভিত্তিক)</th>
+	<th><input type="number" name="totaldailypresentemployeapproveseat"></th>
+	<th><input type="number" name="dailypresentmaleeemploye"></th>
+	<th><input type="number" name="dailypresentfemaleeemploye"></th>
+</tr>
+</table>
+<br>
+<button type="submit">submit</button>
+</form>
+<br>
+</div>
+</body>
+</html>

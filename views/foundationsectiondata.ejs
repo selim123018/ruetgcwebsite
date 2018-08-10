@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/foundationsection">insert</a></li>
+    <li>
+      <form action="/foundationsectiondata" method="GET">
+        <input type="number" name="foundationsectionsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/foundationsectionlogout">logout</a></li>
+  </ul>
+ </div> 
+<div class="form">
+<h3>মোট পদ ভিত্তিক শিক্ষক সংখ্যাঃ</h3>
+<table border="1" width="900" align="center" class="table1">
+<tr>
+	<th rowspan="2">পদ</th>
+	<th rowspan="2">অনুমোদিত পদ সংখ্যা</th>
+	<th colspan="3">পদে নিয়োজিত সংখ্যা</th>
+	<th colspan="3">খন্ডকালিন/চুক্তিভিত্তিক/এডহক শিক্ষক সংখ্যা</th>
+	<th colspan="3">মোট</th>
+</tr>
+<tr>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>প্রফেসর</th>
+	<td><%=foundationsectionuser.totalprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleprofessor%></td>
+	<td><%=foundationsectionuser.approvefemaleprofessor%></td>
+	<td><%=(foundationsectionuser.approvemaleprofessor+foundationsectionuser.approvefemaleprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemaleprofessor%></td>
+	<th><%=foundationsectionuser.parttimefemaleprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemaleprofessor+foundationsectionuser.parttimefemaleprofessor)%></td>	
+	<td><%=foundationsectionuser.totalmaleprofessor%></td>
+	<td><%=foundationsectionuser.totalfemaleprofessor%></td>
+	<td><%=(foundationsectionuser.totalmaleprofessor+foundationsectionuser.totalfemaleprofessor)%></td>
+</tr>
+<tr>
+	<th>এসোসিয়েট প্রফেসর</th>
+	<td><%=foundationsectionuser.totalassociateprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleassociateprofessor%></td>
+	<td><%=foundationsectionuser.approvefemaleassociateprofessor%></td>
+	<td><%=(foundationsectionuser.approvemaleassociateprofessor+foundationsectionuser.approvefemaleassociateprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemaleassociateprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemaleassociateprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemaleassociateprofessor+foundationsectionuser.parttimefemaleassociateprofessor)%></td>
+	<th><%=foundationsectionuser.totalmaleassociateprofessor%></td>
+	<td><%=foundationsectionuser.totalfemaleassociateprofessor%></td>
+	<td><%=(foundationsectionuser.totalmaleassociateprofessor+foundationsectionuser.totalfemaleassociateprofessor)%></td>
+</tr>
+<tr>
+	<th>এসিস্ট্যান্ট প্রফেসর</th>
+	<td><%=foundationsectionuser.totalassistantprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleassistantprofessor%></td>
+	<td><%=foundationsectionuser.approvefemaleassistantprofessor%></td>
+	<td><%=(foundationsectionuser.approvemaleassistantprofessor+foundationsectionuser.approvefemaleassistantprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemaleassistantprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemaleassistantprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemaleassistantprofessor+foundationsectionuser.parttimefemaleassistantprofessor)%></td>
+	<td><%=foundationsectionuser.totalmaleassistantprofessor%></td>
+	<td><%=foundationsectionuser.totalfemaleassistantprofessor%></td>
+	<td><%=(foundationsectionuser.totalmaleassistantprofessor+foundationsectionuser.totalfemaleassistantprofessor)%></td>
+</tr>
+<tr>
+	<th>লেকচারার</th>
+	<td><%=foundationsectionuser.totallecturarapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalelecturar%></td>
+	<td><%=foundationsectionuser.approvefemalelecturar%></td>
+	<td><%=(foundationsectionuser.approvemalelecturar+foundationsectionuser.approvefemalelecturar)%></td>
+	<td><%=foundationsectionuser.parttimemalelecturar%></td>
+	<td><%=foundationsectionuser.parttimefemalelecturar%></th>
+	<td><%=(foundationsectionuser.parttimemalelecturar+foundationsectionuser.parttimefemalelecturar)%></td>	
+	<td><%=foundationsectionuser.totalmalelecturar%></td>
+	<td><%=foundationsectionuser.totalfemalelecturar%></td>
+	<td><%=(foundationsectionuser.totalmalelecturar+foundationsectionuser.totalfemalelecturar)%></td>
+</tr>
+<tr>
+	<th>টিচিং এসিস্ট্যান্ট </th>
+	<td><%=foundationsectionuser.totalteachingassistantapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleteachingassistant%></td>
+	<td><%=foundationsectionuser.approvefemaleteachingassistant%></td>
+	<td><%=(foundationsectionuser.approvemaleteachingassistant+foundationsectionuser.approvefemaleteachingassistant)%></td>
+	<td><%=foundationsectionuser.parttimemaleteachingassistant%></td>
+	<td><%=foundationsectionuser.parttimefemaleteachingassistant%></td>
+	<td><%=(foundationsectionuser.parttimemaleteachingassistant+foundationsectionuser.parttimefemaleteachingassistant)%></td>
+	<td><%=foundationsectionuser.totalmaleteachingassistant%></td>
+	<td><%=foundationsectionuser.totalfemaleteachingassistant%></td>
+	<td><%=(foundationsectionuser.totalmaleteachingassistant+foundationsectionuser.totalfemaleteachingassistant)%></td>
+</tr>
+<tr>
+	<th>ভিজিটিং প্রফেসর</th>
+	<td><%=foundationsectionuser.totalvisitingprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalevisitingprofessor%></td>
+	<td><%=foundationsectionuser.approvefemalevisitingprofessor%></td>
+	<td><%=(foundationsectionuser.approvemalevisitingprofessor+foundationsectionuser.approvefemalevisitingprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemalevisitingprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemalevisitingprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemalevisitingprofessor+foundationsectionuser.parttimefemalevisitingprofessor)%></td>
+	<td><%=foundationsectionuser.totalmalevisitingprofessor%></td>
+	<td><%=foundationsectionuser.totalfemalevisitingprofessor%></td>
+	<td><%=(foundationsectionuser.totalmalevisitingprofessor+foundationsectionuser.totalfemalevisitingprofessor)%></td>
+</tr>
+<tr>
+	<th>অনারারী প্রফেসর</th>
+	<td><%=foundationsectionuser.totalhonoraryprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalehonoraryprofessor%></td>
+	<td><%=foundationsectionuser.approvefemalehonoraryprofessor%></td>
+	<td><%=(foundationsectionuser.approvemalehonoraryprofessor+foundationsectionuser.approvefemalehonoraryprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemalehonoraryprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemalehonoraryprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemalehonoraryprofessor+foundationsectionuser.parttimefemalehonoraryprofessor)%></td>
+	<td><%=foundationsectionuser.totalmalehonoraryprofessor%></td>
+	<td><%=foundationsectionuser.totalfemalehonoraryprofessor%></td>
+	<td><%=(foundationsectionuser.totalmalehonoraryprofessor+foundationsectionuser.totalfemalehonoraryprofessor)%></td>
+</tr>
+<tr>
+	<th>সুপারনিউমারারী প্রফেসর</th>
+	<td><%=foundationsectionuser.totalsupernumararyprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalesupernumararyprofessor%></td>
+	<td><%=foundationsectionuser.approvefemalesupernumararyprofessor%></td>
+	<td><%=(foundationsectionuser.approvemalesupernumararyprofessor+foundationsectionuser.approvefemalesupernumararyprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemalesupernumararyprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemalesupernumararyprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemalesupernumararyprofessor+foundationsectionuser.parttimefemalesupernumararyprofessor)%></td>
+	<td><%=foundationsectionuser.totalmalesupernumararyprofessor%></td>
+	<td><%=foundationsectionuser.totalfemalesupernumararyprofessor%></td>
+	<td><%=(foundationsectionuser.totalmalesupernumararyprofessor+foundationsectionuser.totalfemalesupernumararyprofessor)%></td>
+</tr>
+<tr>
+	<th>ইমেরিটাস প্রফেসর</th>
+	<td><%=foundationsectionuser.totalemeritusprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemaleemeritusprofessor%></td>
+	<td><%=foundationsectionuser.approvefemaleemeritusprofessor%></td>
+	<td><%=(foundationsectionuser.approvemaleemeritusprofessor+foundationsectionuser.approvefemaleemeritusprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemaleemeritusprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemaleemeritusprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemaleemeritusprofessor+foundationsectionuser.parttimefemaleemeritusprofessor)%></td>
+	<td><%=foundationsectionuser.totalmaleemeritusprofessor%></td>
+	<td><%=foundationsectionuser.totalfemaleemeritusprofessor%></td>
+	<td><%=(foundationsectionuser.totalmaleemeritusprofessor+foundationsectionuser.totalfemaleemeritusprofessor)%></td>
+</tr>
+<tr>
+	<th>জাতীয় অধ্যাপক</th>
+	<td><%=foundationsectionuser.totalnationalprofessorapproveseat%></td>
+	<td><%=foundationsectionuser.approvemalenationalprofessor%></td>
+	<td><%=foundationsectionuser.approvefemalenationalprofessor%></td>
+	<td><%=(foundationsectionuser.approvemalenationalprofessor+foundationsectionuser.approvefemalenationalprofessor)%></td>
+	<td><%=foundationsectionuser.parttimemalenationalprofessor%></td>
+	<td><%=foundationsectionuser.parttimefemalenationalprofessor%></td>
+	<td><%=(foundationsectionuser.parttimemalenationalprofessor+foundationsectionuser.parttimefemalenationalprofessor)%></td>
+	<td><%=foundationsectionuser.totalmalenationalprofessor%></td>
+	<td><%=foundationsectionuser.totalfemalenationalprofessor%></td>
+	<td><%=(foundationsectionuser.totalmalenationalprofessor+foundationsectionuser.totalfemalenationalprofessor)%></td>
+</tr>
+</table>
+<br>
+
+<h3>কর্মরত ও অনুপস্থিত শিক্ষকদের পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center" class="table2">
+
+<tr>
+	<th>বিবরণ</th>
+	<th>পুরুষ</th>
+	<th>মহিলা</th>
+	<th>মোট</th>
+</tr>
+<tr>
+	<th>কর্মরত শিক্ষক</th>
+	<td><%=foundationsectionuser.workingmaleteacher%></td>
+	<td><%=foundationsectionuser.workingfemaleteacher%></td>
+	<td><%=(foundationsectionuser.workingmaleteacher+foundationsectionuser.workingfemaleteacher)%></td>
+</tr>
+<tr>
+	<th>অনুপস্থিত শিক্ষক</th>
+	<td><%=foundationsectionuser.absentmaleteacher%></td>
+	<td><%=foundationsectionuser.absentfemaleteacher%></td>
+	<td><%=(foundationsectionuser.absentmaleteacher+foundationsectionuser.absentfemaleteacher)%></td>
+</tr>
+<tr>
+	<th>শিক্ষা ছুটি</th>
+	<td><%=foundationsectionuser.maleeducationvacationteacher%></td>
+	<td><%=foundationsectionuser.femaleeducationvacationteacher%></td>
+	<td><%=(foundationsectionuser.maleeducationvacationteacher+foundationsectionuser.femaleeducationvacationteacher)%></td>
+</tr>
+<tr>
+	<th>প্রেষণ</th>
+	<td><%=foundationsectionuser.maletransmissionteacher%></td>
+	<td><%=foundationsectionuser.femaletransmissionteacher%></td>
+	<td><%=(foundationsectionuser.maletransmissionteacher+foundationsectionuser.femaletransmissionteacher)%></td>
+</tr>
+<tr>
+	<th>লিয়েন</th>
+	<td><%=foundationsectionuser.maleliyenteacher%></td>
+	<td><%=foundationsectionuser.femaleliyenteacher%></td>
+	<td><%=(foundationsectionuser.maleliyenteacher+foundationsectionuser.femaleliyenteacher)%></td>
+</tr>
+<tr>
+	<th>বিনা বেতনে</th>
+	<td><%=foundationsectionuser.malefreesalaryteacher%></td>
+	<td><%=foundationsectionuser.femalefreesalaryteacher%></td>
+	<td><%=(foundationsectionuser.malefreesalaryteacher+foundationsectionuser.femalefreesalaryteacher)%></td>
+</tr>
+<tr>
+	<th>অননুমদিত</th>
+	<td><%=foundationsectionuser.maleunapproveteacher%></td>
+	<td><%=foundationsectionuser.femaleunapproveteacher%></td>
+	<td><%=(foundationsectionuser.maleunapproveteacher+foundationsectionuser.femaleunapproveteacher)%></td>
+</tr>
+<tr>
+	<th>খন্ডকালিন/চুক্তিভিত্তিক/অন্যান্য</th>
+	<td><%=foundationsectionuser.maleparttimeteacher%></td>
+	<td><%=foundationsectionuser.femaleparttimeteacher%></td>
+	<td><%=(foundationsectionuser.maleparttimeteacher+foundationsectionuser.femaleparttimeteacher)%></td>
+</tr>
+</table>
+<br>
+<h3>কর্মকর্তা ও কর্মচারী পরিসংখ্যানঃ</h3>
+<table border="1" width="900" align="center" class="table3">
+<tr>
+	<th rowspan="2">কর্মকর্তা ও কর্মচারী</th>
+	<th rowspan="2">অনুমোদিত পদ সংখ্যা</th>
+	<th colspan="3">সংখ্যা</th>
+</tr>
+<tr>
+<th>পুরুষ</th>
+<th>মহিলা</th>
+<th>মোট</th>
+</tr>
+<tr>
+	<th>কর্মকর্তা(স্থায়ী)</th>
+	<td><%=foundationsectionuser.totalpermanentofficerapproveseat%></td>
+	<td><%=foundationsectionuser.permanentmaleofficer%></td>
+	<td><%=foundationsectionuser.permanentfemaleofficer%></td>
+	<td><%=(foundationsectionuser.permanentmaleofficer+foundationsectionuser.permanentfemaleofficer)%></td>
+</tr>
+<tr>
+	<th>কর্মকর্তা(চুক্তিভিত্তিক)</th>
+	<td><%=foundationsectionuser.totalcontactualofficerapproveseat%></td>
+	<td><%=foundationsectionuser.contactualmaleofficer%></td>
+	<td><%=foundationsectionuser.contactualfemaleofficer%></td>
+    <td><%=(foundationsectionuser.contactualmaleofficer+foundationsectionuser.contactualfemaleofficer)%></td>
+</tr>
+<tr>
+	<th>তৃতীয় শ্রেনীর কর্মচারী(স্থায়ী)</th>
+	<td><%=foundationsectionuser.totalthirdclasspermanentemployeapproveseat%></td>
+	<td><%=foundationsectionuser.thirdclasspermanentmaleemploye%></td>
+	<td><%=foundationsectionuser.thirdclasspermanentfemaleemploye%></td>
+	<td><%=(foundationsectionuser.thirdclasspermanentmaleemploye+foundationsectionuser.thirdclasspermanentfemaleemploye)%></td>
+</tr>
+<tr>
+	<th>চথুরথ শ্রেনীর কর্মচারী(স্থায়ী)</th>
+	<td><%=foundationsectionuser.totalfourthclasspermanentemployeapproveseat%></td>
+	<td><%=foundationsectionuser.fourthclasspermanentmaleemploye%></td>
+	<td><%=foundationsectionuser.fourthclasspermanentfemaleemploye%></td>
+	<td><%=(foundationsectionuser.fourthclasspermanentmaleemploye+foundationsectionuser.fourthclasspermanentfemaleemploye)%></td>
+</tr>
+<tr>
+	<th>কর্মচারী(আঢকভিত্তিক)</th>
+	<td><%=foundationsectionuser.totaladhokemployeapproveseat%></td>
+	<td><%=foundationsectionuser.adhokmaleeemploye%></td>
+	<td><%=foundationsectionuser.adhokfemaleeemploye%></td>
+	<td><%=(foundationsectionuser.adhokmaleeemploye+foundationsectionuser.adhokfemaleeemploye)%></td>
+</tr>
+<tr>
+	<th>কর্মচারী(দৈনিক হাজিরাভিত্তিক)</th>
+	<td><%=foundationsectionuser.totaldailypresentemployeapproveseat%></td>
+	<td><%=foundationsectionuser.dailypresentmaleeemploye%></td>
+	<td><%=foundationsectionuser.dailypresentfemaleeemploye%></td>
+	<td><%=(foundationsectionuser.dailypresentmaleeemploye+foundationsectionuser.dailypresentfemaleeemploye)%></td>
+</tr>
+</table>
+<br>
+<h3>
+<a href="foundationsectionuser/<%=foundationsectionuser._id %>/edit">Update</a>
+<a href="foundationsectionuser/<%=foundationsectionuser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+	
+</head>
+<body>
+ <div class="topnav">
+  <ul>
+    <li><a class="active" href="/hall">insert</a></li>
+    <li>
+      <form action="/halldata" method="GET">
+        <input type="number" name="hallsession" placeholder="সাল..">
+        <button type="submit" value="search">search</button>
+      </form>
+    </li>   
+    <li><a class="active" href="/halllogout">logout</a></li>
+  </ul>
+ </div>  
+<div class="form">
+<h3>আবাসিক শিক্ষার্থীর পরিসংখ্যান</h3>
+<table border="1" width="900" align="center">
+	<tr>
+		<th rowspan="2">হল/ডরমিটরি নাম</th>
+		<th colspan="3">সংখ্যা</th>
+	</tr>
+	<tr>
+		<th>ছাত্র</th>
+		<th>ছাত্রী</th>
+		<th>মোট</th>
+	</tr>
+	<tr>
+		<th>বঙ্গবন্ধু হল</th>
+		<td><%=halluser.bongobondhuhallmalestudent%></td>
+		<td><%=halluser.bongobondhuhallfemalestudent%></td>
+		<td><%=(halluser.bongobondhuhallmalestudent+halluser.bongobondhuhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>শহীদ প্রেসিডেন্ট জিয়াউর রহমান হল</th>
+		<td><%=halluser.ziahallmalestudent%></td>
+		<td><%=halluser.ziahallfemalestudent%></td>
+		<td><%=(halluser.ziahallmalestudent+halluser.ziahallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>শহীদ লেঃ সেলিম হল</th>
+		<td><%=halluser.selimhallmalestudent%></td>
+		<td><%=halluser.selimhallfemalestudent%></td>
+		<td><%=(halluser.selimhallmalestudent+halluser.selimhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>শহীদ শহিদুল ইসলাম হল</th>
+		<td><%=halluser.shohidulhallmalestudent%></td>
+		<td><%=halluser.shohidulhallfemalestudent%></td>
+		<td><%=(halluser.shohidulhallmalestudent+halluser.shohidulhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>শহীদ আব্দুল হামিদ হল</th>
+		<td><%=halluser.hamidhallmalestudent%></td>
+		<td><%=halluser.hamidhallfemalestudent%></td>
+		<td><%=(halluser.hamidhallmalestudent+halluser.hamidhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>টিনশেড হল</th>
+		<td><%=halluser.tinshedhallmalestudent%></td>
+		<td><%=halluser.tinshedhallfemalestudent%></td>
+		<td><%=(halluser.tinshedhallmalestudent+halluser.tinshedhallfemalestudent)%></td>
+	</tr>
+	<tr>
+		<th>দেশরত্ন শেখ হাসিনা হল</th>
+		<td><%=halluser.shekhhasinahallmalestudent%></td>
+		<td><%=halluser.shekhhasinahallfemalestudent%></td>
+		<td><%=(halluser.shekhhasinahallmalestudent+halluser.shekhhasinahallfemalestudent)%></td>
+	</tr>
+</table>
+<br>
+<h3>
+<a href="halluser/<%=halluser._id %>/edit">Update</a>
+<a href="halluser/<%=halluser._id %>/delete">Delete</a>
+</h3>
+<br>
+</div>
+</body>
+</html>
